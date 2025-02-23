@@ -1,7 +1,6 @@
-import { Account, AccountState } from '@tonkeeper/core/src/entries/account';
-import { WalletVersion } from '@tonkeeper/core/src/entries/wallet';
-import { formatAddress } from '@tonkeeper/core/src/utils/common';
-import { AccountType } from '@tonkeeper/core/src/utils/types';
+import { Account, getNetworkByAccount, isAccountTonWalletStandard } from '@tonkeeper/core/src/entries/account';
+import { WalletVersion, TonContract, DerivationItemNamed, sortWalletsByVersion, sortDerivationsByIndex } from '@tonkeeper/core/src/entries/wallet';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import { FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle, css } from 'styled-components';
@@ -24,8 +23,7 @@ import { ScanButton } from './connect/ScanButton';
 import { useAddWalletNotification } from './modals/AddWalletNotificationControlled';
 import { SkeletonText } from './shared/Skeleton';
 import { WalletEmoji } from './shared/emoji/WalletEmoji';
-import { isAccountTonWalletStandard } from '@tonkeeper/core/dist/entries/account';
-import { notNullish } from '@tonkeeper/core/dist/utils/types';
+import { notNullish } from '@tonkeeper/core/src/utils/types';
 
 import { useSideBarItems } from '../state/folders';
 import { useTwoFAWalletConfig } from '../state/two-fa';
@@ -211,9 +209,9 @@ const DropDownPayload: FC<{ onClose: () => void; onCreate: () => void }> = ({
                     .slice()
                     .sort(sortDerivationsByIndex)
                     .map(
-                        d =>
+                        (d: DerivationItemNamed) =>
                             ({
-                                wallet: d.tonWallets.find(w => w.id === d.activeTonWalletId)!,
+                                wallet: d.tonWallets.find((w: TonContract) => w.id === d.activeTonWalletId)!,
                                 account: a
                             } as { wallet: TonContract; account: Account })
                     );

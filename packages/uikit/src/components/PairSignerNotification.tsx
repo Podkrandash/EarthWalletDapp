@@ -1,5 +1,5 @@
 import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
-import { SignerService } from '@tonkeeper/core/src/service/signerService';
+import { createTransferQr } from '@tonkeeper/core/src/service/signerService';
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';

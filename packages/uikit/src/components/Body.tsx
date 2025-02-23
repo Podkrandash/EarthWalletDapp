@@ -1,4 +1,4 @@
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
+import { IAppSdk, TargetEnv } from '@tonkeeper/core/src/AppSdk';
 import { throttle } from '@tonkeeper/core/src/utils/common';
 import React, { PropsWithChildren, useLayoutEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
