@@ -18,5 +18,7 @@
             "src": "/.*",
             "dest": "/index.html"
         }
-    ]
+    ],
+    "installCommand": false,
+    "buildCommand": false
 }
