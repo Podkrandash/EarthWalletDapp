@@ -1,5 +1,5 @@
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { isTonAddress } from '@tonkeeper/core/src/utils/common';
+import { isTonAddress } from '@tonkeeper/core/dist/utils/common';
 import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import styled, { css } from 'styled-components';
@@ -18,7 +18,7 @@ import { useMutateUserUIPreferences, useUserUIPreferences } from '../../state/th
 import { useAssetsDistribution } from '../../state/asset';
 import { TronAssets } from '../../components/home/TronAssets';
 import { useActiveTronWallet, useCanUseTronForActiveWallet } from '../../state/tron/tron';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 
 const DesktopAssetStylesOverride = css`
     background-color: transparent;

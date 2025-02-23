@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
-import { AppKey } from '@tonkeeper/core/src/Keys';
+import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
 import { useAppSdk } from '../hooks/appSdk';
 import { QueryKey } from '../libs/queryKey';
 

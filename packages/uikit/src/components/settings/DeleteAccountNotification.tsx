@@ -1,4 +1,4 @@
-import { Account, AccountId } from '@tonkeeper/core/src/entries/account';
+import { Account, AccountId } from '@tonkeeper/core/dist/entries/account';
 import { FC, useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';

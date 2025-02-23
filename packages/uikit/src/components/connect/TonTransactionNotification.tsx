@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { TonConnectTransactionPayload } from '@tonkeeper/core/src/entries/tonConnect';
+import { TonConnectTransactionPayload } from '@tonkeeper/core/dist/entries/tonConnect';
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { useAppSdk } from '../../hooks/appSdk';
@@ -21,7 +21,7 @@ import { Button } from '../fields/Button';
 import { MainButton, ResultButton, TransferViewHeaderBlock } from '../transfer/common';
 import { EmulationList } from './EstimationLayout';
 import { useAccountsState, useActiveAccount } from '../../state/wallet';
-import { LedgerError } from '@tonkeeper/core/src/errors/LedgerError';
+import { LedgerError } from '@tonkeeper/core/dist/errors/LedgerError';
 import { AccountAndWalletInfo } from '../account/AccountAndWalletInfo';
 import { useIsActiveAccountMultisig } from '../../state/multisig';
 import { MultisigOrderLifetimeMinutes } from '../../libs/multisig';
@@ -37,10 +37,10 @@ import {
     useTonConnectAvailableSendersChoices
 } from '../../hooks/blockchain/useSender';
 import { useToQueryKeyPart } from '../../hooks/useToQueryKeyPart';
-import { Sender } from '@tonkeeper/core/src/service/ton-blockchain/sender';
-import { isTonEstimationDetailed, TonEstimationDetailed } from '@tonkeeper/core/src/entries/send';
+import { Sender } from '@tonkeeper/core/dist/service/ton-blockchain/sender';
+import { isTonEstimationDetailed, TonEstimationDetailed } from '@tonkeeper/core/dist/entries/send';
 import { ActionFeeDetailsUniversal, SelectSenderDropdown } from '../activity/NotificationCommon';
-import { NotEnoughBalanceError } from '@tonkeeper/core/src/errors/NotEnoughBalanceError';
+import { NotEnoughBalanceError } from '@tonkeeper/core/dist/errors/NotEnoughBalanceError';
 
 const ButtonGap = styled.div`
     ${props =>

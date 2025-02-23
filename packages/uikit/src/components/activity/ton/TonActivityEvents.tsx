@@ -1,4 +1,4 @@
-import { AccountEvent } from '@tonkeeper/core/src/tonApiV2';
+import { AccountEvent } from '@tonkeeper/core/dist/tonApiV2';
 import { FC } from 'react';
 import { ListItem } from '../../List';
 import { ProgressIcon } from '../ActivityLayout';

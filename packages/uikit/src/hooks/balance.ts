@@ -1,7 +1,7 @@
-import { FiatCurrencies } from '@tonkeeper/core/src/entries/fiat';
-import { AmountFormatter } from '@tonkeeper/core/src/utils/AmountFormatter';
-import { formatDecimals, shiftedDecimals } from "@tonkeeper/core/src/utils/balance";
-import { getDecimalSeparator, getGroupSeparator } from '@tonkeeper/core/src/utils/formatting';
+import { FiatCurrencies } from '@tonkeeper/core/dist/entries/fiat';
+import { AmountFormatter } from '@tonkeeper/core/dist/utils/AmountFormatter';
+import { formatDecimals, shiftedDecimals } from "@tonkeeper/core/dist/utils/balance";
+import { getDecimalSeparator, getGroupSeparator } from '@tonkeeper/core/dist/utils/formatting';
 import BigNumber from 'bignumber.js';
 import { useCallback, useMemo } from 'react';
 

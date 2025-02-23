@@ -1,8 +1,8 @@
-import { TON_ASSET, TON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TON_ASSET, TON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import {
     TonAsset,
     tonAssetAddressToString
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import BigNumber from 'bignumber.js';
 import { atom, useAtom } from '../../libs/atom';
 import { useQuery } from '@tanstack/react-query';
@@ -12,7 +12,7 @@ import { CalculatedSwap } from './useCalculatedSwap';
 import { useRate } from '../rates';
 import { useSwapsConfig } from './useSwapsConfig';
 import { useCallback } from 'react';
-import { eqAddresses } from '@tonkeeper/core/src/utils/address';
+import { eqAddresses } from '@tonkeeper/core/dist/utils/address';
 
 export const swapFromAsset$ = atom<TonAsset>(TON_ASSET);
 export const swapToAsset$ = atom<TonAsset>(TON_USDT_ASSET);

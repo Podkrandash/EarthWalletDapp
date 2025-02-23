@@ -4,7 +4,7 @@ import { Skeleton } from '../shared/Skeleton';
 import { Body3, Label3 } from '../Text';
 import { styled } from 'styled-components';
 import { useFormatCoinValue } from '../../hooks/balance';
-import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
+import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
 import {
     useMaxSwapValue,
     useSwapFromAmount,
@@ -12,7 +12,7 @@ import {
     useSwapToAsset
 } from '../../state/swap/useSwapForm';
 import { useAssetWeiBalance } from '../../state/home';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
 import { useTranslation } from '../../hooks/translation';
 
 const Body3Styled = styled(Body3)`

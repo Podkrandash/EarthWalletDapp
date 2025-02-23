@@ -1,10 +1,10 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { FavoriteSuggestion, LatestSuggestion } from '@tonkeeper/core/src/entries/suggestion';
+import { FavoriteSuggestion, LatestSuggestion } from '@tonkeeper/core/dist/entries/suggestion';
 import {
     deleteFavoriteSuggestion,
     getFavoriteSuggestions,
     setFavoriteSuggestion
-} from '@tonkeeper/core/src/service/suggestionService';
+} from '@tonkeeper/core/dist/service/suggestionService';
 import { useAppSdk } from '../hooks/appSdk';
 import { QueryKey } from '../libs/queryKey';
 import { useActiveStandardTonWallet } from './wallet';

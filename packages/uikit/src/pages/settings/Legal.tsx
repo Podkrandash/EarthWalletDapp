@@ -29,7 +29,7 @@ export const Legal = React.memo(() => {
                         <ChevronRightIcon />
                     </Icon>
                 ),
-                action: () => sdk.openPage('https://tonkeeper.com/terms/')
+                action: () => sdk.openPage('https://earth-wallet.com/terms/')
             },
             {
                 name: t('legal_privacy'),
@@ -38,7 +38,16 @@ export const Legal = React.memo(() => {
                         <ChevronRightIcon />
                     </Icon>
                 ),
-                action: () => sdk.openPage('https://tonkeeper.com/privacy/')
+                action: () => sdk.openPage('https://earth-wallet.com/privacy/')
+            },
+            {
+                name: t('legal_cookie'),
+                icon: (
+                    <Icon>
+                        <ChevronRightIcon />
+                    </Icon>
+                ),
+                action: () => sdk.openPage('https://earth-wallet.com/privacy/') // TODO: Update link
             }
         ];
     }, [t]);
@@ -52,7 +61,7 @@ export const Legal = React.memo(() => {
                         <ChevronRightIcon />
                     </Icon>
                 ),
-                action: () => sdk.openPage('https://tonkeeper.com/privacy/') // TODO: Update link
+                action: () => sdk.openPage('https://earth-wallet.com/privacy/') // TODO: Update link
             }
         ];
     }, [t]);

@@ -7,7 +7,7 @@ import { Dot } from '../../Dot';
 import { BatterySettingsNotification } from './BatterySettingsNotification';
 import { useDisclosure } from '../../../hooks/useDisclosure';
 import { useActiveTonWalletConfig } from '../../../state/wallet';
-import { TonWalletConfig } from '@tonkeeper/core/src/entries/wallet';
+import { TonWalletConfig } from '@tonkeeper/core/dist/entries/wallet';
 
 const BatteryIconCharging = () => {
     const theme = useTheme();

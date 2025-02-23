@@ -1,13 +1,13 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { BaseRecipient, DnsRecipient, RecipientData } from '@tonkeeper/core/src/entries/send';
-import { Suggestion } from '@tonkeeper/core/src/entries/suggestion';
-import { Account, AccountsApi } from '@tonkeeper/core/src/tonApiV2';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { BaseRecipient, DnsRecipient, RecipientData } from '@tonkeeper/core/dist/entries/send';
+import { Suggestion } from '@tonkeeper/core/dist/entries/suggestion';
+import { Account, AccountsApi } from '@tonkeeper/core/dist/tonApiV2';
 import {
     formatAddress,
     seeIfValidTonAddress,
     seeIfValidTronAddress
-} from '@tonkeeper/core/src/utils/common';
+} from '@tonkeeper/core/dist/utils/common';
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useAppContext } from '../../hooks/appContext';

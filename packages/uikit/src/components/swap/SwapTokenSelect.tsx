@@ -1,5 +1,5 @@
 import { FC, useCallback } from 'react';
-import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import { styled } from 'styled-components';
 import { Label2 } from '../Text';
 import { SwitchIcon } from '../Icon';

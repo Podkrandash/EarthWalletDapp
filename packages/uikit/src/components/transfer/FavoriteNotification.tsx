@@ -1,4 +1,4 @@
-import { FavoriteSuggestion, LatestSuggestion } from '@tonkeeper/core/src/entries/suggestion';
+import { FavoriteSuggestion, LatestSuggestion } from '@tonkeeper/core/dist/entries/suggestion';
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useAppSdk } from '../../hooks/appSdk';

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Action } from '@tonkeeper/core/src/tonApiV2';
+import { Action } from '@tonkeeper/core/dist/tonApiV2';
 
 import {
     ExtraCurrencyTransferDesktopAction,

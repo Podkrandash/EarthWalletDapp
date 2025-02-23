@@ -3,14 +3,24 @@ import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { availableThemes, useMutateUserUIPreferences, useUserUIPreferences } from '../state/theme';
 import { usePrevious } from '../hooks/usePrevious';
 import { getUserOS } from '../libs/web';
-export const UserThemeProvider: FC<
-    PropsWithChildren<{
-        displayType?: 'compact' | 'full-width';
-        isPro?: boolean;
-        isProSupported?: boolean;
-        isInsideTonkeeper?: boolean;
-    }>
-> = ({ children, displayType, isPro, isProSupported, isInsideTonkeeper }) => {
+
+type DisplayType = 'compact' | 'full-width';
+
+interface Props {
+    children: React.ReactNode;
+    displayType?: DisplayType;
+    isPro?: boolean;
+    isProSupported?: boolean;
+    isInsideEarthWallet?: boolean;
+}
+
+const UserThemeProvider: React.FC<Props> = ({
+    children,
+    displayType,
+    isPro,
+    isProSupported,
+    isInsideEarthWallet,
+}) => {
     const { data: uiPreferences, isFetched: isUIPreferencesLoaded } = useUserUIPreferences();
     const { mutateAsync } = useMutateUserUIPreferences();
     const isProPrev = usePrevious(isPro);
@@ -42,7 +52,7 @@ export const UserThemeProvider: FC<
 
         window.document.body.style.background = theme.backgroundPage;
 
-        if (isInsideTonkeeper) {
+        if (isInsideEarthWallet) {
             theme = {
                 ...theme,
                 corner3xSmall: '2px',
@@ -56,7 +66,7 @@ export const UserThemeProvider: FC<
         }
 
         return [theme, themeName];
-    }, [uiPreferences?.theme, displayType, isPro, isProPrev, isInsideTonkeeper]);
+    }, [uiPreferences?.theme, displayType, isPro, isProPrev, isInsideEarthWallet]);
 
     useEffect(() => {
         if (currentTheme && uiPreferences && currentThemeName !== uiPreferences.theme) {
@@ -70,3 +80,5 @@ export const UserThemeProvider: FC<
 
     return <ThemeProvider theme={currentTheme as DefaultTheme}>{children}</ThemeProvider>;
 };
+
+export default UserThemeProvider;

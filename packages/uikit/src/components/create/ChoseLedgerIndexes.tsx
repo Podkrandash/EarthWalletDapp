@@ -2,7 +2,7 @@ import { ListBlock, ListItem, ListItemPayload } from '../List';
 import styled from 'styled-components';
 import { Body1, Body2, H2, Label1 } from '../Text';
 import { useTranslation } from '../../hooks/translation';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import React, { FC, useState } from 'react';
 import { useTonWalletsBalances } from '../../state/wallet';
 import { SkeletonListDesktopAdaptive } from '../Skeleton';
@@ -11,7 +11,7 @@ import { Checkbox } from '../fields/Checkbox';
 import { Button } from '../fields/Button';
 import { ChevronLeftIcon } from '../Icon';
 import { RoundedButton } from '../fields/RoundedButton';
-import { AccountLedger } from '@tonkeeper/core/src/entries/account';
+import { AccountLedger } from '@tonkeeper/core/dist/entries/account';
 
 const Wrapper = styled.div`
     flex: 1;

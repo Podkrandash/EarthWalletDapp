@@ -1,9 +1,8 @@
 import { KeystoneTonSDK } from '@keystonehq/keystone-sdk/dist/chains/ton';
 import type { UR } from '@keystonehq/keystone-sdk/dist/types/ur';
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
-import { KeystoneMessageType, KeystonePathInfo } from '@tonkeeper/core/src/service/keystone/types';
-import { constructKeystoneSignRequest } from '@tonkeeper/core/src/service/keystone/ur';
-import { formatAddress } from '@tonkeeper/core/src/utils/common';
+import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { KeystoneMessageType, KeystonePathInfo } from '@tonkeeper/core/dist/service/keystone/types';
+import { constructKeystoneSignRequest } from '@tonkeeper/core/dist/service/keystone/ur';
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';
@@ -15,6 +14,7 @@ import { Button } from './fields/Button';
 import { Background, HeaderBlock } from './home/AccountView';
 import { KeystoneAnimatedQRCode } from './home/qrCodeView';
 import { useActiveWallet } from '../state/wallet';
+import { formatAddress } from '@tonkeeper/core/dist/utils/common';
 
 export const SignerContent: FC<{
     sdk: IAppSdk;

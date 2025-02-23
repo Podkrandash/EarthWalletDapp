@@ -1,5 +1,5 @@
-import { AccountMAM } from '@tonkeeper/core/src/entries/account';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { AccountMAM } from '@tonkeeper/core/dist/entries/account';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import { FC, useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { InnerBody } from '../../components/Body';

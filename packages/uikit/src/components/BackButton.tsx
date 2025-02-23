@@ -1,4 +1,4 @@
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
+import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
 import { FC, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';

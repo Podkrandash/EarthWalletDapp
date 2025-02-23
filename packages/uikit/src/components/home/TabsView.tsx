@@ -1,4 +1,4 @@
-import { NFT } from '@tonkeeper/core/src/entries/nft';
+import { NFT } from '@tonkeeper/core/dist/entries/nft';
 import React, { FC, useCallback, useEffect, useMemo, useRef } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import styled, { css } from 'styled-components';
@@ -6,7 +6,7 @@ import { useTranslation } from '../../hooks/translation';
 import { Label1 } from '../Text';
 import { NftsList } from '../nft/Nfts';
 import { AssetData, JettonList } from './Jettons';
-import { AssetAmount } from "@tonkeeper/core/src/entries/crypto/asset/asset-amount";
+import { AssetAmount } from "@tonkeeper/core/dist/entries/crypto/asset/asset-amount";
 
 const TabsBlock = styled.div`
     display: flex;

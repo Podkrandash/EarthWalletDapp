@@ -1,28 +1,28 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { QueryKey } from '../libs/queryKey';
-import type { RechargeMethods } from '@tonkeeper/core/src/batteryApi/models/RechargeMethods';
+import type { RechargeMethods } from '@tonkeeper/core/dist/batteryApi/models/RechargeMethods';
 
 import { useActiveAccount, useActiveConfig, useActiveTonNetwork } from './wallet';
 import { useSignTonProof } from '../hooks/accountUtils';
 import { useEffect, useMemo } from 'react';
 import { useAppSdk } from '../hooks/appSdk';
-import { isAccountTonWalletStandard } from '@tonkeeper/core/src/entries/account';
-import { AppKey } from '@tonkeeper/core/src/Keys';
+import { isAccountTonWalletStandard } from '@tonkeeper/core/dist/entries/account';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
 import BigNumber from 'bignumber.js';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { useJettonList } from './jetton';
-import { notNullish } from '@tonkeeper/core/src/utils/types';
+import { notNullish } from '@tonkeeper/core/dist/utils/types';
 import { toNano } from '@ton/core';
-import type { Config } from '@tonkeeper/core/src/batteryApi/models/Config';
-import { JettonEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/jetton-encoder';
-import { Configuration, ConnectApi, DefaultApi, WalletApi } from '@tonkeeper/core/src/batteryApi';
+import type { Config } from '@tonkeeper/core/dist/batteryApi/models/Config';
+import { JettonEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/jetton-encoder';
+import { Configuration, ConnectApi, DefaultApi, WalletApi } from '@tonkeeper/core/dist/batteryApi';
 import {
     isTon,
     TonAsset,
     tonAssetAddressToString
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { Network } from '@tonkeeper/core/src/entries/network';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 import { useTwoFAWalletConfig } from './two-fa';
 
 export const useBatteryApi = () => {

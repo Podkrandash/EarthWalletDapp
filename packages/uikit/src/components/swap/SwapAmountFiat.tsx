@@ -4,7 +4,7 @@ import { useRate } from '../../state/rates';
 import {
     TonAsset,
     tonAssetAddressToString
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import { Skeleton } from '../shared/Skeleton';
 import { Body3 } from '../Text';
 import { styled } from 'styled-components';

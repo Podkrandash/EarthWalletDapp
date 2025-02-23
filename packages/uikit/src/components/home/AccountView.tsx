@@ -1,9 +1,9 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
 import {
     formatAddress,
     formatTransferUrl,
     seeIfValidTonAddress
-} from '@tonkeeper/core/src/utils/common';
+} from '@tonkeeper/core/dist/utils/common';
 import { FC, useRef, useState } from 'react';
 import { QRCode } from 'react-qrcode-logo';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -34,10 +34,10 @@ import {
     TON_ASSET,
     TRON_TRX_ASSET,
     TRON_USDT_ASSET
-} from '@tonkeeper/core/src/entries/crypto/asset/constants';
+} from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { Address } from '@ton/core';
 import { Tabs } from '../Tabs';
-import { TronWallet } from '@tonkeeper/core/src/entries/tron/tron-wallet';
+import { TronWallet } from '@tonkeeper/core/dist/entries/tron/tron-wallet';
 import { useActiveTronWallet } from '../../state/tron/tron';
 
 const CopyBlock = styled.div`

@@ -1,13 +1,13 @@
-import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { Language, intlLocale } from '@tonkeeper/core/src/entries/language';
+import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { intlLocale } from '@tonkeeper/core/dist/entries/language';
 import {
     AccountAddress,
     AccountEvent,
     JettonSwapActionDexEnum
-} from '@tonkeeper/core/src/tonApiV2';
-import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+} from '@tonkeeper/core/dist/tonApiV2';
+import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import React, { FC, PropsWithChildren, useMemo } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { useAppContext } from '../../hooks/appContext';
@@ -29,8 +29,8 @@ import {
 } from '../../hooks/blockchain/useSender';
 import { SelectDropDown } from '../fields/Select';
 import { DropDownContent, DropDownItem, DropDownItemsDivider } from '../DropDown';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
-import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import { useBatteryBalance, useBatteryUnitTonRate } from '../../state/battery';
 import BigNumber from 'bignumber.js';
 

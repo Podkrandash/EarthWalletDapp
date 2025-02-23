@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FC } from 'react';
-import { PromotedApp } from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+import { PromotedApp } from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
 import { useAppContext } from '../../hooks/appContext';
 import { useOpenLinkOnAreaClick } from '../../hooks/useAreaClick';
 import { Body3, Label2 } from '../../components/Text';

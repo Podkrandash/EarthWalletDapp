@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { TronTransferDesktopAction } from './TronTransferDesktopAction';
 
 import { Body2 } from '../../../Text';
-import { TronHistoryItem } from '@tonkeeper/core/src/tronApi';
-import { assertUnreachableSoft } from '@tonkeeper/core/src/utils/types';
+import { TronHistoryItem } from '@tonkeeper/core/dist/tronApi';
+import { assertUnreachableSoft } from '@tonkeeper/core/dist/utils/types';
 import { useTranslation } from '../../../../hooks/translation';
 import { HistoryGridCellFillRow } from '../ton/HistoryGrid';
 

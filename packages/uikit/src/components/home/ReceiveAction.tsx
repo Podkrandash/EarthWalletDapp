@@ -1,4 +1,4 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
 import React, { FC } from 'react';
 import { useAppSdk } from '../../hooks/appSdk';
 import { Action } from './Actions';

@@ -1,4 +1,4 @@
-import { walletVersionText } from '@tonkeeper/core/src/entries/wallet';
+import { walletVersionText } from '@tonkeeper/core/dist/entries/wallet';
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../../hooks/appContext';
@@ -27,7 +27,7 @@ import {
     isAccountTonWalletStandard,
     isAccountVersionEditable,
     isMnemonicAndPassword
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { useBatteryEnabledConfig } from '../../state/battery';
 import { useCanViewTwoFA } from '../../state/two-fa';
 

@@ -1,4 +1,4 @@
-import { CarouselApp } from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+import { CarouselApp } from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
 import { ComponentProps, FC } from 'react';
 import styled from 'styled-components';
 import { Body3, Label2 } from '../Text';

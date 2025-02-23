@@ -10,7 +10,7 @@ import { Body1Body2Responsive, Body3, H2Label2Responsive, Label2 } from '../../T
 import { useTranslation } from '../../../hooks/translation';
 import { ListBlockDesktopAdaptive, ListItem, ListItemPayload } from '../../List';
 import { Checkbox } from '../../fields/Checkbox';
-import { TonWalletConfig } from '@tonkeeper/core/src/entries/wallet';
+import { TonWalletConfig } from '@tonkeeper/core/dist/entries/wallet';
 import { Button } from '../../fields/Button';
 import { useAppContext } from '../../../hooks/appContext';
 import { useBatteryUnitTonRate } from '../../../state/battery';

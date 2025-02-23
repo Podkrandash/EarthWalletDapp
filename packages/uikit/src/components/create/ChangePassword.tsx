@@ -7,7 +7,7 @@ import { Button } from '../fields/Button';
 import { Input } from '../fields/Input';
 import { Notification, NotificationBlock } from '../Notification';
 import { usePasswordStorage } from '../../hooks/useStorage';
-import { validatePassword } from '@tonkeeper/core/src/service/passwordService';
+import { validatePassword } from '@tonkeeper/core/dist/service/passwordService';
 
 const Block = styled.div`
     display: flex;

@@ -1,5 +1,5 @@
-import { NFT } from '@tonkeeper/core/src/entries/nft';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { NFT } from '@tonkeeper/core/dist/entries/nft';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import React, { FC } from 'react';
 import { useAppSdk } from '../../../hooks/appSdk';
 import { useTranslation } from '../../../hooks/translation';

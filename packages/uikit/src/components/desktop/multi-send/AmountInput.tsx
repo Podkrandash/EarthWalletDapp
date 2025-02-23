@@ -6,14 +6,14 @@ import {
     replaceTypedDecimalSeparator,
     seeIfValueValid
 } from '../../transfer/amountView/AmountViewUI';
-import { formatSendValue, isNumeric, removeGroupSeparator } from '@tonkeeper/core/src/utils/send';
-import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
+import { formatSendValue, isNumeric, removeGroupSeparator } from '@tonkeeper/core/dist/utils/send';
+import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
 import BigNumber from 'bignumber.js';
 import { formatter } from '../../../hooks/balance';
 import { InputBlockStyled, InputFieldStyled } from './InputStyled';
 import styled, { css } from 'styled-components';
 import { Body2 } from '../../Text';
-import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 
 const AmountInputFieldStyled = styled(InputFieldStyled)<{ color?: string }>`
     text-align: right;

@@ -4,7 +4,7 @@ import { Label2 } from '../../components/Text';
 import { MultiSendTable } from '../../components/desktop/multi-send/MultiSendTable';
 import { MultiSendList, useUserMultiSendLists } from '../../state/multiSend';
 import { useNavigate, useParams } from 'react-router-dom';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 
 const PageWrapper = styled.div`
     overflow: auto;

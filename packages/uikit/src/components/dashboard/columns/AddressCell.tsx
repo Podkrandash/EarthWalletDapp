@@ -1,7 +1,7 @@
 import { Body2 } from '../../Text';
 import { FC } from 'react';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
-import { Network } from '@tonkeeper/core/src/entries/network';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 import styled from 'styled-components';
 import { CopyButton } from '../../CopyButton';
 

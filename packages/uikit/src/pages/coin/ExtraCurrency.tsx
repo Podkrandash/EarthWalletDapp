@@ -1,6 +1,6 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { ExtraCurrency } from '@tonkeeper/core/src/tonApiV2';
-import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { ExtraCurrency } from '@tonkeeper/core/dist/tonApiV2';
+import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
 import { FC, useMemo, useRef } from 'react';
 import { InnerBody } from '../../components/Body';
 import { CoinSkeletonPage } from '../../components/Skeleton';

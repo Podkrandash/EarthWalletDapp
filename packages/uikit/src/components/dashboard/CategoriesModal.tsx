@@ -16,7 +16,7 @@ import { Badge } from '../shared';
 import { useProState } from '../../state/pro';
 import { ProNotification } from '../pro/ProNotification';
 import { useDisclosure } from '../../hooks/useDisclosure';
-import { DashboardColumn } from '@tonkeeper/core/src/entries/dashboard';
+import { DashboardColumn } from '@tonkeeper/core/dist/entries/dashboard';
 import { useTranslation } from '../../hooks/translation';
 import { HideOnReview } from '../ios/HideOnReview';
 

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Action } from '@tonkeeper/core/src/tonApiV2';
+import { Action } from '@tonkeeper/core/dist/tonApiV2';
 import {
     ActionRow,
     ErrorRow,
@@ -8,8 +8,8 @@ import {
     HistoryCellAmount,
     HistoryCellComment
 } from './HistoryCell';
-import { eqAddresses } from '@tonkeeper/core/src/utils/address';
-import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { eqAddresses } from '@tonkeeper/core/dist/utils/address';
+import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
 import { CodeIcon } from '../../../Icon';
 import { useTranslation } from '../../../../hooks/translation';
 import { useActiveWallet } from '../../../../state/wallet';

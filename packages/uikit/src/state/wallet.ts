@@ -19,21 +19,21 @@ import {
     isAccountTronCompatible,
     isAccountVersionEditable,
     isMnemonicAndPassword
-} from '@tonkeeper/core/src/entries/account';
-import { Network } from '@tonkeeper/core/src/entries/network';
-import { AuthKeychain, MnemonicType } from '@tonkeeper/core/src/entries/password';
+} from '@tonkeeper/core/dist/entries/account';
+import { Network } from '@tonkeeper/core/dist/entries/network';
+import { AuthKeychain, MnemonicType } from '@tonkeeper/core/dist/entries/password';
 import {
     isStandardTonWallet,
     TonWalletConfig,
     TonWalletStandard,
     WalletId,
     WalletVersion
-} from '@tonkeeper/core/src/entries/wallet';
+} from '@tonkeeper/core/dist/entries/wallet';
 import {
     getActiveWalletConfig,
     setActiveWalletConfig
-} from '@tonkeeper/core/src/service/wallet/configService';
-import { walletContract } from '@tonkeeper/core/src/service/wallet/contractService';
+} from '@tonkeeper/core/dist/service/wallet/configService';
+import { walletContract } from '@tonkeeper/core/dist/service/wallet/contractService';
 import {
     createMAMAccountByMnemonic,
     createMultisigTonAccount,
@@ -48,9 +48,9 @@ import {
     mamAccountToMamAccountWithTron,
     standardTonAccountToAccountWithTron,
     tronWalletByTonMnemonic
-} from '@tonkeeper/core/src/service/walletService';
-import { Account as TonapiAccount, AccountsApi } from '@tonkeeper/core/src/tonApiV2';
-import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
+} from '@tonkeeper/core/dist/service/walletService';
+import { Account as TonapiAccount, AccountsApi } from '@tonkeeper/core/dist/tonApiV2';
+import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
 import { useMemo } from 'react';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';
@@ -62,12 +62,12 @@ import {
     encryptWalletSecret,
     seeIfMnemonicValid,
     walletSecretToString
-} from '@tonkeeper/core/src/service/mnemonicService';
+} from '@tonkeeper/core/dist/service/mnemonicService';
 import { useAccountsStateQuery, useAccountsState } from './accounts';
 import { useGlobalPreferences } from './global-preferences';
 import { useDeleteFolder } from './folders';
 import { useRemoveAccountTwoFAData } from './two-fa';
-import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
+import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
 import { useIsTronEnabledGlobally } from './tron/tron';
 
 export { useAccountsStateQuery, useAccountsState };

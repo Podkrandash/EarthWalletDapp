@@ -1,6 +1,6 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { Suggestion } from '@tonkeeper/core/src/entries/suggestion';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { Suggestion } from '@tonkeeper/core/dist/entries/suggestion';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import React, { FC, useMemo } from 'react';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';

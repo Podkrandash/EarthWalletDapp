@@ -1,9 +1,9 @@
-import { TonRecipient } from '@tonkeeper/core/src/entries/send';
+import { TonRecipient } from '@tonkeeper/core/dist/entries/send';
 import {
     formatAddress,
     seeIfValidTonAddress,
     toShortValue
-} from '@tonkeeper/core/src/utils/common';
+} from '@tonkeeper/core/dist/utils/common';
 import React, { ForwardedRef, forwardRef, useCallback, useEffect, useRef, useState } from 'react';
 import { ErrorOption, UseFormSetError } from 'react-hook-form';
 import styled from 'styled-components';
@@ -14,12 +14,12 @@ import { useAsyncValidator } from '../../hooks/useAsyncValidator';
 import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';
 import { IconButton } from './IconButton';
 import { useAppContext } from '../../hooks/appContext';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
 import { seeIfInvalidDns } from '../transfer/RecipientView';
-import { DNSApi } from '@tonkeeper/core/src/tonApiV2';
+import { DNSApi } from '@tonkeeper/core/dist/tonApiV2';
 import { TextareaAutosize } from './TextareaAutosize';
 import { InputBlock, Label } from './Input';
-import { userInputAddressIsBounceable } from '@tonkeeper/core/src/service/ton-blockchain/utils';
+import { userInputAddressIsBounceable } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
 import { useActiveApi } from '../../state/wallet';
 
 const SpinnerRingStyled = styled(SpinnerRing)`

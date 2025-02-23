@@ -1,4 +1,4 @@
-import { AccountConnection } from '@tonkeeper/core/src/service/tonConnect/connectionService';
+import { AccountConnection } from '@tonkeeper/core/dist/service/tonConnect/connectionService';
 import { FC, useState } from 'react';
 import { styled } from 'styled-components';
 import { useTranslation } from '../../hooks/translation';

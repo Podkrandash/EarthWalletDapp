@@ -1,4 +1,4 @@
-import { validatePassword } from '@tonkeeper/core/src/service/passwordService';
+import { validatePassword } from '@tonkeeper/core/dist/service/passwordService';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useAppSdk } from '../../hooks/appSdk';

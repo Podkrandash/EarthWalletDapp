@@ -1,5 +1,5 @@
-import { ConnectItemReply, DAppManifest } from '@tonkeeper/core/src/entries/tonConnect';
-import { TonConnectParams } from '@tonkeeper/core/src/service/tonConnect/connectionService';
+import { ConnectItemReply, DAppManifest } from '@tonkeeper/core/dist/entries/tonConnect';
+import { TonConnectParams } from '@tonkeeper/core/dist/service/tonConnect/connectionService';
 import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useRequestNotificationAnalytics } from '../../hooks/amplitude';
@@ -7,8 +7,8 @@ import { useAppSdk } from '../../hooks/appSdk';
 import { ScanIcon } from '../Icon';
 import { TonConnectNotification } from './TonConnectNotification';
 import { useResponseConnectionMutation, useGetConnectInfo } from './connectHook';
-import { Account } from '@tonkeeper/core/src/entries/account';
-import { WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { Account } from '@tonkeeper/core/dist/entries/account';
+import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
 
 const ScanBlock = styled.div`
     position: absolute;

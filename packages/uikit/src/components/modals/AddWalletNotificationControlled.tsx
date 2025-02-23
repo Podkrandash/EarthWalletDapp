@@ -5,7 +5,7 @@ import { AddWalletContent, addWalletMethod, AddWalletMethod } from '../create/Ad
 import styled, { css } from 'styled-components';
 import { Body1, Body2Class, H2, Label2Class } from '../Text';
 import { useTranslation } from '../../hooks/translation';
-import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
+import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
 import { CreateMultisig } from '../create/Multisig';
 import { AddWalletContext } from '../create/AddWalletContext';
 import { useAtom } from '../../libs/atom';
@@ -19,8 +19,8 @@ import { CreateSignerWallet } from '../../pages/import/CreateSignerWallet';
 import { CreateKeystoneWallet } from '../../pages/import/CreateKeystoneWallet';
 import { CreateLedgerWallet } from '../../pages/import/CreateLedgerWallet';
 import { useAppSdk } from '../../hooks/appSdk';
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
-import { Network } from '@tonkeeper/core/src/entries/network';
+import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 import { ImportTestnetWallet } from '../../pages/import/ImportTestnetWallet';
 
 const { hook, paramsControl } = createModalControl<{ walletType?: AddWalletMethod } | undefined>();

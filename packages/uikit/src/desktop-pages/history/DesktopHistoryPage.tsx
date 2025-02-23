@@ -12,7 +12,7 @@ import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';
 import { useActiveConfig, useActiveWallet } from '../../state/wallet';
 import { Label2 } from '../../components/Text';
-import { formatAddress } from '@tonkeeper/core/src/utils/common';
+import { formatAddress } from '@tonkeeper/core/dist/utils/common';
 import { LinkOutIcon, SpinnerRing } from '../../components/Icon';
 import { useFetchFilteredActivity, useScrollMonitor } from '../../state/activity';
 import {

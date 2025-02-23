@@ -1,8 +1,8 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { ProState, ProStateAuthorized, ProSubscription } from '@tonkeeper/core/src/entries/pro';
-import { RecipientData } from '@tonkeeper/core/src/entries/send';
-import { TonWalletStandard, isStandardTonWallet } from '@tonkeeper/core/src/entries/wallet';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { ProState, ProStateAuthorized, ProSubscription } from '@tonkeeper/core/dist/entries/pro';
+import { RecipientData } from '@tonkeeper/core/dist/entries/send';
+import { TonWalletStandard, isStandardTonWallet } from '@tonkeeper/core/dist/entries/wallet';
 import {
     authViaTonConnect,
     createProServiceInvoice,
@@ -16,8 +16,8 @@ import {
     setBackupState,
     startProServiceTrial,
     waitProServiceInvoice
-} from '@tonkeeper/core/src/service/proService';
-import { InvoicesInvoice, OpenAPI } from '@tonkeeper/core/src/tonConsoleApi';
+} from '@tonkeeper/core/dist/service/proService';
+import { InvoicesInvoice, OpenAPI } from '@tonkeeper/core/dist/tonConsoleApi';
 import { ProServiceTier } from '@tonkeeper/core/src/tonConsoleApi/models/ProServiceTier';
 import { useMemo } from 'react';
 import { useAppContext, useAppPlatform } from '../hooks/appContext';
@@ -32,9 +32,9 @@ import {
     getAccountByWalletById,
     getWalletById,
     isAccountTonWalletStandard
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { useActiveApi } from './wallet';
-import { AppKey } from '@tonkeeper/core/src/Keys';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
 
 export const useProBackupState = () => {
     const sdk = useAppSdk();

@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
 import { CalculatedSwap } from './useCalculatedSwap';
-import type { SwapService } from '@tonkeeper/core/src/swapsApi';
-import { assertUnreachable, NonNullableFields } from '@tonkeeper/core/src/utils/types';
+import type { SwapService } from '@tonkeeper/core/dist/swapsApi';
+import { assertUnreachable, NonNullableFields } from '@tonkeeper/core/dist/utils/types';
 import { Address } from '@ton/core';
 import { useSwapsConfig } from './useSwapsConfig';
 import BigNumber from 'bignumber.js';
@@ -10,7 +10,7 @@ import { useActiveConfig, useActiveTonWalletConfig, useActiveWallet } from '../w
 import {
     TON_CONNECT_MSG_VARIANTS_ID,
     TonConnectTransactionPayload
-} from '@tonkeeper/core/src/entries/tonConnect';
+} from '@tonkeeper/core/dist/entries/tonConnect';
 import { useBatteryBalance, useBatteryServiceConfig } from '../battery';
 
 export function useEncodeSwap() {

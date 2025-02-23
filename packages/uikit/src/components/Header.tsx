@@ -1,6 +1,11 @@
-import { Account, getNetworkByAccount, isAccountTonWalletStandard } from '@tonkeeper/core/src/entries/account';
-import { WalletVersion, TonContract, DerivationItemNamed, sortWalletsByVersion, sortDerivationsByIndex } from '@tonkeeper/core/src/entries/wallet';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { Account, getNetworkByAccount } from '@tonkeeper/core/dist/entries/account';
+import {
+    DerivationItemNamed,
+    TonContract,
+    sortDerivationsByIndex,
+    sortWalletsByVersion
+} from '@tonkeeper/core/dist/entries/wallet';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import { FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle, css } from 'styled-components';
@@ -23,7 +28,8 @@ import { ScanButton } from './connect/ScanButton';
 import { useAddWalletNotification } from './modals/AddWalletNotificationControlled';
 import { SkeletonText } from './shared/Skeleton';
 import { WalletEmoji } from './shared/emoji/WalletEmoji';
-import { notNullish } from '@tonkeeper/core/src/utils/types';
+import { isAccountTonWalletStandard } from '@tonkeeper/core/dist/entries/account';
+import { notNullish } from '@tonkeeper/core/dist/utils/types';
 
 import { useSideBarItems } from '../state/folders';
 import { useTwoFAWalletConfig } from '../state/two-fa';
@@ -194,23 +200,27 @@ const DropDownPayload: FC<{ onClose: () => void; onCreate: () => void }> = ({
 }) => {
     const navigate = useNavigate();
     const { t } = useTranslation();
-    const accountsWallets = useSideBarItems()
+    const accountsWallets: {
+        wallet: TonContract;
+        account: Account;
+        derivation?: DerivationItemNamed;
+    }[] = useSideBarItems()
         .map(i => (i.type === 'folder' ? i.accounts : [i]))
         .flat()
         .filter(notNullish)
         .filter(a => a.type !== 'ton-multisig')
-        .flatMap<{ wallet: TonContract; account: Account; derivation?: DerivationItemNamed }>(a => {
+        .flatMap(a => {
             if (a.type === 'ledger') {
                 return a.derivations
                     .slice()
                     .sort(sortDerivationsByIndex)
-                    .flatMap(d => {
-                        if ('name' in d && 'emoji' in d) {
-                            const wallet = d.tonWallets.find(w => w.id === d.activeTonWalletId);
-                            return wallet ? [{ wallet, account: a, derivation: d as DerivationItemNamed }] : [];
-                        }
-                        return [];
-                    });
+                    .map(
+                        d =>
+                            ({
+                                wallet: d.tonWallets.find(w => w.id === d.activeTonWalletId)!,
+                                account: a
+                            } as { wallet: TonContract; account: Account })
+                    );
             }
 
             if (!isAccountTonWalletStandard(a)) {

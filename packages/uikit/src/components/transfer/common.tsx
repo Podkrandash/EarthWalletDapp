@@ -1,9 +1,9 @@
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { tokenToTonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { TonRecipientData } from '@tonkeeper/core/src/entries/send';
-import { TonTransferParams } from '@tonkeeper/core/src/service/deeplinkingService';
-import { Account, JettonsBalances } from '@tonkeeper/core/src/tonApiV2';
+import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { tokenToTonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { TonRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { TonTransferParams } from '@tonkeeper/core/dist/service/deeplinkingService';
+import { Account, JettonsBalances } from '@tonkeeper/core/dist/tonApiV2';
 import React, { FC, PropsWithChildren } from 'react';
 import styled, { css, useTheme } from 'styled-components';
 import { useAppContext } from '../../hooks/appContext';
@@ -16,8 +16,8 @@ import { Button } from '../fields/Button';
 import { Center, Title } from './amountView/AmountViewUI';
 import { AmountState } from './amountView/amountState';
 import { useIsActiveWalletLedger } from '../../state/ledger';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { formatAddress, seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { formatAddress, seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
 import { useIsActiveAccountMultisig } from '../../state/multisig';
 
 export const duration = 300;

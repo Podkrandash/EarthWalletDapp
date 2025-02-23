@@ -1,4 +1,4 @@
-import { throttle } from '@tonkeeper/core/src/utils/common';
+import { throttle } from '@tonkeeper/core/dist/utils/common';
 import { useEffect } from 'react';
 
 export const useFetchNext = (

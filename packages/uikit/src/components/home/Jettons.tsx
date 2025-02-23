@@ -1,5 +1,5 @@
-import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
-import { Account, JettonsBalances } from '@tonkeeper/core/src/tonApiV2';
+import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { Account, JettonsBalances } from '@tonkeeper/core/dist/tonApiV2';
 import React, { FC, forwardRef, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../../hooks/appContext';
@@ -14,16 +14,16 @@ import {
     useCanUseTronForActiveWallet
 } from '../../state/tron/tron';
 import { TronAssetComponent, TronAssets } from './TronAssets';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { TronAsset } from '@tonkeeper/core/src/entries/crypto/asset/tron-asset';
-import { isTronAsset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { TronAsset } from '@tonkeeper/core/dist/entries/crypto/asset/tron-asset';
+import { isTronAsset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
 import {
     tonAssetAddressToString,
     TonAsset as TonAssetType
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import { useJettonList } from '../../state/jetton';
-import { eqAddresses } from '@tonkeeper/core/src/utils/address';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { eqAddresses } from '@tonkeeper/core/dist/utils/address';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { Address } from '@ton/core';
 
 export interface TonAssetData {

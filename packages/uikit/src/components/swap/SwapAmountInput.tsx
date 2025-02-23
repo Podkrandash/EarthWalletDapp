@@ -2,14 +2,14 @@ import { FC, useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 import { Num2Class } from '../Text';
 import BigNumber from 'bignumber.js';
-import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
+import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
 import { replaceTypedDecimalSeparator, seeIfValueValid } from '../transfer/amountView/AmountViewUI';
 import {
     formatNumberValue,
     formatSendValue,
     isNumeric,
     removeGroupSeparator
-} from '@tonkeeper/core/src/utils/send';
+} from '@tonkeeper/core/dist/utils/send';
 
 const AmountInputWrapper = styled.input<{ isErrored: boolean }>`
     border: none;

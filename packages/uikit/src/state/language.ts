@@ -1,12 +1,12 @@
 import { useAppSdk } from '../hooks/appSdk';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { AppKey } from '@tonkeeper/core/src/Keys';
-import { Language, localizationText } from '@tonkeeper/core/src/entries/language';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
+import { Language, localizationText } from '@tonkeeper/core/dist/entries/language';
 import { QueryKey } from '../libs/queryKey';
 import { useTranslation } from '../hooks/translation';
-import { DeprecatedAccountState } from '@tonkeeper/core/src/entries/account';
-import { IStorage } from '@tonkeeper/core/src/Storage';
-import { DeprecatedWalletState } from '@tonkeeper/core/src/entries/wallet';
+import { DeprecatedAccountState } from '@tonkeeper/core/dist/entries/account';
+import { IStorage } from '@tonkeeper/core/dist/Storage';
+import { DeprecatedWalletState } from '@tonkeeper/core/dist/entries/wallet';
 
 export const useUserLanguage = () => {
     const sdk = useAppSdk();

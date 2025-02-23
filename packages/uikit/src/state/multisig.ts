@@ -7,9 +7,9 @@ import {
     MultisigApi,
     MultisigOrder,
     Multisigs
-} from '@tonkeeper/core/src/tonApiV2';
+} from '@tonkeeper/core/dist/tonApiV2';
 import { useAccountsState, useActiveAccount, useActiveAccountQuery, useActiveApi } from './wallet';
-import { isStandardTonWallet, WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { isStandardTonWallet, WalletId } from '@tonkeeper/core/dist/entries/wallet';
 import { useMemo, useRef } from 'react';
 import { useCountdown } from '../hooks/useCountDown';
 import {
@@ -17,12 +17,12 @@ import {
     AccountsState,
     AccountTonMultisig,
     getAccountByWalletById
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { useAccountsStorage } from '../hooks/useStorage';
 import { useAppSdk } from '../hooks/appSdk';
-import { AppKey } from '@tonkeeper/core/src/Keys';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
 import { Cell, Dictionary } from '@ton/core';
-import { orderStatus } from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder/multisig-utils';
+import { orderStatus } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder/multisig-utils';
 
 export const useMultisigWalletInfo = (walletAddressRaw: string) => {
     const api = useActiveApi();

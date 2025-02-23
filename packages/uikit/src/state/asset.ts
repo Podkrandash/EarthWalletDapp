@@ -1,21 +1,21 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Address } from '@ton/core';
-import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
-import { Asset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { AssetIdentification } from '@tonkeeper/core/src/entries/crypto/asset/asset-identification';
-import { isBasicAsset, packAssetId } from '@tonkeeper/core/src/entries/crypto/asset/basic-asset';
+import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { Asset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetIdentification } from '@tonkeeper/core/dist/entries/crypto/asset/asset-identification';
+import { isBasicAsset, packAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/basic-asset';
 import {
     KNOWN_TON_ASSETS,
     TON_ASSET,
     TRON_TRX_ASSET,
     TRON_USDT_ASSET
-} from '@tonkeeper/core/src/entries/crypto/asset/constants';
-import { TonAsset, legacyTonAssetId } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { DashboardCellNumeric } from '@tonkeeper/core/src/entries/dashboard';
-import { getDashboardData } from '@tonkeeper/core/src/service/proService';
-import { JettonBalance } from '@tonkeeper/core/src/tonApiV2';
-import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
+} from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TonAsset, legacyTonAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { DashboardCellNumeric } from '@tonkeeper/core/dist/entries/dashboard';
+import { getDashboardData } from '@tonkeeper/core/dist/service/proService';
+import { JettonBalance } from '@tonkeeper/core/dist/tonApiV2';
+import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
 import BigNumber from 'bignumber.js';
 import { useMemo } from 'react';
 import { useAppContext } from '../hooks/appContext';
@@ -33,9 +33,9 @@ import {
 } from './rates';
 import { useTronBalances } from './tron/tron';
 import { useAccountsState, useActiveAccount, useWalletAccountInfo } from './wallet';
-import { Network } from '@tonkeeper/core/src/entries/network';
-import { getNetworkByAccount } from '@tonkeeper/core/src/entries/account';
-import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
+import { Network } from '@tonkeeper/core/dist/entries/network';
+import { getNetworkByAccount } from '@tonkeeper/core/dist/entries/account';
+import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
 
 export function useUserAssetBalance<
     T extends AssetIdentification = AssetIdentification,

@@ -2,12 +2,12 @@ import { useGlobalPreferences, useMutateGlobalPreferences } from './global-prefe
 import { useMutation } from '@tanstack/react-query';
 import { useAccountsState } from './accounts';
 import { useCallback, useLayoutEffect, useMemo, useState } from 'react';
-import { notNullish } from '@tonkeeper/core/src/utils/types';
+import { notNullish } from '@tonkeeper/core/dist/utils/types';
 import {
     Account,
     AccountsFolderStored,
     AccountTonMultisig
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { DropResult, ResponderProvided } from 'react-beautiful-dnd';
 
 export type AccountsFolder = Omit<AccountsFolderStored, 'accounts'> & {

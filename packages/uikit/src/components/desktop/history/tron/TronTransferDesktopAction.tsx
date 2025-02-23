@@ -8,12 +8,12 @@ import {
     HistoryCellComment,
     ErrorRow
 } from '../ton/HistoryCell';
-import { TronHistoryItemTransferAsset } from '@tonkeeper/core/src/tronApi';
+import { TronHistoryItemTransferAsset } from '@tonkeeper/core/dist/tronApi';
 import { useActiveTronWallet } from '../../../../state/tron/tron';
 import styled from 'styled-components';
 import { HistoryGridCell } from '../ton/HistoryGrid';
 import { Body2Class } from '../../../Text';
-import { toShortValue } from '@tonkeeper/core/src/utils/common';
+import { toShortValue } from '@tonkeeper/core/dist/utils/common';
 
 const HistoryCellAccount = styled(HistoryGridCell)`
     ${Body2Class};

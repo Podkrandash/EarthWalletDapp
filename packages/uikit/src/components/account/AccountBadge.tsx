@@ -1,10 +1,10 @@
-import { Account } from '@tonkeeper/core/src/entries/account';
-import { TonContract, WalletId, DerivationItemNamed, WalletVersion, walletVersionText } from '@tonkeeper/core/src/entries/wallet';
+import { Account } from '@tonkeeper/core/dist/entries/account';
+import { WalletId, WalletVersion, walletVersionText } from '@tonkeeper/core/dist/entries/wallet';
 import { FC, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { Badge } from '../shared';
-import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
-import { Network } from '@tonkeeper/core/src/entries/network';
+import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 
 export const NetworkBadge: FC<
     PropsWithChildren<{

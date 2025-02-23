@@ -1,13 +1,13 @@
 import { useMutation } from '@tanstack/react-query';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
-import { TonkeeperIcon } from '../../components/Icon';
+import EarthLogo from '../../components/lottie/EarthLogo';
 import { Button, ButtonRow } from '../../components/fields/Button';
 import { Input } from '../../components/fields/Input';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';
 import { useIsPasswordSet, useMutateDeleteAll, useAccountsState } from '../../state/wallet';
-import { passwordStorage } from '@tonkeeper/core/src/service/passwordService';
+import { passwordStorage } from '@tonkeeper/core/dist/service/passwordService';
 
 const Block = styled.form<{ minHeight?: string }>`
     display: flex;
@@ -30,12 +30,18 @@ const Logo = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: 400%;
-
+    font-size: 128px;
     margin-bottom: 2rem;
+    animation: rotate 3s linear infinite;
 
-    color: ${props => props.theme.accentBlue};
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
 `;
 
 const useMutateUnlock = () => {
@@ -91,7 +97,7 @@ export const PasswordUnlock: FC<{ minHeight?: string }> = ({ minHeight }) => {
     return (
         <Block minHeight={minHeight} onSubmit={onSubmit}>
             <Logo>
-                <TonkeeperIcon />
+                <EarthLogo width="128" />
             </Logo>
             <Input
                 id="unlock-password"

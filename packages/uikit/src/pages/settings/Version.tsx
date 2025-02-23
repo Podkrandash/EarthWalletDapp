@@ -4,13 +4,13 @@ import {
     WalletVersions,
     walletVersionText,
     WalletId
-} from '@tonkeeper/core/src/entries/wallet';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+} from '@tonkeeper/core/dist/entries/wallet';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import {
     AccountId,
     AccountVersionEditable,
     getNetworkByAccount
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { InnerBody } from '../../components/Body';

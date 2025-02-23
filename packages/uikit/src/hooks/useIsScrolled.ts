@@ -1,5 +1,5 @@
 import { RefCallback, useCallback, useLayoutEffect, useRef, useState } from 'react';
-import { throttle } from '@tonkeeper/core/src/utils/common';
+import { throttle } from '@tonkeeper/core/dist/utils/common';
 
 export function useIsScrolled<T extends HTMLElement = HTMLDivElement>(options?: {
     gapTop?: number;

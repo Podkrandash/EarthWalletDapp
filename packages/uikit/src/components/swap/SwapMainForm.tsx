@@ -1,5 +1,5 @@
-import { TonConnectTransactionPayload } from '@tonkeeper/core/src/entries/tonConnect';
-import { NonNullableFields } from '@tonkeeper/core/src/utils/types';
+import { TonConnectTransactionPayload } from '@tonkeeper/core/dist/entries/tonConnect';
+import { NonNullableFields } from '@tonkeeper/core/dist/utils/types';
 import { FC, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { styled, useTheme } from 'styled-components';

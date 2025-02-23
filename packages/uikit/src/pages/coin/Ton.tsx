@@ -1,7 +1,6 @@
-import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
-
-import { Account } from '@tonkeeper/core/src/tonApiV2';
-import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
+import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { Account } from '@tonkeeper/core/dist/tonApiV2';
+import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
 import React, { FC, useMemo, useRef } from 'react';
 import { InnerBody } from '../../components/Body';
 import { CoinSkeletonPage } from '../../components/Skeleton';
@@ -29,7 +28,7 @@ const TonHeader: FC<{ info: Account }> = ({ info: { balance } }) => {
             symbol="TON"
             price={fiatAmount}
             description={t('Ton_page_description')}
-            image="https://wallet.tonkeeper.com/img/toncoin.svg"
+            image="https://earth-wallet.com/img/toncoin.svg"
         />
     );
 };

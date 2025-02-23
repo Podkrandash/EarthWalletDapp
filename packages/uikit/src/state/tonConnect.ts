@@ -3,7 +3,7 @@ import {
     ConnectItemReply,
     ConnectRequest,
     DAppManifest
-} from '@tonkeeper/core/src/entries/tonConnect';
+} from '@tonkeeper/core/dist/entries/tonConnect';
 import {
     createTonProofItem,
     getAppConnections,
@@ -11,14 +11,14 @@ import {
     tonConnectProofPayload,
     toTonAddressItemReply,
     toTonProofItemReply
-} from '@tonkeeper/core/src/service/tonConnect/connectService';
+} from '@tonkeeper/core/dist/service/tonConnect/connectService';
 import {
     AccountConnection,
     getTonWalletConnections,
     saveAccountConnection,
     setAccountConnection
-} from '@tonkeeper/core/src/service/tonConnect/connectionService';
-import { getLastEventId } from '@tonkeeper/core/src/service/tonConnect/httpBridge';
+} from '@tonkeeper/core/dist/service/tonConnect/connectionService';
+import { getLastEventId } from '@tonkeeper/core/dist/service/tonConnect/httpBridge';
 import { useAppSdk } from '../hooks/appSdk';
 import { useTranslation } from '../hooks/translation';
 import { subject } from '../libs/atom';
@@ -29,18 +29,18 @@ import {
     TonContract,
     WalletId,
     WalletVersion
-} from '@tonkeeper/core/src/entries/wallet';
-import { IStorage } from '@tonkeeper/core/src/Storage';
+} from '@tonkeeper/core/dist/entries/wallet';
+import { IStorage } from '@tonkeeper/core/dist/Storage';
 import {
     Account,
     getNetworkByAccount,
     isAccountTonWalletStandard
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { useCheckTouchId } from './password';
 import { useAccountsState, useAccountsStateQuery, useActiveWallet } from './wallet';
 import { TxConfirmationCustomError } from '../libs/errors/TxConfirmationCustomError';
-import { getServerTime } from '@tonkeeper/core/src/service/ton-blockchain/utils';
-import { getContextApiByNetwork } from '@tonkeeper/core/src/service/walletService';
+import { getServerTime } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
+import { getContextApiByNetwork } from '@tonkeeper/core/dist/service/walletService';
 import { useAppContext } from '../hooks/appContext';
 
 export const useAppTonConnectConnections = () => {

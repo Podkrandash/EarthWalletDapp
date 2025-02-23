@@ -3,15 +3,15 @@ import {
     isTon,
     TonAsset,
     TonAssetAddress
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import type { SwapService } from '@tonkeeper/core/src/swapsApi';
-import { AccountsApi, JettonsApi } from '@tonkeeper/core/src/tonApiV2';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
-import { packAssetId } from '@tonkeeper/core/src/entries/crypto/asset/basic-asset';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import type { SwapService } from '@tonkeeper/core/dist/swapsApi';
+import { AccountsApi, JettonsApi } from '@tonkeeper/core/dist/tonApiV2';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { packAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/basic-asset';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
 import { Address } from '@ton/core';
-import { eqAddresses } from '@tonkeeper/core/src/utils/address';
+import { eqAddresses } from '@tonkeeper/core/dist/utils/address';
 import { useMemo } from 'react';
 import { useAppContext } from '../../hooks/appContext';
 import {
@@ -22,8 +22,8 @@ import {
     useIsSwapFormNotCompleted
 } from './useSwapForm';
 import { QueryKey } from '../../libs/queryKey';
-import { unShiftedDecimals } from '@tonkeeper/core/src/utils/balance';
-import { APIConfig } from '@tonkeeper/core/src/entries/apis';
+import { unShiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { APIConfig } from '@tonkeeper/core/dist/entries/apis';
 import { atom, useAtom } from '../../libs/atom';
 import { useSwapsConfig } from './useSwapsConfig';
 import { useActiveApi } from '../wallet';

@@ -1,5 +1,5 @@
 import { MutableRefObject, Ref, RefCallback } from 'react';
-import { intlLocale } from '@tonkeeper/core/src/entries/language';
+import { intlLocale } from '@tonkeeper/core/dist/entries/language';
 
 export const scrollToTop = () => {
     if (!document.body.classList.contains('top')) {

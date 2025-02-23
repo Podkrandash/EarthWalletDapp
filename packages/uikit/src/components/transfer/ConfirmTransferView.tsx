@@ -1,5 +1,5 @@
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { RecipientData } from '@tonkeeper/core/src/entries/send';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { RecipientData } from '@tonkeeper/core/dist/entries/send';
 import React, { FC, PropsWithChildren, useEffect, useMemo, useState } from 'react';
 import { useEstimateTransfer } from '../../hooks/blockchain/useEstimateTransfer';
 import { useSendTransfer } from '../../hooks/blockchain/useSendTransfer';
@@ -11,16 +11,16 @@ import {
 import {
     TonAsset,
     tonAssetAddressToString
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { TON_ASSET, TON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { TON_ASSET, TON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { useAssetWeiBalance } from '../../state/home';
-import { JettonEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/jetton-encoder';
+import { JettonEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/jetton-encoder';
 import BigNumber from 'bignumber.js';
-import { RatesApi } from '@tonkeeper/core/src/tonApiV2';
+import { RatesApi } from '@tonkeeper/core/dist/tonApiV2';
 import { useAppContext } from '../../hooks/appContext';
-import { isTonAsset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
+import { isTonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
 import { useQuery } from '@tanstack/react-query';
-import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
+import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
 import { useActiveApi } from '../../state/wallet';
 
 const gaslessApproximateFee = (asset: TonAsset, tokenToTonRate: number) => {

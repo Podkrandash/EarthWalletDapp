@@ -2,9 +2,9 @@ import {
     isStandardTonWallet,
     walletVersionText,
     TonContract
-} from '@tonkeeper/core/src/entries/wallet';
-import { Account } from '@tonkeeper/core/src/entries/account';
-import { Network } from '@tonkeeper/core/src/entries/network';
+} from '@tonkeeper/core/dist/entries/wallet';
+import { Account } from '@tonkeeper/core/dist/entries/account';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 
 export interface Analytics {
     pageView: (location: string) => void;

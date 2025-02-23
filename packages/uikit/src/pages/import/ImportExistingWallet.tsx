@@ -16,15 +16,15 @@ import {
     AccountMAM,
     AccountTonMnemonic,
     getAccountByWalletById
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import {
     createStandardTonAccountByMnemonic,
     getMAMAccountWalletsInfo,
     getStandardTonWalletVersions
-} from '@tonkeeper/core/src/service/walletService';
+} from '@tonkeeper/core/dist/service/walletService';
 import { useAppContext } from '../../hooks/appContext';
-import { WalletId, WalletVersion } from '@tonkeeper/core/src/entries/wallet';
-import { Account } from '@tonkeeper/core/src/entries/account';
+import { WalletId, WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
+import { Account } from '@tonkeeper/core/dist/entries/account';
 import { AccountIsAlreadyAdded } from '../../components/create/AccountIsAlreadyAdded';
 import { useConfirmDiscardNotification } from '../../components/modals/ConfirmDiscardNotificationControlled';
 import { AddWalletContext } from '../../components/create/AddWalletContext';
@@ -40,9 +40,9 @@ import { mnemonicValidate } from '@ton/crypto';
 import {
     mnemonicToKeypair,
     validateBip39Mnemonic
-} from '@tonkeeper/core/src/service/mnemonicService';
-import { MnemonicType } from '@tonkeeper/core/src/entries/password';
-import { Network } from '@tonkeeper/core/src/entries/network';
+} from '@tonkeeper/core/dist/service/mnemonicService';
+import { MnemonicType } from '@tonkeeper/core/dist/entries/password';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 import { useIsTronEnabledGlobally } from '../../state/tron/tron';
 
 const useProcessMnemonic = () => {

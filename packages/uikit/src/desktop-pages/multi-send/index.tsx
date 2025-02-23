@@ -6,7 +6,7 @@ import { ListBlock, ListItem } from '../../components/List';
 import { ChevronRightIcon, CloseIcon, SpinnerIcon } from '../../components/Icon';
 import { MultiSendList, useUserMultiSendLists } from '../../state/multiSend';
 import { useRate } from '../../state/rates';
-import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import { SkeletonText } from '../../components/shared/Skeleton';
 import { DesktopMultiSendFormPage } from './MultiSendFormPage';
 import { Navigate, Route, Routes, useNavigate, useParams } from 'react-router-dom';
@@ -14,12 +14,12 @@ import { getWillBeMultiSendValue } from '../../components/desktop/multi-send/uti
 import { ErrorBoundary } from 'react-error-boundary';
 import { fallbackRenderOver } from '../../components/Error';
 import { useAssetWeiBalance } from '../../state/home';
-import { unShiftedDecimals } from '@tonkeeper/core/src/utils/balance';
+import { unShiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
 import { useTranslation } from '../../hooks/translation';
 import { useDisclosure } from '../../hooks/useDisclosure';
 import { ImportListNotification } from '../../components/desktop/multi-send/import-list/ImportListNotification';
 import { useActiveWallet } from '../../state/wallet';
-import { isStandardTonWallet } from '@tonkeeper/core/src/entries/wallet';
+import { isStandardTonWallet } from '@tonkeeper/core/dist/entries/wallet';
 import { AppRoute } from '../../libs/routes';
 
 const PageWrapper = styled.div`

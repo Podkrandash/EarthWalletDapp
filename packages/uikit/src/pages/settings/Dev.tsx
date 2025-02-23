@@ -5,7 +5,7 @@ import { SettingsItem, SettingsList } from '../../components/settings/SettingsLi
 import { useAppSdk } from '../../hooks/appSdk';
 import { CloseIcon, SpinnerIcon, PlusIcon } from '../../components/Icon';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { AppKey } from '@tonkeeper/core/src/Keys';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
 import { ListBlock, ListItem, ListItemPayload } from '../../components/List';
 import { Body3, Label1 } from '../../components/Text';
 import { Switch } from '../../components/fields/Switch';

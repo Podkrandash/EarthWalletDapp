@@ -1,5 +1,5 @@
-import { Action } from '@tonkeeper/core/src/tonApiV2';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { Action } from '@tonkeeper/core/dist/tonApiV2';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import React, { FC } from 'react';
 import { useTranslation } from '../../../hooks/translation';
 import { ListBlock } from '../../List';

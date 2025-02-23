@@ -1,5 +1,5 @@
 import { useQueryClient } from '@tanstack/react-query';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useAppContext } from '../../hooks/appContext';
@@ -16,11 +16,11 @@ import {
     AccountMAM,
     AccountTonMnemonic,
     getNetworkByAccount
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { DropDownContent, DropDownItem, DropDownItemsDivider } from '../DropDown';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
 import { SelectDropDown } from '../fields/Select';
-import { TON_ASSET, TRON_TRX_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TON_ASSET, TRON_TRX_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { ChevronDownIcon, CopyIcon, DoneIcon } from '../Icon';
 import { useActiveTronWallet } from '../../state/tron/tron';
 

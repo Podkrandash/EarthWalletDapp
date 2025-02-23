@@ -7,7 +7,7 @@ import {
     LedgerTonProofRequest,
     LedgerTonProofResponse,
     LedgerTransaction
-} from '@tonkeeper/core/src/service/ledger/connector';
+} from '@tonkeeper/core/dist/service/ledger/connector';
 import { useConnectLedgerMutation } from '../state/ledger';
 import styled from 'styled-components';
 import { Cell } from '@ton/core';

@@ -1,9 +1,9 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { Asset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
-import { TON_ASSET, TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
-import { TonAsset, legacyTonAssetId } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { getDecimalSeparator, getGroupSeparator } from '@tonkeeper/core/src/utils/formatting';
-import { formatSendValue, isNumeric } from '@tonkeeper/core/src/utils/send';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { Asset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
+import { TON_ASSET, TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TonAsset, legacyTonAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { getDecimalSeparator, getGroupSeparator } from '@tonkeeper/core/dist/utils/formatting';
+import { formatSendValue, isNumeric } from '@tonkeeper/core/dist/utils/send';
 import BigNumber from 'bignumber.js';
 import { Reducer } from 'react';
 import { inputToBigNumber, replaceTypedDecimalSeparator, seeIfValueValid } from './AmountViewUI';

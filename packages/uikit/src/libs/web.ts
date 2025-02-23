@@ -1,4 +1,4 @@
-import { getWindow } from '@tonkeeper/core/src/service/telegramOauth';
+import { getWindow } from '@tonkeeper/core/dist/service/telegramOauth';
 
 export function getUserOS() {
     if (navigator.userAgent.includes('Win')) {

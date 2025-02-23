@@ -1,4 +1,4 @@
-import { ActionStatusEnum } from '@tonkeeper/core/src/tonApiV2';
+import { ActionStatusEnum } from '@tonkeeper/core/dist/tonApiV2';
 import React, { FC, PropsWithChildren } from 'react';
 import { useFormatFiat, useUSDTRate } from '../../../state/rates';
 import { ListBlock } from '../../List';
@@ -11,7 +11,7 @@ import {
 } from '../NotificationCommon';
 import { useActiveTronWallet } from '../../../state/tron/tron';
 import { ActivityNotificationDataTron } from '../ton/ActivityNotification';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 
 const TronActionDetailsBlock: FC<PropsWithChildren<{ transactionHash: string }>> = ({
     transactionHash,

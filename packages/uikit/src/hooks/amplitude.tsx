@@ -1,4 +1,4 @@
-import { DAppManifest } from '@tonkeeper/core/src/entries/tonConnect';
+import { DAppManifest } from '@tonkeeper/core/dist/entries/tonConnect';
 import React, { useCallback, useContext, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Analytics } from './analytics';

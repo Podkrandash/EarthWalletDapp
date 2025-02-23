@@ -1,4 +1,4 @@
-import { OpenAPI, SwapService } from '@tonkeeper/core/src/swapsApi';
+import { OpenAPI, SwapService } from '@tonkeeper/core/dist/swapsApi';
 import { useActiveConfig } from '../wallet';
 
 export const useSwapsConfig = () => {

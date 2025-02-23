@@ -1,7 +1,7 @@
 import {
     TonendpoinFiatCategory,
     TonendpoinFiatItem
-} from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+} from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
 import React, { FC, useCallback, useMemo, useState } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import styled, { css } from 'styled-components';

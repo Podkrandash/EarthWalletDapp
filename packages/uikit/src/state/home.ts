@@ -1,24 +1,24 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { AssetIdentification } from '@tonkeeper/core/src/entries/crypto/asset/asset-identification';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { AssetIdentification } from '@tonkeeper/core/dist/entries/crypto/asset/asset-identification';
 import BigNumber from 'bignumber.js';
 import { useMemo } from 'react';
 import { AssetData } from '../components/home/Jettons';
 import { useJettonList } from './jetton';
 import { useActiveTonWalletConfig, useActiveWallet, useWalletAccountInfo } from './wallet';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
 import {
     TON_ASSET,
     TRON_TRX_ASSET,
     TRON_USDT_ASSET
-} from '@tonkeeper/core/src/entries/crypto/asset/constants';
+} from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import {
     extraBalanceToTonAsset,
     jettonToTonAssetAmount,
     TonAsset
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { packAssetId } from '@tonkeeper/core/src/entries/crypto/asset/basic-asset';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { packAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/basic-asset';
 import { useTronBalances } from './tron/tron';
-import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
+import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
 import { Address } from '@ton/core';
 
 export const useAssets = () => {

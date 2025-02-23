@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { Language, localizationText } from '@tonkeeper/core/src/entries/language';
-import { Network } from '@tonkeeper/core/src/entries/network';
+import { Language, localizationText } from '@tonkeeper/core/dist/entries/language';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 import {
     TonendpoinFiatCategory,
     TonendpoinFiatItem,
@@ -8,12 +8,12 @@ import {
     TonendpointConfig,
     getServerConfig,
     BootParams
-} from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+} from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
 import { useMemo } from 'react';
 import { useAppContext } from '../hooks/appContext';
 import { QueryKey, TonkeeperApiKey } from '../libs/queryKey';
 import { useUserCountry } from './country';
-import { TargetEnv } from '@tonkeeper/core/src/AppSdk';
+import { TargetEnv } from '@tonkeeper/core/dist/AppSdk';
 
 export const useTonendpoint = (options: {
     targetEnv: TargetEnv;

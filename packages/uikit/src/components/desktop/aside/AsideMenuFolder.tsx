@@ -9,7 +9,7 @@ import { useManageFolderNotification } from '../../modals/ManageFolderNotificati
 import { useDisclosure } from '../../../hooks/useDisclosure';
 import { Accordion } from '../../shared/Accordion';
 import { AsideMenuAccount } from './AsideMenuAccount';
-import { WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
 import { AccountsFolder, useSetFolderLastIsOpened } from '../../../state/folders';
 
 const FolderIconStyled = styled(FolderIcon)`

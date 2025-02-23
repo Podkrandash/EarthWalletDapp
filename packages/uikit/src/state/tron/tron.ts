@@ -4,15 +4,15 @@ import { QueryKey } from '../../libs/queryKey';
 import { DefaultRefetchInterval } from '../tonendpoint';
 import { useActiveAccount, useActiveConfig } from '../wallet';
 import { useMemo } from 'react';
-import { isAccountTronCompatible } from '@tonkeeper/core/src/entries/account';
-import { TronWallet } from '@tonkeeper/core/src/entries/tron/tron-wallet';
-import { TronApi } from '@tonkeeper/core/src/tronApi';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { isAccountTronCompatible } from '@tonkeeper/core/dist/entries/account';
+import { TronWallet } from '@tonkeeper/core/dist/entries/tron/tron-wallet';
+import { TronApi } from '@tonkeeper/core/dist/tronApi';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
 import {
     TRON_TRX_ASSET,
     TRON_USDT_ASSET
-} from '@tonkeeper/core/src/entries/crypto/asset/constants';
-import { TronAsset } from '@tonkeeper/core/src/entries/crypto/asset/tron-asset';
+} from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TronAsset } from '@tonkeeper/core/dist/entries/crypto/asset/tron-asset';
 import { useDevSettings } from '../dev';
 
 export const useTronApi = () => {

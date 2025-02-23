@@ -1,5 +1,5 @@
-import { Account, isAccountTonWalletStandard } from '@tonkeeper/core/src/entries/account';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { Account, isAccountTonWalletStandard } from '@tonkeeper/core/dist/entries/account';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import { useActiveAccount, useActiveApi, useActiveTonNetwork } from '../state/wallet';
 import { useTranslation } from './translation';
 import { useAppSdk } from './appSdk';
@@ -8,10 +8,10 @@ import { useMutation } from '@tanstack/react-query';
 import {
     createTonProofItem,
     tonConnectProofPayload
-} from '@tonkeeper/core/src/service/tonConnect/connectService';
-import { walletStateInitFromState } from '@tonkeeper/core/src/service/wallet/contractService';
+} from '@tonkeeper/core/dist/service/tonConnect/connectService';
+import { walletStateInitFromState } from '@tonkeeper/core/dist/service/wallet/contractService';
 import { signTonConnectOver } from '../state/mnemonic';
-import { getServerTime } from '@tonkeeper/core/src/service/ton-blockchain/utils';
+import { getServerTime } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
 
 export function useAccountLabel(account: Account) {
     const tonWallets = account.allTonWallets;

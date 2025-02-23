@@ -1,8 +1,8 @@
-import { TwoFAEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/two-fa-encoder';
+import { TwoFAEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/two-fa-encoder';
 import { useActiveAccountQuery, useActiveApi } from '../state/wallet';
 import { beginCell, external, storeMessage, storeStateInit } from '@ton/core';
 import { useGetAccountSigner } from '../state/mnemonic';
-import { BlockchainApi } from '@tonkeeper/core/src/tonApiV2';
+import { BlockchainApi } from '@tonkeeper/core/dist/tonApiV2';
 import { useAppContext } from './appContext';
 import { useEffect } from 'react';
 

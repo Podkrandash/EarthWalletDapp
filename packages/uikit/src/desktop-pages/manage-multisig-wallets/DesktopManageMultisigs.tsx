@@ -15,7 +15,7 @@ import { SkeletonListDesktopAdaptive } from '../../components/Skeleton';
 import React, { FC, useMemo } from 'react';
 import { ListBlockDesktopAdaptive, ListItem, ListItemPayload } from '../../components/List';
 import { WalletEmoji } from '../../components/shared/emoji/WalletEmoji';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import { toFormattedTonBalance } from '../../hooks/balance';
 import { PencilIcon, PinIconOutline, UnpinIconOutline } from '../../components/Icon';
 import { Button } from '../../components/fields/Button';
@@ -33,15 +33,15 @@ import { useAppContext } from '../../hooks/appContext';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useAddWalletNotification } from '../../components/modals/AddWalletNotificationControlled';
 import { useRenameNotification } from '../../components/modals/RenameNotificationControlled';
-import { getFallbackAccountEmoji } from '@tonkeeper/core/src/service/walletService';
+import { getFallbackAccountEmoji } from '@tonkeeper/core/dist/service/walletService';
 import { Address } from '@ton/core';
 import { AppRoute } from '../../libs/routes';
 import { Navigate, useNavigate } from 'react-router-dom';
 import {
     AccountTonMultisig,
     isAccountCanManageMultisigs
-} from '@tonkeeper/core/src/entries/account';
-import { WalletId } from '@tonkeeper/core/src/entries/wallet';
+} from '@tonkeeper/core/dist/entries/account';
+import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
 
 const DesktopViewPageLayoutStyled = styled(DesktopViewPageLayout)`
     height: 100%;

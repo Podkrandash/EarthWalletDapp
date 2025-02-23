@@ -5,7 +5,7 @@ import { Button } from '../fields/Button';
 import { useProState } from '../../state/pro';
 import { useDateTimeFormat } from '../../hooks/useDateTimeFormat';
 import { useTranslation } from '../../hooks/translation';
-import { isPaidSubscription, isTrialSubscription } from '@tonkeeper/core/src/entries/pro';
+import { isPaidSubscription, isTrialSubscription } from '@tonkeeper/core/dist/entries/pro';
 import { useProFeaturesNotification } from '../modals/ProFeaturesNotificationControlled';
 
 const ProBannerStyled = styled.div`

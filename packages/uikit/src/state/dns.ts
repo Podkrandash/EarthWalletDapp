@@ -1,9 +1,9 @@
 import { useAppContext } from '../hooks/appContext';
 import { useMemo, useState } from 'react';
-import { debounce } from '@tonkeeper/core/src/utils/common';
+import { debounce } from '@tonkeeper/core/dist/utils/common';
 import { useQuery } from '@tanstack/react-query';
 import { QueryKey } from '../libs/queryKey';
-import { DNSApi } from '@tonkeeper/core/src/tonApiV2';
+import { DNSApi } from '@tonkeeper/core/dist/tonApiV2';
 import { seeIfInvalidDns } from '../components/transfer/RecipientView';
 import { useActiveApi } from './wallet';
 

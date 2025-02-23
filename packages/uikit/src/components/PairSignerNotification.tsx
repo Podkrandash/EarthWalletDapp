@@ -1,5 +1,5 @@
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
-import { createTransferQr } from '@tonkeeper/core/src/service/signerService';
+import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { createTransferQr } from '@tonkeeper/core/dist/service/signerService';
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';
@@ -10,7 +10,7 @@ import { Notification, NotificationBlock } from './Notification';
 import { Button } from './fields/Button';
 import { Background, HeaderBlock } from './home/AccountView';
 import { AnimatedQrCode } from './home/qrCodeView';
-import { isStandardTonWallet, TonWalletStandard } from '@tonkeeper/core/src/entries/wallet';
+import { isStandardTonWallet, TonWalletStandard } from '@tonkeeper/core/dist/entries/wallet';
 
 export const SignerContent: FC<{
     sdk: IAppSdk;

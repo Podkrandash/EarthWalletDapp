@@ -1,13 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
-import { TonEstimation } from '@tonkeeper/core/src/entries/send';
+import { TonEstimation } from '@tonkeeper/core/dist/entries/send';
 import { EXTERNAL_SENDER_CHOICE, useGetEstimationSender } from '../useSender';
 import { useTonRawTransactionService } from '../useBlockchainService';
 import { useNotifyErrorHandle } from '../../useNotification';
 import { DefaultRefetchInterval } from '../../../state/tonendpoint';
-import { TwoFAEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/two-fa-encoder';
+import { TwoFAEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/two-fa-encoder';
 import { useActiveAccount, useActiveApi } from '../../../state/wallet';
 import { useTwoFAServiceConfig, useTwoFAWalletConfig } from '../../../state/two-fa';
-import { isStandardTonWallet } from '@tonkeeper/core/src/entries/wallet';
+import { isStandardTonWallet } from '@tonkeeper/core/dist/entries/wallet';
 
 export function useEstimateTwoFADeploy() {
     const getSender = useGetEstimationSender(EXTERNAL_SENDER_CHOICE);

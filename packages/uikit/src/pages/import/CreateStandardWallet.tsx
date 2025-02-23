@@ -14,7 +14,7 @@ import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';
 import { FinalView } from './Password';
 import { Subscribe } from './Subscribe';
-import { Account } from '@tonkeeper/core/src/entries/account';
+import { Account } from '@tonkeeper/core/dist/entries/account';
 import { useCreateAccountMnemonic, useMutateRenameAccount } from '../../state/wallet';
 import {
     OnCloseInterceptor,

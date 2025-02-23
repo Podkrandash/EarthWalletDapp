@@ -2,8 +2,8 @@ import { useAppSdk } from '../../hooks/appSdk';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { QueryKey } from '../../libs/queryKey';
 import { useTranslation } from '../../hooks/translation';
-import { DashboardColumn, isSupportedColumnType } from '@tonkeeper/core/src/entries/dashboard';
-import { getDashboardColumns } from '@tonkeeper/core/src/service/proService';
+import { DashboardColumn, isSupportedColumnType } from '@tonkeeper/core/dist/entries/dashboard';
+import { getDashboardColumns } from '@tonkeeper/core/dist/service/proService';
 import { useProState } from '../pro';
 
 export type DashboardColumnsForm = { id: string; isEnabled: boolean }[];

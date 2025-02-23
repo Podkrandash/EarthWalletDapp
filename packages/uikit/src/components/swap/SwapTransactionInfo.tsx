@@ -11,8 +11,8 @@ import {
     useSwapPriceImpact
 } from '../../state/swap/useSwapForm';
 import { useCalculatedSwap } from '../../state/swap/useCalculatedSwap';
-import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
 import { useSwapOptions } from '../../state/swap/useSwapOptions';
 import { useTranslation } from '../../hooks/translation';
 import { BorderSmallResponsive } from '../shared/Styles';

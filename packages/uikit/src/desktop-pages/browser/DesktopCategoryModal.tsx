@@ -1,6 +1,6 @@
 import { Notification } from '../../components/Notification';
 import React, { FC } from 'react';
-import { PromotionCategory } from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+import { PromotionCategory } from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
 import { DesktopCategoryGroupItem } from './DesktopPromotedItem';
 import styled from 'styled-components';
 

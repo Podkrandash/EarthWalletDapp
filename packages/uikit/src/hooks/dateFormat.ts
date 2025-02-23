@@ -1,4 +1,4 @@
-import { intlLocale } from '@tonkeeper/core/src/entries/language';
+import { intlLocale } from '@tonkeeper/core/dist/entries/language';
 import { useMemo } from 'react';
 import { useTranslation } from './translation';
 

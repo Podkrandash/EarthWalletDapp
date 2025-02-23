@@ -1,5 +1,5 @@
-import { NFT } from '@tonkeeper/core/src/entries/nft';
-import { TrustType } from '@tonkeeper/core/src/tonApiV2';
+import { NFT } from '@tonkeeper/core/dist/entries/nft';
+import { TrustType } from '@tonkeeper/core/dist/tonApiV2';
 import { FC, useMemo, useRef } from 'react';
 import styled from 'styled-components';
 import { useAppContext } from '../../hooks/appContext';

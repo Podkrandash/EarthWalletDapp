@@ -4,6 +4,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     plugins: [react()],
+    build: {
+        outDir: 'dist',
+        copyPublicDir: true
+    },
     resolve: {
         alias: {
             react: path.resolve(__dirname, './node_modules/react'),

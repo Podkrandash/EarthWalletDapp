@@ -1,4 +1,4 @@
-import { Account } from '@tonkeeper/core/src/entries/account';
+import { Account } from '@tonkeeper/core/dist/entries/account';
 import React, { FC, useCallback, useState } from 'react';
 import { useTranslation } from '../../../hooks/translation';
 import { useMutateRenameAccount, useMutateRenameAccountDerivation } from '../../../state/wallet';

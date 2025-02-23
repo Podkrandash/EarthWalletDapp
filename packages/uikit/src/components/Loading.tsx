@@ -1,23 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TonkeeperIcon } from './Icon';
+import EarthIcon from './lottie/EarthLogo';
 
-const Block = styled.div`
-    height: 100vh;
-
+const LoadingWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: ${props => props.theme.backgroundPage};
-
-    color: ${props => props.theme.accentBlue};
+    min-height: var(--app-height);
 `;
 
-export const Loading = React.forwardRef<HTMLDivElement>(({}, ref) => {
+export const Loading = () => {
     return (
-        <Block ref={ref}>
-            <TonkeeperIcon loop />
-        </Block>
+        <LoadingWrapper>
+            <EarthIcon width="128" />
+        </LoadingWrapper>
     );
-});
+};

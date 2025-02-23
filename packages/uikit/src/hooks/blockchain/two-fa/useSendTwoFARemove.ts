@@ -5,8 +5,8 @@ import { useActiveWallet, useInvalidateActiveWalletQueries } from '../../../stat
 import { useNotifyErrorHandle, useToast } from '../../useNotification';
 import { EXTERNAL_SENDER_CHOICE, useGetSender } from '../useSender';
 import { useTwoFAWalletConfig } from '../../../state/two-fa';
-import { isStandardTonWallet } from '@tonkeeper/core/src/entries/wallet';
-import { TwoFAMessageSender } from '@tonkeeper/core/src/service/ton-blockchain/sender/two-fa-message-sender';
+import { isStandardTonWallet } from '@tonkeeper/core/dist/entries/wallet';
+import { TwoFAMessageSender } from '@tonkeeper/core/dist/service/ton-blockchain/sender/two-fa-message-sender';
 import { QueryKey } from '../../../libs/queryKey';
 import { useTranslation } from '../../translation';
 

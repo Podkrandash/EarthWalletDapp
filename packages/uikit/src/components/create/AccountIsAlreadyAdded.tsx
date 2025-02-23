@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React, { FC } from 'react';
 import { Label1 } from '../Text';
 import { AccountAndWalletInfo } from '../account/AccountAndWalletInfo';
-import { Account } from '@tonkeeper/core/src/entries/account';
+import { Account } from '@tonkeeper/core/dist/entries/account';
 import { ButtonResponsiveSize } from '../fields/Button';
 import { useMutateActiveAccountAndWallet } from '../../state/wallet';
 import { useTranslation } from '../../hooks/translation';

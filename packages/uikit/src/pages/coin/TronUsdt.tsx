@@ -5,15 +5,15 @@ import { SubHeader } from '../../components/SubHeader';
 import { Action, ActionsRow } from '../../components/home/Actions';
 import { CoinInfo } from '../../components/jettons/Info';
 import { useFormatFiat, useUSDTRate } from '../../state/rates';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { TronAsset } from '@tonkeeper/core/src/entries/crypto/asset/tron-asset';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { TronAsset } from '@tonkeeper/core/dist/entries/crypto/asset/tron-asset';
 import { useTronBalances } from '../../state/tron/tron';
 import { ReceiveIcon, SendIcon } from '../../components/home/HomeIcons';
 import { useAppSdk } from '../../hooks/appSdk';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
 import { useSendTransferNotification } from '../../components/modals/useSendTransferNotification';
 import { MobileAssetHistory } from './Jetton';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 
 const TronUsdtHeader: FC<{ assetAmount: AssetAmount<TronAsset> }> = ({ assetAmount }) => {
     const { data: rate } = useUSDTRate();

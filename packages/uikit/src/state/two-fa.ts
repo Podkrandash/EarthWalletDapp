@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { anyOfKeysParts, QueryKey } from '../libs/queryKey';
 import { useAppSdk } from '../hooks/appSdk';
-import { AppKey } from '@tonkeeper/core/src/Keys';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
 import {
     useAccountsState,
     useActiveAccount,
@@ -10,13 +10,13 @@ import {
     useActiveWallet
 } from './wallet';
 import { useDevSettings } from './dev';
-import { AccountId, Account } from '@tonkeeper/core/src/entries/account';
-import { AuthApi, Configuration } from '@tonkeeper/core/src/2faApi';
+import { AccountId, Account } from '@tonkeeper/core/dist/entries/account';
+import { AuthApi, Configuration } from '@tonkeeper/core/dist/2faApi';
 import { useEffect, useMemo } from 'react';
 import { useSignTonProof } from '../hooks/accountUtils';
-import { TwoFAEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/two-fa-encoder';
-import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
-import { WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { TwoFAEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/two-fa-encoder';
+import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
+import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
 import { useToast } from '../hooks/useNotification';
 import { useTranslation } from '../hooks/translation';
 import { getMultisigSignerInfo } from './multisig';

@@ -1,6 +1,6 @@
 import { useAppSdk } from './appSdk';
-import { passwordStorage } from '@tonkeeper/core/src/service/passwordService';
-import { accountsStorage } from '@tonkeeper/core/src/service/accountsStorage';
+import { passwordStorage } from '@tonkeeper/core/dist/service/passwordService';
+import { accountsStorage } from '@tonkeeper/core/dist/service/accountsStorage';
 
 export const useAccountsStorage = () => {
     const sdk = useAppSdk();

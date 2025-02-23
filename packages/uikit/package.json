@@ -2,13 +2,13 @@
     "name": "@tonkeeper/uikit",
     "version": "0.1.0",
     "author": "Ton APPS UK Limited <support@tonkeeper.com>",
-    "description": "UI Kit for tonkeeper wallet",
+    "description": "UI Kit for Tonkeeper",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "build": "rm -fr dist && tsc",
+        "build": "node build.js",
         "start": "tsc -w",
         "build:pkg": "yarn build"
     },

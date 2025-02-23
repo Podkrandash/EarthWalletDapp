@@ -1,36 +1,36 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
 import { useAccountsState, useActiveApi } from '../../../state/wallet';
 import {
     getAccountByWalletById,
     isAccountTonWalletStandard
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { getSigner } from '../../../state/mnemonic';
 import { useAppSdk } from '../../appSdk';
 import { useCheckTouchId } from '../../../state/password';
 import { useTranslation } from '../../translation';
 import { anyOfKeysParts, QueryKey } from '../../../libs/queryKey';
 import BigNumber from 'bignumber.js';
-import { AccountsApi, Multisig, MultisigApi } from '@tonkeeper/core/src/tonApiV2';
+import { AccountsApi, Multisig, MultisigApi } from '@tonkeeper/core/dist/tonApiV2';
 import { useAccountsStorage } from '../../useStorage';
 import { TxConfirmationCustomError } from '../../../libs/errors/TxConfirmationCustomError';
 import {
     LedgerMessageSender,
     WalletMessageSender,
     Sender
-} from '@tonkeeper/core/src/service/ton-blockchain/sender';
+} from '@tonkeeper/core/dist/service/ton-blockchain/sender';
 import { useNotifyErrorHandle } from '../../useNotification';
-import { APIConfig } from '@tonkeeper/core/src/entries/apis';
+import { APIConfig } from '@tonkeeper/core/dist/entries/apis';
 import { Address } from '@ton/core';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { useTonRawTransactionService } from '../useBlockchainService';
 import {
     MultisigEncoder,
     MultisigConfig
-} from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder';
+} from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder';
 import { useTwoFAApi, useTwoFAServiceConfig, useTwoFAWalletConfig } from '../../../state/two-fa';
-import { TwoFAMessageSender } from '@tonkeeper/core/src/service/ton-blockchain/sender/two-fa-message-sender';
+import { TwoFAMessageSender } from '@tonkeeper/core/dist/service/ton-blockchain/sender/two-fa-message-sender';
 import { useConfirmTwoFANotification } from '../../../components/modals/ConfirmTwoFANotificationControlled';
 
 export const useDeployMultisig = (

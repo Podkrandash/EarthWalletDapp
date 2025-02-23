@@ -1,8 +1,8 @@
-import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
-import { Action } from '@tonkeeper/core/src/tonApiV2';
+import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { Action } from '@tonkeeper/core/dist/tonApiV2';
 import { FC } from 'react';
 
-import { eqAddresses } from '@tonkeeper/core/src/utils/address';
+import { eqAddresses } from '@tonkeeper/core/dist/utils/address';
 import {
     ActionRow,
     HistoryCellActionReceived,

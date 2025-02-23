@@ -3,9 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AppRoute } from '../../libs/routes';
 import { JettonContent } from './Jetton';
 import { TonPage } from './Ton';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { TronUsdtContent } from './TronUsdt';
-import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
+import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
 import { ExtraCurrencyPage } from './ExtraCurrency';
 
 const CoinPage = () => {

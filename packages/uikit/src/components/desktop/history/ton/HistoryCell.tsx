@@ -4,7 +4,7 @@ import { useTranslation } from '../../../../hooks/translation';
 import { ArrowDownIcon, ArrowUpIcon, XMarkCircleIcon } from '../../../Icon';
 import { FC, ReactNode } from 'react';
 import { Body2, Body2Class } from '../../../Text';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import { useFormatCoinValue } from '../../../../hooks/balance';
 import { HistoryGridCell, HistoryGridCellFillRow } from './HistoryGrid';
 import { useActiveTonNetwork, useActiveWallet } from '../../../../state/wallet';

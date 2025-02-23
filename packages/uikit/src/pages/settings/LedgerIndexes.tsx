@@ -1,5 +1,5 @@
-import { AccountLedger } from '@tonkeeper/core/src/entries/account';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { AccountLedger } from '@tonkeeper/core/dist/entries/account';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { InnerBody } from '../../components/Body';

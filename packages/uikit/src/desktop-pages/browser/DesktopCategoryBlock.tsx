@@ -1,4 +1,4 @@
-import { PromotionCategory } from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+import { PromotionCategory } from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { Label1, Label2 } from '../../components/Text';

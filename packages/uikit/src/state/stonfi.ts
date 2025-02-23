@@ -1,5 +1,5 @@
 import { useAppContext } from '../hooks/appContext';
-import { isTon, TonAssetAddress } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { isTon, TonAssetAddress } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 
 export const useStonfiSwapLink = (fromToken: TonAssetAddress, toToken: TonAssetAddress): string => {
     const { tonendpoint, env } = useAppContext();

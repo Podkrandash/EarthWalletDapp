@@ -3,11 +3,11 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { Body2 } from '../Text';
 import { useDashboardColumnsAsForm } from '../../state/dashboard/useDashboardColumns';
 import { useDashboardData } from '../../state/dashboard/useDashboardData';
-import { DashboardColumnType } from '@tonkeeper/core/src/entries/dashboard';
+import { DashboardColumnType } from '@tonkeeper/core/dist/entries/dashboard';
 import { Skeleton } from '../shared/Skeleton';
 import { DashboardCell } from './columns/DashboardCell';
 import { useAccountsState } from '../../state/wallet';
-import { seeIfMainnnetAccount } from '@tonkeeper/core/src/entries/account';
+import { seeIfMainnnetAccount } from '@tonkeeper/core/dist/entries/account';
 
 const TableStyled = styled.table`
     width: 100%;

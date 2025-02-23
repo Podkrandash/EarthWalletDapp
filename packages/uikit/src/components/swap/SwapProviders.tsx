@@ -3,7 +3,7 @@ import { Body3, Label2 } from '../Text';
 import { FC } from 'react';
 import { useCalculatedSwap } from '../../state/swap/useCalculatedSwap';
 import { useFormatFiat, useRate } from '../../state/rates';
-import { tonAssetAddressToString } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { tonAssetAddressToString } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import {
     useIsSwapFormNotCompleted,
     useSelectedSwap,

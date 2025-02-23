@@ -1,7 +1,7 @@
 import { useAppSdk } from "../hooks/appSdk";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { AppKey } from "@tonkeeper/core/src/Keys";
-import { FiatCurrencies } from "@tonkeeper/core/src/entries/fiat";
+import { AppKey } from "@tonkeeper/core/dist/Keys";
+import { FiatCurrencies } from "@tonkeeper/core/dist/entries/fiat";
 
 export const useUserFiatQuery = () => {
     const sdk = useAppSdk();

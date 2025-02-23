@@ -1,12 +1,12 @@
-import { APIConfig } from '@tonkeeper/core/src/entries/apis';
-import { FiatCurrencies } from '@tonkeeper/core/src/entries/fiat';
-import { WalletVersion } from '@tonkeeper/core/src/entries/wallet';
-import { Configuration as ConfigurationV2 } from '@tonkeeper/core/src/tonApiV2';
+import { APIConfig } from '@tonkeeper/core/dist/entries/apis';
+import { FiatCurrencies } from '@tonkeeper/core/dist/entries/fiat';
+import { WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
+import { Configuration as ConfigurationV2 } from '@tonkeeper/core/dist/tonApiV2';
 import {
     defaultTonendpointConfig,
     Tonendpoint,
     TonendpointConfig
-} from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+} from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
 import React, { useContext } from 'react';
 
 export interface IAppContext {

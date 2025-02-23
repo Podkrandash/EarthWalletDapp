@@ -1,5 +1,5 @@
-import { Account } from '@tonkeeper/core/src/entries/account';
-import { WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { Account } from '@tonkeeper/core/dist/entries/account';
+import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
 import { FC, forwardRef, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useLocation, useNavigate } from 'react-router-dom';

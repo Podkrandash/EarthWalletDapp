@@ -5,7 +5,7 @@ import {
     MultisigCreateOrderSender,
     Sender,
     WalletMessageSender
-} from '@tonkeeper/core/src/service/ton-blockchain/sender';
+} from '@tonkeeper/core/dist/service/ton-blockchain/sender';
 import { useAppContext } from '../appContext';
 import {
     useAccountsState,
@@ -14,7 +14,7 @@ import {
     useActiveConfig,
     useActiveTonWalletConfig
 } from '../../state/wallet';
-import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
+import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
 import {
     useBatteryApi,
     useBatteryAuthToken,
@@ -28,23 +28,23 @@ import { useCallback, useMemo } from 'react';
 import {
     TonAsset,
     tonAssetAddressToString
-} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
 import {
     Account,
     AccountTonMultisig,
     isAccountTronCompatible
-} from '@tonkeeper/core/src/entries/account';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+} from '@tonkeeper/core/dist/entries/account';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 import { getMultisigSignerInfo } from '../../state/multisig';
-import { GaslessConfig, Multisig } from '@tonkeeper/core/src/tonApiV2';
-import { estimationSigner } from '@tonkeeper/core/src/service/ton-blockchain/utils';
-import { isStandardTonWallet, WalletVersion } from '@tonkeeper/core/src/entries/wallet';
+import { GaslessConfig, Multisig } from '@tonkeeper/core/dist/tonApiV2';
+import { estimationSigner } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
+import { isStandardTonWallet, WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
 import { useGaslessConfig } from '../../state/gasless';
-import { TonConnectTransactionPayload } from '@tonkeeper/core/src/entries/tonConnect';
+import { TonConnectTransactionPayload } from '@tonkeeper/core/dist/entries/tonConnect';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { TonConnectTransactionService } from '@tonkeeper/core/src/service/ton-blockchain/ton-connect-transaction.service';
+import { TonConnectTransactionService } from '@tonkeeper/core/dist/service/ton-blockchain/ton-connect-transaction.service';
 import { useAssets } from '../../state/home';
-import { JettonEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/jetton-encoder';
+import { JettonEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/jetton-encoder';
 import { toNano } from '@ton/core';
 import {
     useTwoFAWalletConfigMayBeOfMultisigHost,
@@ -52,14 +52,14 @@ import {
     useTwoFAServiceConfig,
     useTwoFAWalletConfig
 } from '../../state/two-fa';
-import { TwoFAMessageSender } from '@tonkeeper/core/src/service/ton-blockchain/sender/two-fa-message-sender';
+import { TwoFAMessageSender } from '@tonkeeper/core/dist/service/ton-blockchain/sender/two-fa-message-sender';
 import { useConfirmTwoFANotification } from '../../components/modals/ConfirmTwoFANotificationControlled';
 import { useTronApi } from '../../state/tron/tron';
-import { TronSender } from '@tonkeeper/core/src/service/tron-blockchain/tron-sender';
+import { TronSender } from '@tonkeeper/core/dist/service/tron-blockchain/tron-sender';
 import { useAppSdk } from '../appSdk';
 import { useCheckTouchId } from '../../state/password';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { TronAsset } from '@tonkeeper/core/src/entries/crypto/asset/tron-asset';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { TronAsset } from '@tonkeeper/core/dist/entries/crypto/asset/tron-asset';
 import { QueryKey } from '../../libs/queryKey';
 
 export type SenderChoice =

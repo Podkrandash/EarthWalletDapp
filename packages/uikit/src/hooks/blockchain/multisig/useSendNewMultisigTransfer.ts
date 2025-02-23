@@ -1,13 +1,13 @@
 import { useMutation } from '@tanstack/react-query';
-import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
-import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
-import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { TonEstimation, TonRecipientData } from '@tonkeeper/core/src/entries/send';
+import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { TonEstimation, TonRecipientData } from '@tonkeeper/core/dist/entries/send';
 import { useInvalidateActiveWalletQueries } from '../../../state/wallet';
 import { useTransactionAnalytics } from '../../amplitude';
 import { MultisigOrderLifetimeMinutes } from '../../../libs/multisig';
 import { useTonAssetTransferService } from '../useBlockchainService';
-import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
+import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
 import { useNotifyErrorHandle } from '../../useNotification';
 import { useGetSender } from '../useSender';
 

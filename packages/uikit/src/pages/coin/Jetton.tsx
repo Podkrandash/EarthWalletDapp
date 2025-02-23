@@ -1,7 +1,7 @@
 import { Address } from '@ton/core';
-import { tonAssetAddressToString } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
-import { JettonBalance, JettonInfo } from '@tonkeeper/core/src/tonApiV2';
-import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
+import { tonAssetAddressToString } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { JettonBalance, JettonInfo } from '@tonkeeper/core/dist/tonApiV2';
+import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
 import React, { FC, Suspense, useMemo, useRef } from 'react';
 import { InnerBody } from '../../components/Body';
 import {

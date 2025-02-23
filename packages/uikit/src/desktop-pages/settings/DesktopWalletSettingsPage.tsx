@@ -1,4 +1,4 @@
-import { TonWalletStandard, walletVersionText } from '@tonkeeper/core/src/entries/wallet';
+import { TonWalletStandard, walletVersionText } from '@tonkeeper/core/dist/entries/wallet';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import {
@@ -31,7 +31,7 @@ import {
     AccountMAM,
     isAccountVersionEditable,
     AccountTonMultisig
-} from '@tonkeeper/core/src/entries/account';
+} from '@tonkeeper/core/dist/entries/account';
 import { useRenameNotification } from '../../components/modals/RenameNotificationControlled';
 import { useRecoveryNotification } from '../../components/modals/RecoveryNotificationControlled';
 import { WalletIndexBadge } from '../../components/account/AccountBadge';

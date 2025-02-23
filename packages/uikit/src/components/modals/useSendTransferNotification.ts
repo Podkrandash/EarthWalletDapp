@@ -1,6 +1,6 @@
 import { useAppSdk } from '../../hooks/appSdk';
 import { useCallback } from 'react';
-import { TransferInitParams } from '@tonkeeper/core/src/AppSdk';
+import { TransferInitParams } from '@tonkeeper/core/dist/AppSdk';
 
 export const useSendTransferNotification = () => {
     const sdk = useAppSdk();

@@ -15,7 +15,7 @@ import { ResultButton } from '../transfer/common';
 import { CheckmarkCircleIcon, ExclamationMarkCircleIcon } from '../Icon';
 import { Button } from '../fields/Button';
 import { useEstimateExisitingMultisigOrder } from '../../hooks/blockchain/multisig/useEstimateExisitingMultisigOrder';
-import { MultisigOrder } from '@tonkeeper/core/src/tonApiV2';
+import { MultisigOrder } from '@tonkeeper/core/dist/tonApiV2';
 import { NotificationSkeleton } from '../Skeleton';
 import styled, { css } from 'styled-components';
 import { useSendExisitingMultisigOrder } from '../../hooks/blockchain/multisig/useSendExisitingMultisigOrder';

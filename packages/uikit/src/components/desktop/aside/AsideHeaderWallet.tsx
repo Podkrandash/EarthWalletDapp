@@ -4,7 +4,7 @@ import { WalletEmoji } from '../../shared/emoji/WalletEmoji';
 import { Body2, Body3, Label2 } from '../../Text';
 import { useActiveAccount, useActiveTonNetwork } from '../../../state/wallet';
 import { useTranslation } from '../../../hooks/translation';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
 import { useAppSdk } from '../../../hooks/appSdk';
 import { ChevronDownIcon, CopyIcon, DoneIcon } from '../../Icon';
 import { Transition } from 'react-transition-group';
@@ -13,9 +13,9 @@ import { AsideHeaderContainer } from './AsideHeaderElements';
 import { useActiveTronWallet } from '../../../state/tron/tron';
 import { DropDownContent, DropDownItem, DropDownItemsDivider } from '../../DropDown';
 import { SelectDropDown } from '../../fields/Select';
-import { AccountMAM, AccountTonMnemonic } from '@tonkeeper/core/src/entries/account';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
-import { TON_ASSET, TRON_TRX_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { AccountMAM, AccountTonMnemonic } from '@tonkeeper/core/dist/entries/account';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { TON_ASSET, TRON_TRX_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
 
 const HeaderContainer = styled(AsideHeaderContainer)`
     display: flex;

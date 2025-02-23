@@ -8,6 +8,7 @@ import { Button } from '../../components/fields/Button';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';
 import { useAddWalletNotification } from '../../components/modals/AddWalletNotificationControlled';
+import { Loading } from '../../components/Loading';
 
 const Block = styled.div<{ fullHeight: boolean }>`
     display: flex;
@@ -40,7 +41,7 @@ export const InitializeContainer: FC<
 > = ({ fullHeight = true, children, className }) => {
     return (
         <Block fullHeight={fullHeight} className={className}>
-            {children}
+            <Loading />
         </Block>
     );
 };

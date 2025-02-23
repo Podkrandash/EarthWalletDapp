@@ -1,5 +1,5 @@
-import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
-import { AppKey } from '@tonkeeper/core/src/Keys';
+import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { AppKey } from '@tonkeeper/core/dist/Keys';
 import { useEffect, useState } from 'react';
 
 export const useLock = (sdk: IAppSdk) => {

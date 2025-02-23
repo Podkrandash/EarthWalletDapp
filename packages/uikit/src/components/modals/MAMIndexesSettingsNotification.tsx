@@ -1,7 +1,7 @@
 import { Notification } from '../Notification';
 import { useAtom } from '../../libs/atom';
 import { useTranslation } from '../../hooks/translation';
-import { AccountId } from '@tonkeeper/core/src/entries/account';
+import { AccountId } from '@tonkeeper/core/dist/entries/account';
 import { createModalControl } from './createModalControl';
 import { useAccountState } from '../../state/wallet';
 import { MAMIndexesPageContent } from '../../pages/settings/MamIndexes';

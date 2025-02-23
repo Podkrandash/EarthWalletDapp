@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# Earth Wallet Web Monorepo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Earth Wallet Web is a non-custodial crypto wallet and gateway to blockchain dApps.
 
-## Available Scripts
+Earth Wallet Extension supports Firefox 109.0 or higher version, Google Chrome, and Chromium-based browsers.
 
-In the project directory, you can run:
+## Development
 
-### `npm start`
+This is a monorepo containing the following packages:
+- `apps/twa`: Telegram Web App version
+- `apps/web`: Web version
+- `packages/core`: Core functionality
+- `packages/uikit`: UI components
+- `packages/locales`: Localization files
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Building locally
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+# Install `Node.js` version v20.7.0
+nvm use
 
-### `npm test`
+# Install `Yarn` version 4.0.2
+corepack enable
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Build web script
 
-### `npm run build`
+```sh
+# Install dependencies
+yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Build web app
+yarn build:web
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Compressed build could be found in `/apps/web/dist` once they're built.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Build extension script
 
-### `npm run eject`
+```sh
+# Install dependencies
+yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Build extension apps
+yarn build:extension
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Compressed builds could be found in `/apps/extension/dist/chrome` and `/apps/extension/dist/firefox`
+once they're built.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Build desktop script
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+# Install dependencies
+yarn
 
-## Learn More
+# Build desktop for current OS
+yarn build:desktop
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Application for your platform could be found in `/apps/desktop/out` once they're built.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Mac Environment variables:
+
+You can generate an App Store Connect API key to authenticate `notarytool` by going to the
+[App Store Connect](https://appstoreconnect.apple.com/access/api) access page and using the "Keys"
+tab. This API key will look something like `AuthKey_ABCD123456.p8` and can only be downloaded once.
+
+| Env variable       | Description                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `APPLE_API_KEY`    | Filesystem path string to your API key file.                                                                       |
+| `APPLE_API_KEY_ID` | 10-character alphanumeric ID string. In the previous `AuthKey_ABCD123456.p8` example, this would be `ABCD123456`.  |
+| `APPLE_API_ISSUER` | UUID that identifies the API key issuer. You will find this ID in the "Keys" tab where you generated your API key. |
+
+Keychain - Certificate Type - `Developer ID Application`
+
+## License
+
+(c) Copyright 2024 Ton APPS UK Limited Released under the
+[Apache License, Version 2.0](LICENSE.txt).

@@ -1,15 +1,15 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Address } from '@ton/core';
-import { DashboardRow, DashboardRowNullable } from '@tonkeeper/core/src/entries/dashboard';
-import { TonContract } from '@tonkeeper/core/src/entries/wallet';
-import { getDashboardData } from '@tonkeeper/core/src/service/proService';
+import { DashboardRow, DashboardRowNullable } from '@tonkeeper/core/dist/entries/dashboard';
+import { TonContract } from '@tonkeeper/core/dist/entries/wallet';
+import { getDashboardData } from '@tonkeeper/core/dist/service/proService';
 import { useAppContext } from '../../hooks/appContext';
 import { useTranslation } from '../../hooks/translation';
 import { QueryKey } from '../../libs/queryKey';
 import { ClientColumns, useDashboardColumnsAsForm } from './useDashboardColumns';
-import { formatAddress } from '@tonkeeper/core/src/utils/common';
+import { formatAddress } from '@tonkeeper/core/dist/utils/common';
 import { useAccountsOrdered } from '../folders';
-import { seeIfMainnnetAccount } from '@tonkeeper/core/src/entries/account';
+import { seeIfMainnnetAccount } from '@tonkeeper/core/dist/entries/account';
 
 export function useDashboardData() {
     const { data: columns } = useDashboardColumnsAsForm();

@@ -1,5 +1,5 @@
-import { AccountId } from '@tonkeeper/core/src/entries/account';
-import { WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { AccountId } from '@tonkeeper/core/dist/entries/account';
+import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
 import { useCallback } from 'react';
 import styled from 'styled-components';
 import { useAtom } from '../../libs/atom';

@@ -1,6 +1,6 @@
 import UR from '@ngraveio/bc-ur/dist/ur';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { accountByKeystone } from '@tonkeeper/core/src/service/walletService';
+import { accountByKeystone } from '@tonkeeper/core/dist/service/walletService';
 import { useNavigate } from 'react-router-dom';
 import { useAppSdk } from '../hooks/appSdk';
 import { QueryKey } from '../libs/queryKey';

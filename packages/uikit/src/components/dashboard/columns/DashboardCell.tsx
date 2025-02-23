@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { DashboardCell as DashboardCellProps } from '@tonkeeper/core/src/entries/dashboard';
+import { DashboardCell as DashboardCellProps } from '@tonkeeper/core/dist/entries/dashboard';
 import { StringCell } from './StringCell';
 import { AddressCell } from './AddressCell';
-import { Network } from '@tonkeeper/core/src/entries/network';
+import { Network } from '@tonkeeper/core/dist/entries/network';
 import { NumericCell } from './NumericCell';
 import { NumericCryptoCell } from './NumericCryptoCell';
 import { NumericFiatCell } from './NumericFiatCell';

@@ -1,4 +1,4 @@
-import { AccountId } from '@tonkeeper/core/src/entries/account';
+import { AccountId } from '@tonkeeper/core/dist/entries/account';
 import { createModalControl } from './createModalControl';
 import React, { useCallback } from 'react';
 import { useAtom } from '../../libs/atom';

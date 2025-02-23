@@ -1,12 +1,12 @@
-import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
 import {
     AccountEvent,
     ActionStatusEnum,
     DepositStakeAction,
     WithdrawStakeAction,
     WithdrawStakeRequestAction
-} from '@tonkeeper/core/src/tonApiV2';
-import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
+} from '@tonkeeper/core/dist/tonApiV2';
+import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
 import React, { FC } from 'react';
 import { useFormatCoinValue } from '../../../hooks/balance';
 import { useTranslation } from '../../../hooks/translation';
