@@ -1,4 +1,4 @@
-import { intlLocale } from '@tonkeeper/core/dist/entries/language';
+import { intlLocale } from '@tonkeeper/core/src/entries/language';
 import country from 'country-list-js';
 import React, { useCallback, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';

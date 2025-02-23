@@ -1,17 +1,17 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { TonRecipient } from '@tonkeeper/core/dist/entries/send';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { TonRecipient } from '@tonkeeper/core/src/entries/send';
 
 import BigNumber from 'bignumber.js';
 import { useTransactionAnalytics } from '../amplitude';
 import { useActiveAccount } from '../../state/wallet';
-import { isAccountTonWalletStandard } from '@tonkeeper/core/dist/entries/account';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { isAccountTonWalletStandard } from '@tonkeeper/core/src/entries/account';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import { useNotifyErrorHandle } from '../useNotification';
 import { SenderChoiceUserAvailable, useGetSender } from './useSender';
 import { useTonAssetTransferService } from './useBlockchainService';
-import { TransferParams } from '@tonkeeper/core/dist/service/ton-blockchain/ton-asset-transaction.service';
+import { TransferParams } from '@tonkeeper/core/src/service/ton-blockchain/ton-asset-transaction.service';
 
 export type MultiSendFormTokenized = {
     rows: {

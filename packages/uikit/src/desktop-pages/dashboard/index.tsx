@@ -1,4 +1,4 @@
-import { isPaidSubscription } from '@tonkeeper/core/dist/entries/pro';
+import { isPaidSubscription } from '@tonkeeper/core/src/entries/pro';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { DashboardTable } from '../../components/dashboard/DashboardTable';

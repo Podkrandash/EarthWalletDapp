@@ -1,5 +1,5 @@
-import { Network } from '@tonkeeper/core/dist/entries/network';
-import { Account } from '@tonkeeper/core/dist/entries/account';
+import { Network } from '@tonkeeper/core/src/entries/network';
+import { Account } from '@tonkeeper/core/src/entries/account';
 import ReactGA from 'react-ga4';
 import { Analytics } from '.';
 

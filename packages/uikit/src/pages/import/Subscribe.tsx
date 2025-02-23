@@ -1,4 +1,4 @@
-import { TonContract } from '@tonkeeper/core/dist/entries/wallet';
+import { TonContract } from '@tonkeeper/core/src/entries/wallet';
 import React, { FC } from 'react';
 import { IconPage } from '../../components/Layout';
 import { Button } from '../../components/fields/Button';
@@ -6,7 +6,7 @@ import { NotificationIcon } from '../../components/lottie/LottieIcons';
 import { useTranslation } from '../../hooks/translation';
 import { signTonConnectMnemonicOver } from '../../state/mnemonic';
 import { useSubscribeMutation } from '../../state/subscribe';
-import { MnemonicType } from '@tonkeeper/core/dist/entries/password';
+import { MnemonicType } from '@tonkeeper/core/src/entries/password';
 import { useIsFullWidthMode } from '../../hooks/useIsFullWidthMode';
 
 export const Subscribe: FC<{

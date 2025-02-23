@@ -1,5 +1,5 @@
-import { FiatCurrencies, FiatCurrencySymbolsConfig } from '@tonkeeper/core/dist/entries/fiat';
-import { intlLocale } from '@tonkeeper/core/dist/entries/language';
+import { FiatCurrencies, FiatCurrencySymbolsConfig } from '@tonkeeper/core/src/entries/fiat';
+import { intlLocale } from '@tonkeeper/core/src/entries/language';
 import React, { useMemo } from 'react';
 import { InnerBody } from '../../components/Body';
 import { CheckIcon } from '../../components/Icon';

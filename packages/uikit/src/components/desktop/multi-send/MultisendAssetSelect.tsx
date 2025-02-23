@@ -2,7 +2,7 @@ import { DropDown } from '../../DropDown';
 import { Button } from '../../fields/Button';
 import { SwitchIcon } from '../../Icon';
 import styled from 'styled-components';
-import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { FC } from 'react';
 import { AssetSelectDropdownContent } from '../../fields/AssetSelect';
 

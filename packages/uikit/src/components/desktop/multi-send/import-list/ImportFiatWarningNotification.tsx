@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { styled } from 'styled-components';
 import { Body2, Label2 } from '../../../Text';
 import { Button } from '../../../fields/Button';
-import { FiatCurrencies } from '@tonkeeper/core/dist/entries/fiat';
+import { FiatCurrencies } from '@tonkeeper/core/src/entries/fiat';
 import { useTranslation } from '../../../../hooks/translation';
 
 const ModalContent = styled.div`

@@ -1,8 +1,8 @@
 import { useMutation } from '@tanstack/react-query';
-import { isTonAsset, Asset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { isTon, TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { Estimation, TonRecipientData, TronRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { isTonAsset, Asset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { isTon, TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { Estimation, TonRecipientData, TronRecipientData } from '@tonkeeper/core/src/entries/send';
 import { useAnalyticsTrack } from '../amplitude';
 import { useInvalidateActiveWalletQueries } from '../../state/wallet';
 
@@ -15,9 +15,9 @@ import {
 } from './useSender';
 import { useTonAssetTransferService } from './useBlockchainService';
 import { useNotifyErrorHandle } from '../useNotification';
-import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { TronAsset } from '@tonkeeper/core/dist/entries/crypto/asset/tron-asset';
+import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TronAsset } from '@tonkeeper/core/src/entries/crypto/asset/tron-asset';
 
 export function useSendTransfer<T extends Asset>({
     recipient,

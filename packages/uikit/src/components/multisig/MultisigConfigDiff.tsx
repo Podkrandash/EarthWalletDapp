@@ -3,9 +3,9 @@ import { styled } from 'styled-components';
 import { Body2 } from '../Text';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useAppContext } from '../../hooks/appContext';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import { useTranslation } from '../../hooks/translation';
-import { MultisigConfig } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder';
+import { MultisigConfig } from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder';
 import { useActiveConfig } from '../../state/wallet';
 
 const DiffContainer = styled.div``;

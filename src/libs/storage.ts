@@ -1,5 +1,5 @@
 import { CloudStorage, initCloudStorage } from '@tma.js/sdk';
-import { IStorage } from '@tonkeeper/core/dist/Storage';
+import { IStorage } from '@tonkeeper/core/src/Storage';
 
 export class TwaStorage implements IStorage {
     cloudStorage: CloudStorage;

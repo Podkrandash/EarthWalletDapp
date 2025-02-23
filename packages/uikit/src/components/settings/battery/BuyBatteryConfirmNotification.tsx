@@ -4,8 +4,8 @@ import {
     useEstimatePurchaseBattery,
     usePurchaseBattery
 } from '../../../hooks/blockchain/usePurchaseBattery';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { isTon, TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { isTon, TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { Notification } from '../../Notification';
 import { BATTERY_SENDER_CHOICE, EXTERNAL_SENDER_CHOICE } from '../../../hooks/blockchain/useSender';
 import { useTonRecipient } from '../../../hooks/blockchain/useTonRecipient';

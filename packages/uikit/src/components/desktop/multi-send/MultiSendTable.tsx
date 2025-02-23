@@ -1,10 +1,10 @@
 import { Address } from '@ton/core';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { TonAsset, isTon } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { DnsRecipient, TonRecipient } from '@tonkeeper/core/dist/entries/send';
-import { isW5Version } from '@tonkeeper/core/dist/entries/wallet';
-import { arrayToCsvString } from '@tonkeeper/core/dist/service/parserService';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TonAsset, isTon } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { DnsRecipient, TonRecipient } from '@tonkeeper/core/src/entries/send';
+import { isW5Version } from '@tonkeeper/core/src/entries/wallet';
+import { arrayToCsvString } from '@tonkeeper/core/src/service/parserService';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import BigNumber from 'bignumber.js';
 import { FC, useEffect, useState } from 'react';
 import { Controller, FormProvider, useFieldArray, useForm, useFormContext } from 'react-hook-form';
@@ -48,10 +48,10 @@ import { SaveListNotification } from './SaveListNotification';
 import { UpdateListNotification } from './UpdateListNotification';
 import { ImportListNotification } from './import-list/ImportListNotification';
 import { getWillBeMultiSendValue } from './utils';
-import { removeGroupSeparator } from '@tonkeeper/core/dist/utils/send';
-import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
+import { removeGroupSeparator } from '@tonkeeper/core/src/utils/send';
+import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
 import { useActiveStandardTonWallet } from '../../../state/wallet';
-import { MAX_ALLOWED_WALLET_MSGS } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
+import { MAX_ALLOWED_WALLET_MSGS } from '@tonkeeper/core/src/service/ton-blockchain/utils';
 import { HideOnReview } from '../../ios/HideOnReview';
 
 const FormHeadingWrapper = styled.div`

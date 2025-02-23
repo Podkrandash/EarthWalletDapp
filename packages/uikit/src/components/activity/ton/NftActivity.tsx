@@ -1,6 +1,6 @@
-import { Action, ActionStatusEnum, NftItem, Price } from '@tonkeeper/core/dist/tonApiV2';
-import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+import { Action, ActionStatusEnum, NftItem, Price } from '@tonkeeper/core/src/tonApiV2';
+import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import React, { FC, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { useAppSdk } from '../../../hooks/appSdk';

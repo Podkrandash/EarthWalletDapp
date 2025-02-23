@@ -1,4 +1,4 @@
-import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
 import { useEffect } from 'react';
 
 export const useNavigate = (sdk: IAppSdk, onNavigate: () => void) => {

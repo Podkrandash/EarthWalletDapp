@@ -1,4 +1,4 @@
-import { AccountEvent, Action } from '@tonkeeper/core/dist/tonApiV2';
+import { AccountEvent, Action, ActionStatusEnum } from '@tonkeeper/core/src/tonApiV2';
 import { FC, useCallback } from 'react';
 import { Notification } from '../../Notification';
 import { ErrorActivityNotification } from '../NotificationCommon';
@@ -23,10 +23,11 @@ import {
     WithdrawStakeActionNotification
 } from './StakeNotifications';
 import { SubscribeActionDetails, UnSubscribeActionDetails } from './SubscribeAction';
-import { TronHistoryItem } from '@tonkeeper/core/dist/tronApi';
-import { assertUnreachableSoft } from '@tonkeeper/core/dist/utils/types';
+import { TronHistoryItem } from '@tonkeeper/core/src/tronApi';
+import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
 import { useTranslation } from '../../../hooks/translation';
 import { TronTransferActionNotification } from '../tron/TronActivityActionDetails';
+import { TronApi } from '@tonkeeper/core/src/tronApi';
 
 export interface ActionData {
     isScam: boolean;
@@ -106,7 +107,7 @@ const ActivityContentTron: FC<ActivityNotificationDataTron> = props => {
         case 'asset-transfer':
             return <TronTransferActionNotification {...props} />;
         default: {
-            assertUnreachableSoft(props.event.type);
+            assertUnreachable(props.event.type);
             return <>{t('txActions_signRaw_types_unknownTransaction')}</>;
         }
     }

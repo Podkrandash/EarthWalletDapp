@@ -1,8 +1,8 @@
-import { RecipientData, isTonRecipientData } from '@tonkeeper/core/dist/entries/send';
-import { Network } from '@tonkeeper/core/dist/entries/network';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
-import { getDecimalSeparator, getNotDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
-import { isNumeric, removeGroupSeparator, seeIfLargeTail } from '@tonkeeper/core/dist/utils/send';
+import { RecipientData, isTonRecipientData } from '@tonkeeper/core/src/entries/send';
+import { Network } from '@tonkeeper/core/src/entries/network';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { getDecimalSeparator, getNotDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
+import { isNumeric, removeGroupSeparator, seeIfLargeTail } from '@tonkeeper/core/src/utils/send';
 import BigNumber from 'bignumber.js';
 import { FC } from 'react';
 import styled from 'styled-components';

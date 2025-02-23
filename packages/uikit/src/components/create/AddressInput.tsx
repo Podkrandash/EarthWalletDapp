@@ -5,7 +5,7 @@ import { CenterContainer } from '../Layout';
 import { Body2, H2Label2Responsive } from '../Text';
 import { ButtonResponsiveSize } from '../fields/Button';
 import { TonRecipientInput } from '../fields/TonRecipientInput';
-import { TonRecipient } from '@tonkeeper/core/dist/entries/send';
+import { TonRecipient } from '@tonkeeper/core/src/entries/send';
 import { Address } from '@ton/core';
 
 const Block = styled.div`

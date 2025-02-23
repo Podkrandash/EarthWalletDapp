@@ -1,10 +1,10 @@
 import { useTonRawTransactionService } from '../useBlockchainService';
 import { useActiveAccount } from '../../../state/wallet';
 import { useQuery } from '@tanstack/react-query';
-import { NFTEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/nft-encoder';
+import { NFTEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/nft-encoder';
 import { EXTERNAL_SENDER_CHOICE, useGetEstimationSender } from '../useSender';
 import { useToQueryKeyPart } from '../../useToQueryKeyPart';
-import { TonEstimation } from '@tonkeeper/core/dist/entries/send';
+import { TonEstimation } from '@tonkeeper/core/src/entries/send';
 
 export const useEstimateNftRenew = (args: { nftAddress: string }) => {
     const getSender = useGetEstimationSender(EXTERNAL_SENDER_CHOICE);

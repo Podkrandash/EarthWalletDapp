@@ -10,7 +10,7 @@ import { Body1, Body2, Body2Class, Body3, H2Label2Responsive, Label2 } from '../
 import { Button, ButtonResponsiveSize } from '../fields/Button';
 import { BorderSmallResponsive } from '../shared/Styles';
 import { ExclamationMarkCircleIcon } from '../Icon';
-import { validateMnemonicTonOrMAM } from '@tonkeeper/core/dist/service/mnemonicService';
+import { validateMnemonicTonOrMAM } from '@tonkeeper/core/src/service/mnemonicService';
 import { ToggleButton, ToggleButtonItem } from '../shared/ToggleButton';
 import { useActiveConfig } from '../../state/wallet';
 import { hexToRGBA } from '../../libs/css';

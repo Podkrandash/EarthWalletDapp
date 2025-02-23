@@ -5,8 +5,8 @@ import { SwapAmountInput } from './SwapAmountInput';
 import { useMaxSwapValue, useSwapFromAmount, useSwapFromAsset } from '../../state/swap/useSwapForm';
 import { SwapAmountFiat } from './SwapAmountFiat';
 import { SwapFromAmountBalance } from './SwapAmountBalance';
-import { debounce } from '@tonkeeper/core/dist/utils/common';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { debounce } from '@tonkeeper/core/src/utils/common';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import { FC, PropsWithChildren } from 'react';
 import { useTranslation } from '../../hooks/translation';
 

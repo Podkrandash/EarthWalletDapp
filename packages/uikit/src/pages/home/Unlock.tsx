@@ -7,7 +7,7 @@ import { Input } from '../../components/fields/Input';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';
 import { useIsPasswordSet, useMutateDeleteAll, useAccountsState } from '../../state/wallet';
-import { passwordStorage } from '@tonkeeper/core/dist/service/passwordService';
+import { passwordStorage } from '@tonkeeper/core/src/service/passwordService';
 
 const Block = styled.form<{ minHeight?: string }>`
     display: flex;

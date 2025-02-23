@@ -1,4 +1,4 @@
-import { Asset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
+import { Asset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
 import { useEffect } from 'react';
 import { useAppContext } from '../../../hooks/appContext';
 import { getTextWidth } from '../../../hooks/textWidth';

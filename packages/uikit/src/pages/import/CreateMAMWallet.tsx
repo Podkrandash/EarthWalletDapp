@@ -10,7 +10,7 @@ import {
 } from '../../components/lottie/LottieIcons';
 import { useTranslation } from '../../hooks/translation';
 import { FinalView } from './Password';
-import { Account, AccountMAM } from '@tonkeeper/core/dist/entries/account';
+import { Account, AccountMAM } from '@tonkeeper/core/src/entries/account';
 import {
     useCreateAccountMAM,
     useMutateRenameAccount,

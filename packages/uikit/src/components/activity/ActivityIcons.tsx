@@ -1,4 +1,4 @@
-import { ActionStatusEnum } from '@tonkeeper/core/dist/tonApiV2';
+import { ActionStatusEnum } from '@tonkeeper/core/src/tonApiV2';
 import React, { FC, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 

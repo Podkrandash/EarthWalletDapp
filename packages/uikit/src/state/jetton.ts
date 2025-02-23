@@ -1,18 +1,18 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { FiatCurrencies } from '@tonkeeper/core/dist/entries/fiat';
-import { TonWalletConfig } from '@tonkeeper/core/dist/entries/wallet';
+import { FiatCurrencies } from '@tonkeeper/core/src/entries/fiat';
+import { TonWalletConfig } from '@tonkeeper/core/src/entries/wallet';
 import {
     getActiveWalletConfig,
     setActiveWalletConfig
-} from '@tonkeeper/core/dist/service/wallet/configService';
+} from '@tonkeeper/core/src/service/wallet/configService';
 import {
     AccountsApi,
     JettonBalance,
     JettonInfo,
     JettonsApi,
     JettonsBalances
-} from '@tonkeeper/core/dist/tonApiV2';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+} from '@tonkeeper/core/src/tonApiV2';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import BigNumber from 'bignumber.js';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';

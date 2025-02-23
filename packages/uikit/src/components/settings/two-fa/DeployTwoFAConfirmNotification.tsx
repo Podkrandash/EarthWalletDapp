@@ -8,9 +8,9 @@ import {
 } from '../../transfer/ConfirmView';
 import { useSendTwoFADeploy } from '../../../hooks/blockchain/two-fa/useSendTwoFADeploy';
 import { useEstimateTwoFADeploy } from '../../../hooks/blockchain/two-fa/useEstimateTwoFADeploy';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { TwoFAEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/two-fa-encoder';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TwoFAEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/two-fa-encoder';
 import { useTranslation } from '../../../hooks/translation';
 
 export const DeployTwoFAConfirmNotification: FC<{

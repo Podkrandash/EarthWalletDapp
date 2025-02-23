@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Notification } from '../../Notification';
 import styled from 'styled-components';
 import { Body2 } from '../../Text';
-import { formatAddress } from '@tonkeeper/core/dist/utils/common';
+import { formatAddress } from '@tonkeeper/core/src/utils/common';
 import { MultiSendFormTokenized } from '../../../hooks/blockchain/useSendMultiTransfer';
 import { formatFiatCurrency, formatter } from '../../../hooks/balance';
 import { useAppContext } from '../../../hooks/appContext';
@@ -10,8 +10,8 @@ import { useRate } from '../../../state/rates';
 import {
     TonAsset,
     tonAssetAddressToString
-} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import { useTranslation } from '../../../hooks/translation';
 
 const NotificationStyled = styled(Notification)`

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Recommendations } from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
+import { Recommendations } from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
 import { QueryKey } from '../../libs/queryKey';
 import { useUserCountry } from '../../state/country';
 import { useAppContext } from '../appContext';

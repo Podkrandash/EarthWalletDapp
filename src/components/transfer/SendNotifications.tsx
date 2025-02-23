@@ -1,13 +1,13 @@
-import { TransferInitParams } from '@tonkeeper/core/dist/AppSdk';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { jettonToTonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { RecipientData } from '@tonkeeper/core/dist/entries/send';
+import { TransferInitParams } from '@tonkeeper/core/src/AppSdk';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { jettonToTonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { RecipientData } from '@tonkeeper/core/src/entries/send';
 import {
     TonTransferParams,
     parseTonTransferWithAddress
-} from '@tonkeeper/core/dist/service/deeplinkingService';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+} from '@tonkeeper/core/src/service/deeplinkingService';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import { ConfirmTransferView } from '@tonkeeper/uikit/dist/components/transfer/ConfirmTransferView';
 import {
     ConfirmViewButtons,
@@ -51,8 +51,8 @@ import {
     RecipientTwaHeaderBlock
 } from './SendNotificationHeader';
 import { useAnalyticsTrack } from '@tonkeeper/uikit/dist/hooks/amplitude';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { seeIfValidTonAddress, seeIfValidTronAddress } from '@tonkeeper/core/dist/utils/common';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { seeIfValidTonAddress, seeIfValidTronAddress } from '@tonkeeper/core/src/utils/common';
 import { useActiveWallet } from '@tonkeeper/uikit/dist/state/wallet';
 
 const Body = styled.div`

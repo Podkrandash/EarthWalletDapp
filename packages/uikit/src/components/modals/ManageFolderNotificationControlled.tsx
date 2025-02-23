@@ -11,7 +11,7 @@ import styled from 'styled-components';
 import { Body3, Label2, NoSelectText, TextEllipsis } from '../Text';
 import { AccountBadge } from '../account/AccountBadge';
 import { Checkbox } from '../fields/Checkbox';
-import { AccountId } from '@tonkeeper/core/dist/entries/account';
+import { AccountId } from '@tonkeeper/core/src/entries/account';
 import { Button } from '../fields/Button';
 import { Input } from '../fields/Input';
 import {

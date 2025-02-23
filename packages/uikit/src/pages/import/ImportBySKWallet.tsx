@@ -1,4 +1,4 @@
-import { Account, AccountTonSK } from '@tonkeeper/core/dist/entries/account';
+import { Account, AccountTonSK } from '@tonkeeper/core/src/entries/account';
 import React, { FC, useContext, useMemo, useState } from 'react';
 import { UpdateWalletName } from '../../components/create/WalletName';
 import {
@@ -15,11 +15,11 @@ import {
     useSetNotificationOnCloseInterceptor
 } from '../../components/Notification';
 import { AccountIsAlreadyAdded } from '../../components/create/AccountIsAlreadyAdded';
-import { WalletId, WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
+import { WalletId, WalletVersion } from '@tonkeeper/core/src/entries/wallet';
 import { SKInput } from '../../components/create/SKInput';
 import { ChoseWalletVersions } from '../../components/create/ChoseWalletVersions';
-import { Network } from '@tonkeeper/core/dist/entries/network';
-import { createStandardTonAccountBySK } from '@tonkeeper/core/dist/service/walletService';
+import { Network } from '@tonkeeper/core/src/entries/network';
+import { createStandardTonAccountBySK } from '@tonkeeper/core/src/service/walletService';
 import { useAppContext } from '../../hooks/appContext';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useMutation } from '@tanstack/react-query';

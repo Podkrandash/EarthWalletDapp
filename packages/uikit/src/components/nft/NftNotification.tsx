@@ -1,4 +1,4 @@
-import { NFT } from '@tonkeeper/core/dist/entries/nft';
+import { NFT } from '@tonkeeper/core/src/entries/nft';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useAppSdk } from '../../hooks/appSdk';
 import { Notification } from '../Notification';

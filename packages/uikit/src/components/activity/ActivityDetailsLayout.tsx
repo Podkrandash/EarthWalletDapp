@@ -1,4 +1,4 @@
-import { ActionStatusEnum } from '@tonkeeper/core/dist/tonApiV2';
+import { ActionStatusEnum } from '@tonkeeper/core/src/tonApiV2';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { useFormatCoinValue } from '../../hooks/balance';

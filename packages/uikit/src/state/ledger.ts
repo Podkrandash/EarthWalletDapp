@@ -4,10 +4,10 @@ import {
     isTransportReady,
     LedgerTonTransport,
     waitLedgerTonAppReady
-} from '@tonkeeper/core/dist/service/ledger/connector';
-import { getLedgerAccountPathByIndex } from '@tonkeeper/core/dist/service/ledger/utils';
+} from '@tonkeeper/core/src/service/ledger/connector';
+import { getLedgerAccountPathByIndex } from '@tonkeeper/core/src/service/ledger/utils';
 import { useAppContext } from '../hooks/appContext';
-import { AccountsApi, Account } from '@tonkeeper/core/dist/tonApiV2';
+import { AccountsApi, Account } from '@tonkeeper/core/src/tonApiV2';
 import { Address } from '@ton/core';
 import { useAppSdk } from '../hooks/appSdk';
 import { useNavigate } from 'react-router-dom';
@@ -16,8 +16,8 @@ import { AppRoute } from '../libs/routes';
 import { useCallback, useState } from 'react';
 import { useAccountsStorage } from '../hooks/useStorage';
 import { useActiveAccount, useActiveApi } from './wallet';
-import { accountByLedger } from '@tonkeeper/core/dist/service/walletService';
-import { WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
+import { accountByLedger } from '@tonkeeper/core/src/service/walletService';
+import { WalletVersion } from '@tonkeeper/core/src/entries/wallet';
 
 export type LedgerAccount = {
     accountIndex: number;

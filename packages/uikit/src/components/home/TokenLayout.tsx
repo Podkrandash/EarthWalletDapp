@@ -1,4 +1,4 @@
-import { JettonVerificationType } from '@tonkeeper/core/dist/tonApiV2';
+import { JettonVerificationType } from '@tonkeeper/core/src/tonApiV2';
 import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import { useTranslation } from '../../hooks/translation';

@@ -6,7 +6,7 @@ import { SettingsItem, SettingsList } from '../../components/settings/SettingsLi
 import { useTranslation } from '../../hooks/translation';
 import { getLanguageName } from '../../libs/common';
 import { useMutateUserLanguage } from '../../state/language';
-import { localizationFrom } from '@tonkeeper/core/dist/entries/language';
+import { localizationFrom } from '@tonkeeper/core/src/entries/language';
 
 export const Localization = () => {
     const { t, i18n } = useTranslation();

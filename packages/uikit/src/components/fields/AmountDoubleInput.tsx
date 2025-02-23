@@ -2,8 +2,8 @@ import React, { forwardRef, ReactNode, useEffect, useLayoutEffect, useRef, useSt
 import styled from 'styled-components';
 import { replaceTypedDecimalSeparator, seeIfValueValid } from '../transfer/amountView/AmountViewUI';
 import { getTextWidth } from '../../hooks/textWidth';
-import { formatSendValue, isNumeric, removeGroupSeparator } from '@tonkeeper/core/dist/utils/send';
-import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
+import { formatSendValue, isNumeric, removeGroupSeparator } from '@tonkeeper/core/src/utils/send';
+import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
 import BigNumber from 'bignumber.js';
 import { formatter } from '../../hooks/balance';
 import { Body1 } from '../Text';

@@ -4,8 +4,8 @@ import {
     isAccountBip39,
     isAccountTronCompatible,
     isMnemonicAndPassword
-} from '@tonkeeper/core/dist/entries/account';
-import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
+} from '@tonkeeper/core/src/entries/account';
+import { WalletId } from '@tonkeeper/core/src/entries/wallet';
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import styled, { css } from 'styled-components';
@@ -17,7 +17,7 @@ import { useCheckTouchId } from '../../state/password';
 import { useAccountState, useActiveAccount } from '../../state/wallet';
 import { Body2Class, H2Label2Responsive } from '../../components/Text';
 import { useTranslation } from '../../hooks/translation';
-import { tonMnemonicToTronMnemonic } from '@tonkeeper/core/dist/service/walletService';
+import { tonMnemonicToTronMnemonic } from '@tonkeeper/core/src/service/walletService';
 import { SpinnerRing } from '../../components/Icon';
 import { useSetNotificationOnBack } from '../../components/Notification';
 import { BorderSmallResponsive } from '../../components/shared/Styles';

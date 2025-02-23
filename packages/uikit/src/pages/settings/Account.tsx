@@ -23,7 +23,7 @@ import { WalletEmoji } from '../../components/shared/emoji/WalletEmoji';
 import { useTranslation } from '../../hooks/translation';
 import { AppRoute, SettingsRoute } from '../../libs/routes';
 import { useAccountsState } from '../../state/wallet';
-import { Account as AccountType } from '@tonkeeper/core/dist/entries/account';
+import { Account as AccountType } from '@tonkeeper/core/src/entries/account';
 import { useAccountLabel } from '../../hooks/accountUtils';
 import { useAddWalletNotification } from '../../components/modals/AddWalletNotificationControlled';
 

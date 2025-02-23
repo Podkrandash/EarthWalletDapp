@@ -1,8 +1,8 @@
 import { MultiSendForm } from '../../../state/multiSend';
 import BigNumber from 'bignumber.js';
 import { formatter } from '../../../hooks/balance';
-import { removeGroupSeparator } from '@tonkeeper/core/dist/utils/send';
-import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
+import { removeGroupSeparator } from '@tonkeeper/core/src/utils/send';
+import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
 
 export function getWillBeMultiSendValue(
     rowsValue: MultiSendForm['rows'],

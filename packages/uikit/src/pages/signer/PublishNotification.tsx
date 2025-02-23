@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { publishSignerMessage } from '@tonkeeper/core/dist/service/signerService';
+import { publishSignerMessage } from '@tonkeeper/core/src/service/signerService';
 import { FC, useCallback, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { CheckmarkCircleIcon, ExclamationMarkCircleIcon } from '../../components/Icon';
@@ -11,7 +11,7 @@ import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';
 import { AppRoute } from '../../libs/routes';
 import { useActiveApi, useActiveStandardTonWallet } from '../../state/wallet';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { Network } from '@tonkeeper/core/src/entries/network';
 
 const usePublishMessage = (signatureHex: string) => {
     const sdk = useAppSdk();

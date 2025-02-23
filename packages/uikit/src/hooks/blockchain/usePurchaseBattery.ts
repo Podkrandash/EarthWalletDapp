@@ -1,8 +1,8 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { isAccountTonWalletStandard } from '@tonkeeper/core/dist/entries/account';
+import { isAccountTonWalletStandard } from '@tonkeeper/core/src/entries/account';
 
-import { isTon, TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { isTon, TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import { useBatteryServiceConfig } from '../../state/battery';
 import { useActiveAccount, useInvalidateActiveWalletQueries } from '../../state/wallet';
 import { QueryKey } from '../../libs/queryKey';
@@ -17,7 +17,7 @@ import {
 } from './useSender';
 import { useTonAssetTransferService } from './useBlockchainService';
 import { useToQueryKeyPart } from '../useToQueryKeyPart';
-import { TonEstimation } from '@tonkeeper/core/dist/entries/send';
+import { TonEstimation } from '@tonkeeper/core/src/entries/send';
 
 export function useEstimatePurchaseBattery({
     assetAmount,

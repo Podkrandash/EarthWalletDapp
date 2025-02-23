@@ -3,16 +3,16 @@ import {
     AccountMAM,
     AccountTonMnemonic,
     seeIfMainnnetAccount
-} from '@tonkeeper/core/dist/entries/account';
-import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
-import { ProState, ProStateAuthorized, isPaidSubscription } from '@tonkeeper/core/dist/entries/pro';
+} from '@tonkeeper/core/src/entries/account';
+import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { ProState, ProStateAuthorized, isPaidSubscription } from '@tonkeeper/core/src/entries/pro';
 import {
     DerivationItemNamed,
     TonWalletStandard,
     backwardCompatibilityOnlyWalletVersions,
     sortWalletsByVersion
-} from '@tonkeeper/core/dist/entries/wallet';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+} from '@tonkeeper/core/src/entries/wallet';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import { ProServiceTier } from '@tonkeeper/core/src/tonConsoleApi';
 import { FC, PropsWithChildren, useCallback, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';

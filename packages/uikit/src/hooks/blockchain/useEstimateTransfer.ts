@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
-import { Asset, isTonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { Estimation, RecipientData, TonRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { Asset, isTonAsset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { Estimation, RecipientData, TonRecipientData } from '@tonkeeper/core/src/entries/send';
 import { QueryKey } from '../../libs/queryKey';
 import { DefaultRefetchInterval } from '../../state/tonendpoint';
 import {
@@ -14,12 +14,12 @@ import {
 } from './useSender';
 import { useTonAssetTransferService } from './useBlockchainService';
 import { useNotifyErrorHandle } from '../useNotification';
-import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
+import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
 import { useToQueryKeyPart } from '../useToQueryKeyPart';
 import { useMemo } from 'react';
-import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { TronAsset } from '@tonkeeper/core/dist/entries/crypto/asset/tron-asset';
+import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TronAsset } from '@tonkeeper/core/src/entries/crypto/asset/tron-asset';
 
 export function useEstimateTransfer({
     recipient,

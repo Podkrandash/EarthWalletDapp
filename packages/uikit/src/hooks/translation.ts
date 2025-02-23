@@ -2,7 +2,7 @@ import {
     defaultLanguage,
     languages,
     localizationText
-} from '@tonkeeper/core/dist/entries/language';
+} from '@tonkeeper/core/src/entries/language';
 import React, { useCallback, useContext } from 'react';
 
 export type Translation = (text: string, replaces?: Record<string, string | number>) => string;

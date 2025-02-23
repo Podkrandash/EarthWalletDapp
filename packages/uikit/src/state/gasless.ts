@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { QueryKey } from '../libs/queryKey';
 import { useAppContext } from '../hooks/appContext';
-import { GaslessApi } from '@tonkeeper/core/dist/tonApiV2';
+import { GaslessApi } from '@tonkeeper/core/src/tonApiV2';
 import { useMemo } from 'react';
 import { useActiveApi } from './wallet';
 

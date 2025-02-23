@@ -7,7 +7,7 @@ import {
     useLedgerWallets
 } from '../../state/ledger';
 import React, { FC, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { LedgerTonTransport } from '@tonkeeper/core/dist/service/ledger/connector';
+import { LedgerTonTransport } from '@tonkeeper/core/src/service/ledger/connector';
 import { Body2, H2Label2Responsive } from '../../components/Text';
 import { useNavigate } from 'react-router-dom';
 import { useAppSdk } from '../../hooks/appSdk';
@@ -15,7 +15,7 @@ import { AppRoute } from '../../libs/routes';
 import { useNativeBackButton } from '../../components/BackButton';
 import { SpinnerIcon } from '../../components/Icon';
 import { ListBlock, ListItem } from '../../components/List';
-import { formatAddress } from '@tonkeeper/core/dist/utils/common';
+import { formatAddress } from '@tonkeeper/core/src/utils/common';
 import { Checkbox } from '../../components/fields/Checkbox';
 import { UpdateWalletName } from '../../components/create/WalletName';
 import { toFormattedTonBalance } from '../../hooks/balance';

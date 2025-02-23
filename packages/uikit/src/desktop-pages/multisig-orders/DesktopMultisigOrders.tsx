@@ -18,19 +18,19 @@ import { Button } from '../../components/fields/Button';
 import { styled } from 'styled-components';
 import { useAppContext } from '../../hooks/appContext';
 import { useAppSdk } from '../../hooks/appSdk';
-import { Multisig, type MultisigOrder, Risk } from '@tonkeeper/core/dist/tonApiV2';
+import { Multisig, type MultisigOrder, Risk } from '@tonkeeper/core/src/tonApiV2';
 import { AppRoute } from '../../libs/routes';
 import { Navigate } from 'react-router-dom';
 import { useSendTransferNotification } from '../../components/modals/useSendTransferNotification';
-import { toTimeLeft } from '@tonkeeper/core/dist/utils/date';
+import { toTimeLeft } from '@tonkeeper/core/src/utils/date';
 import { ArrowUpIcon } from '../../components/Icon';
 import { toNano } from '@ton/core';
 import { useFormatCoinValue } from '../../hooks/balance';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
 import { useMultisigOrderNotification } from '../../components/modals/MultisigOrderNotificationControlled';
-import { formatAddress } from '@tonkeeper/core/dist/utils/common';
+import { formatAddress } from '@tonkeeper/core/src/utils/common';
 import { useDateTimeFormatFromNow } from '../../hooks/useDateTimeFormat';
-import { orderStatus } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder';
+import { orderStatus } from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder';
 import { useActiveConfig } from '../../state/wallet';
 
 const DesktopViewPageLayoutStyled = styled(DesktopViewPageLayout)`

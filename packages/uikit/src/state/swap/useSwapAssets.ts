@@ -1,18 +1,18 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Address } from '@ton/core';
-import { AppKey } from '@tonkeeper/core/dist/Keys';
-import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { packAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/basic-asset';
+import { AppKey } from '@tonkeeper/core/src/Keys';
+import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { packAssetId } from '@tonkeeper/core/src/entries/crypto/asset/basic-asset';
 import {
     TonAsset,
     isTon,
     tonAssetAddressFromString,
     tonAssetAddressToString
-} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { JettonsApi } from '@tonkeeper/core/dist/tonApiV2';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
-import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
+} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { JettonsApi } from '@tonkeeper/core/src/tonApiV2';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
+import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
 import BigNumber from 'bignumber.js';
 import { useMemo } from 'react';
 import { useAppContext } from '../../hooks/appContext';

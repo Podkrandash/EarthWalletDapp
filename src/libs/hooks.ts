@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Viewport } from '@tma.js/sdk';
-import { Account } from '@tonkeeper/core/dist/entries/account';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { Account } from '@tonkeeper/core/src/entries/account';
+import { Network } from '@tonkeeper/core/src/entries/network';
 import { Analytics, AnalyticsGroup, toWalletType } from '@tonkeeper/uikit/dist/hooks/analytics';
 import { AptabaseWeb } from '@tonkeeper/uikit/dist/hooks/analytics/aptabase-web';
 import { Gtag } from '@tonkeeper/uikit/dist/hooks/analytics/gtag';

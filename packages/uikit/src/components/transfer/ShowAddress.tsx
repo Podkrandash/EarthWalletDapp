@@ -1,4 +1,4 @@
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import React, { FC, PropsWithChildren, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import useTextWidth from '../../hooks/textWidth';

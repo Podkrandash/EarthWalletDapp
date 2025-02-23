@@ -1,4 +1,4 @@
-import { Account } from '@tonkeeper/core/dist/entries/account';
+import { Account } from '@tonkeeper/core/src/entries/account';
 import React, { FC, useContext, useMemo, useState } from 'react';
 import { AddressInput } from '../../components/create/AddressInput';
 import { UpdateWalletName } from '../../components/create/WalletName';
@@ -16,7 +16,7 @@ import {
     useSetNotificationOnCloseInterceptor
 } from '../../components/Notification';
 import { AccountIsAlreadyAdded } from '../../components/create/AccountIsAlreadyAdded';
-import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
+import { WalletId } from '@tonkeeper/core/src/entries/wallet';
 import { Address } from '@ton/core';
 
 export const CreateWatchOnlyWallet: FC<{ afterCompleted: () => void }> = ({ afterCompleted }) => {

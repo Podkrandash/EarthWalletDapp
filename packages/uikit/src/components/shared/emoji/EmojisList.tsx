@@ -1,4 +1,4 @@
-import { emojis } from '@tonkeeper/core/dist/utils/emojis';
+import { emojis } from '@tonkeeper/core/src/utils/emojis';
 import React, { FC, useEffect, useState } from 'react';
 import { emojiIcons } from './emojiIcons';
 import styled from 'styled-components';

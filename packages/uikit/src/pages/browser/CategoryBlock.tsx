@@ -1,4 +1,4 @@
-import { PromotedApp, PromotionCategory } from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
+import { PromotedApp, PromotionCategory } from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
 import { FC, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';

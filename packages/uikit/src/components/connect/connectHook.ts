@@ -3,27 +3,27 @@ import {
     ConnectItemReply,
     DAppManifest,
     SendTransactionAppRequest
-} from '@tonkeeper/core/dist/entries/tonConnect';
+} from '@tonkeeper/core/src/entries/tonConnect';
 import {
     parseTonTransferWithAddress,
     seeIfBringToFrontLink
-} from '@tonkeeper/core/dist/service/deeplinkingService';
+} from '@tonkeeper/core/src/service/deeplinkingService';
 import {
     connectRejectResponse,
     parseTonConnect,
     saveWalletTonConnect,
     sendTransactionErrorResponse,
     sendTransactionSuccessResponse
-} from '@tonkeeper/core/dist/service/tonConnect/connectService';
-import { TonConnectParams } from '@tonkeeper/core/dist/service/tonConnect/connectionService';
-import { sendEventToBridge } from '@tonkeeper/core/dist/service/tonConnect/httpBridge';
+} from '@tonkeeper/core/src/service/tonConnect/connectService';
+import { TonConnectParams } from '@tonkeeper/core/src/service/tonConnect/connectionService';
+import { sendEventToBridge } from '@tonkeeper/core/src/service/tonConnect/httpBridge';
 import { useAppSdk } from '../../hooks/appSdk';
 import { useTranslation } from '../../hooks/translation';
 import { QueryKey } from '../../libs/queryKey';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
 import { useToast } from '../../hooks/useNotification';
-import { Account } from '@tonkeeper/core/dist/entries/account';
-import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
+import { Account } from '@tonkeeper/core/src/entries/account';
+import { WalletId } from '@tonkeeper/core/src/entries/wallet';
 
 export const useGetConnectInfo = () => {
     const sdk = useAppSdk();

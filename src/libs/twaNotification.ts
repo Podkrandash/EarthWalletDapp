@@ -1,18 +1,18 @@
 import { LaunchParams, MiniApp, retrieveLaunchParams } from '@tma.js/sdk';
-import { NotificationService } from '@tonkeeper/core/dist/AppSdk';
-import { APIConfig } from '@tonkeeper/core/dist/entries/apis';
+import { NotificationService } from '@tonkeeper/core/src/AppSdk';
+import { APIConfig } from '@tonkeeper/core/src/entries/apis';
 import {
     TonContract,
     TonWalletStandard,
     isStandardTonWallet
-} from '@tonkeeper/core/dist/entries/wallet';
+} from '@tonkeeper/core/src/entries/wallet';
 import {
     toTonProofItem,
     tonConnectProofPayload
-} from '@tonkeeper/core/dist/service/tonConnect/connectService';
-import { walletStateInitFromState } from '@tonkeeper/core/dist/service/wallet/contractService';
+} from '@tonkeeper/core/src/service/tonConnect/connectService';
+import { walletStateInitFromState } from '@tonkeeper/core/src/service/wallet/contractService';
 import { Configuration, DefaultApi } from '../twaApi';
-import { getServerTime } from "@tonkeeper/core/dist/service/ton-blockchain/utils";
+import { getServerTime } from "@tonkeeper/core/src/service/ton-blockchain/utils";
 
 const seeIfProduction = () => {
     return window.location.hostname.includes('twa.tonkeeper.com');

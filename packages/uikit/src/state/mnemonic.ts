@@ -1,46 +1,46 @@
 import { TonKeychainRoot } from '@ton-keychain/core';
 import { Cell } from '@ton/core';
 import { keyPairFromSecretKey, sha256_sync, sign } from '@ton/crypto';
-import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
 import {
     AccountId,
     isAccountTronCompatible,
     isMnemonicAndPassword,
     Account,
     AccountSecret
-} from '@tonkeeper/core/dist/entries/account';
-import { AuthPassword, MnemonicType } from '@tonkeeper/core/dist/entries/password';
-import { CellSigner, Signer, TronSigner } from '@tonkeeper/core/dist/entries/signer';
-import { TonWalletStandard, WalletId } from '@tonkeeper/core/dist/entries/wallet';
-import { accountsStorage } from '@tonkeeper/core/dist/service/accountsStorage';
-import { KeystoneMessageType } from '@tonkeeper/core/dist/service/keystone/types';
+} from '@tonkeeper/core/src/entries/account';
+import { AuthPassword, MnemonicType } from '@tonkeeper/core/src/entries/password';
+import { CellSigner, Signer, TronSigner } from '@tonkeeper/core/src/entries/signer';
+import { TonWalletStandard, WalletId } from '@tonkeeper/core/src/entries/wallet';
+import { accountsStorage } from '@tonkeeper/core/src/service/accountsStorage';
+import { KeystoneMessageType } from '@tonkeeper/core/src/service/keystone/types';
 import {
     LedgerTonProofRequest,
     LedgerTonProofResponse,
     LedgerTransaction
-} from '@tonkeeper/core/dist/service/ledger/connector';
+} from '@tonkeeper/core/src/service/ledger/connector';
 import {
     decryptWalletSecret,
     mnemonicToKeypair,
     walletSecretFromString
-} from '@tonkeeper/core/dist/service/mnemonicService';
+} from '@tonkeeper/core/src/service/mnemonicService';
 import {
     parseSignerSignature,
     storeTransactionAndCreateDeepLink
-} from '@tonkeeper/core/dist/service/signerService';
-import { delay } from '@tonkeeper/core/dist/utils/common';
-import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
+} from '@tonkeeper/core/src/service/signerService';
+import { delay } from '@tonkeeper/core/src/utils/common';
+import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
 import nacl from 'tweetnacl';
 import { TxConfirmationCustomError } from '../libs/errors/TxConfirmationCustomError';
-import { getLedgerAccountPathByIndex } from '@tonkeeper/core/dist/service/ledger/utils';
+import { getLedgerAccountPathByIndex } from '@tonkeeper/core/src/service/ledger/utils';
 import { useAppSdk } from '../hooks/appSdk';
 import { useCallback } from 'react';
 import { useActiveAccount } from './wallet';
 import { useCheckTouchId } from './password';
-import { tonMnemonicToTronMnemonic } from '@tonkeeper/core/dist/service/walletService';
+import { tonMnemonicToTronMnemonic } from '@tonkeeper/core/src/service/walletService';
 import { TronWeb } from 'tronweb';
 import type { Transaction } from 'tronweb/src/types/Transaction';
-import { TronApi } from '@tonkeeper/core/dist/tronApi';
+import { TronApi } from '@tonkeeper/core/src/tronApi';
 
 export const signTonConnectOver = ({
     sdk,

@@ -10,14 +10,14 @@ import {
     useMutateRenameAccount
 } from '../../state/wallet';
 import { ChoseWalletVersions, ChoseWalletVersionsByMnemonic } from "../../components/create/ChoseWalletVersions";
-import { AccountTonTestnet, getAccountByWalletById } from '@tonkeeper/core/dist/entries/account';
+import { AccountTonTestnet, getAccountByWalletById } from '@tonkeeper/core/src/entries/account';
 import {
     createStandardTestnetAccountByMnemonic,
     getStandardTonWalletVersions
-} from '@tonkeeper/core/dist/service/walletService';
+} from '@tonkeeper/core/src/service/walletService';
 import { useAppContext } from '../../hooks/appContext';
-import { WalletId, WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
-import { Account } from '@tonkeeper/core/dist/entries/account';
+import { WalletId, WalletVersion } from '@tonkeeper/core/src/entries/wallet';
+import { Account } from '@tonkeeper/core/src/entries/account';
 import { AccountIsAlreadyAdded } from '../../components/create/AccountIsAlreadyAdded';
 import { useConfirmDiscardNotification } from '../../components/modals/ConfirmDiscardNotificationControlled';
 import { AddWalletContext } from '../../components/create/AddWalletContext';
@@ -30,8 +30,8 @@ import { TonKeychainRoot } from '@ton-keychain/core';
 import { useMutation } from '@tanstack/react-query';
 import { useUserFiat } from '../../state/fiat';
 import { mnemonicValidate } from '@ton/crypto';
-import { mnemonicToKeypair } from '@tonkeeper/core/dist/service/mnemonicService';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { mnemonicToKeypair } from '@tonkeeper/core/src/service/mnemonicService';
+import { Network } from '@tonkeeper/core/src/entries/network';
 
 const useProcessMnemonic = () => {
     const context = useAppContext();

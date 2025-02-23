@@ -1,9 +1,9 @@
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { TonRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { TonRecipientData } from '@tonkeeper/core/src/entries/send';
 import React, { FC, PropsWithChildren } from 'react';
 import { ConfirmView, ConfirmViewAdditionalBottomSlot } from './ConfirmView';
 import { useEstimateNewMultisigTransfer } from '../../hooks/blockchain/multisig/useEstimateNewMultisigTransfer';
-import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { useSendNewMultisigTransfer } from '../../hooks/blockchain/multisig/useSendNewMultisigTransfer';
 import { MultisigOrderLifetimeMinutes } from '../../libs/multisig';
 import { MultisigTransferDetails } from './multisig/MultisigTransferDetails';

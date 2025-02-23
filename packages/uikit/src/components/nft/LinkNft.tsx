@@ -1,11 +1,11 @@
 import { Address } from '@ton/core';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { NFTDNS } from '@tonkeeper/core/dist/entries/nft';
-import { isStandardTonWallet, WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
-import { getWalletsAddresses } from '@tonkeeper/core/dist/service/walletService';
-import { areEqAddresses, formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
-import { isTMEDomain } from '@tonkeeper/core/dist/utils/nft';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { NFTDNS } from '@tonkeeper/core/src/entries/nft';
+import { isStandardTonWallet, WalletVersion } from '@tonkeeper/core/src/entries/wallet';
+import { getWalletsAddresses } from '@tonkeeper/core/src/service/walletService';
+import { areEqAddresses, formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { isTMEDomain } from '@tonkeeper/core/src/utils/nft';
 import BigNumber from 'bignumber.js';
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';

@@ -5,8 +5,8 @@ import { useTranslation } from '../../hooks/translation';
 import { Button } from '../fields/Button';
 import { SpinnerRing } from '../Icon';
 import { useAccountsState, useActiveConfig, useCreateAccountTonMultisig } from '../../state/wallet';
-import { AccountTonMultisig } from '@tonkeeper/core/dist/entries/account';
-import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
+import { AccountTonMultisig } from '@tonkeeper/core/src/entries/account';
+import { WalletId } from '@tonkeeper/core/src/entries/wallet';
 import {
     Notification,
     useSetNotificationOnBack,
@@ -38,10 +38,10 @@ import { AppRoute } from '../../libs/routes';
 import {
     MultisigConfig,
     MultisigEncoder
-} from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+} from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import BigNumber from 'bignumber.js';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
 
 const ContentWrapper = styled.div`
     display: flex;

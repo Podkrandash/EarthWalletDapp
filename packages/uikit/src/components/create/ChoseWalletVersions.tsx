@@ -2,8 +2,8 @@ import {
     WalletVersion,
     WalletVersions,
     walletVersionText
-} from '@tonkeeper/core/dist/entries/wallet';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+} from '@tonkeeper/core/src/entries/wallet';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import { FC, useEffect, useLayoutEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useAppContext } from '../../hooks/appContext';
@@ -17,11 +17,11 @@ import { Checkbox } from '../fields/Checkbox';
 import { ButtonResponsiveSize } from '../fields/Button';
 import { Body1, Body2, Body2Class, H2Label2Responsive, Label1 } from '../Text';
 import { ListBlock, ListItem, ListItemPayload } from '../List';
-import { isAccountTonWalletStandard } from '@tonkeeper/core/dist/entries/account';
-import { mnemonicToKeypair } from '@tonkeeper/core/dist/service/mnemonicService';
-import { MnemonicType } from '@tonkeeper/core/dist/entries/password';
-import { Network } from '@tonkeeper/core/dist/entries/network';
-import { mayBeCreateAccountId } from '@tonkeeper/core/dist/service/walletService';
+import { isAccountTonWalletStandard } from '@tonkeeper/core/src/entries/account';
+import { mnemonicToKeypair } from '@tonkeeper/core/src/service/mnemonicService';
+import { MnemonicType } from '@tonkeeper/core/src/entries/password';
+import { Network } from '@tonkeeper/core/src/entries/network';
+import { mayBeCreateAccountId } from '@tonkeeper/core/src/service/walletService';
 
 const Wrapper = styled.div`
     flex: 1;

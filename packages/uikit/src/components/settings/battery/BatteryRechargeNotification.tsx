@@ -3,10 +3,10 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { useTranslation } from '../../../hooks/translation';
 import styled, { css } from 'styled-components';
 import { AssetSelect } from '../../fields/AssetSelect';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
 import { BatteryPacksSelect } from './BatteryPacksSelect';
 import { useAsset } from '../../../state/home';
-import { legacyTonAssetId, TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { legacyTonAssetId, TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import {
     useBatteryAvailableRechargeMethods,
     useBatteryPacksReservedApplied,
@@ -17,10 +17,10 @@ import { BatteryCustomAmountInput } from './BatteryCustomAmountInput';
 import BigNumber from 'bignumber.js';
 import { ButtonResponsiveSize } from '../../fields/Button';
 import { BuyBatteryConfirmNotification } from './BuyBatteryConfirmNotification';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import { useToast } from '../../../hooks/useNotification';
 import { TonRecipientInput } from '../../fields/TonRecipientInput';
-import { TonRecipient } from '@tonkeeper/core/dist/entries/send';
+import { TonRecipient } from '@tonkeeper/core/src/entries/send';
 
 const NotificationStyled = styled(Notification)`
     ${p =>

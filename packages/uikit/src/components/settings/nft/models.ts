@@ -1,5 +1,5 @@
-import { NftItemCollection } from '@tonkeeper/core/dist/tonApiV2';
-import { NFT } from '@tonkeeper/core/dist/entries/nft';
+import { NftItemCollection } from '@tonkeeper/core/src/tonApiV2';
+import { NFT } from '@tonkeeper/core/src/entries/nft';
 
 export type SettingsNFTCollection = NftItemCollection & {
     type: 'collection';

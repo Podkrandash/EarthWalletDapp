@@ -1,7 +1,7 @@
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { intlLocale } from '@tonkeeper/core/dist/entries/language';
-import { NFTDNS } from '@tonkeeper/core/dist/entries/nft';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { intlLocale } from '@tonkeeper/core/src/entries/language';
+import { NFTDNS } from '@tonkeeper/core/src/entries/nft';
 import BigNumber from 'bignumber.js';
 import { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';

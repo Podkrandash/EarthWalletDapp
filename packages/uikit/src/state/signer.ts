@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { accountBySignerQr } from '@tonkeeper/core/dist/service/walletService';
+import { accountBySignerQr } from '@tonkeeper/core/src/service/walletService';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';

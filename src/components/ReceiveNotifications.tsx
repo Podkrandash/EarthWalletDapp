@@ -1,5 +1,5 @@
-import { ReceiveInitParams } from '@tonkeeper/core/dist/AppSdk';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { ReceiveInitParams } from '@tonkeeper/core/src/AppSdk';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
 import { ReceiveContent } from '@tonkeeper/uikit/dist/components/home/AccountView';
 import { useAppSdk } from '@tonkeeper/uikit/dist/hooks/appSdk';
 import { FC, PropsWithChildren, useEffect, useState } from 'react';

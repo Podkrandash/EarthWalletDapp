@@ -1,13 +1,13 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { sha512_sync } from '@ton/crypto';
-import { FiatCurrencies } from '@tonkeeper/core/dist/entries/fiat';
-import { TonContract } from '@tonkeeper/core/dist/entries/wallet';
+import { FiatCurrencies } from '@tonkeeper/core/src/entries/fiat';
+import { TonContract } from '@tonkeeper/core/src/entries/wallet';
 import {
     TonendpoinFiatButton,
     TonendpoinFiatItem,
     TonendpointConfig
-} from '@tonkeeper/core/dist/tonkeeperApi/tonendpoint';
-import { formatAddress } from '@tonkeeper/core/dist/utils/common';
+} from '@tonkeeper/core/src/tonkeeperApi/tonendpoint';
+import { formatAddress } from '@tonkeeper/core/src/utils/common';
 import React, { FC, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';

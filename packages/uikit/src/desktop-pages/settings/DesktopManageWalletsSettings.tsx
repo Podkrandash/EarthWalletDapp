@@ -33,7 +33,7 @@ import {
     AccountTonSK,
     AccountTonTestnet,
     AccountTonWatchOnly
-} from '@tonkeeper/core/dist/entries/account';
+} from '@tonkeeper/core/src/entries/account';
 import { useAddWalletNotification } from '../../components/modals/AddWalletNotificationControlled';
 import {
     DesktopViewHeader,
@@ -48,9 +48,9 @@ import {
     sortDerivationsByIndex,
     sortWalletsByVersion,
     WalletId
-} from '@tonkeeper/core/dist/entries/wallet';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
-import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
+} from '@tonkeeper/core/src/entries/wallet';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
 import { useMultisigsOfAccountToDisplay } from '../../state/multisig';
 import { SelectDropDown } from '../../components/fields/Select';
 import { useRenameNotification } from '../../components/modals/RenameNotificationControlled';

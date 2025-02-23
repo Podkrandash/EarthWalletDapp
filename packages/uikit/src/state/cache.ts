@@ -1,4 +1,4 @@
-import { IAppSdk } from '@tonkeeper/core/dist/AppSdk';
+import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
 
 interface BrowserCache<T> {
     timeout: number;

@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 
-import { NftItem } from '@tonkeeper/core/dist/tonApiV2';
+import { NftItem } from '@tonkeeper/core/src/tonApiV2';
 import React, { FC, ReactNode, useEffect, useMemo, useState } from 'react';
 import { useAppContext } from '../../../hooks/appContext';
 import { useTranslation } from '../../../hooks/translation';
@@ -8,9 +8,9 @@ import { Gap } from '../../Layout';
 import { ListBlock } from '../../List';
 import { FullHeightBlock } from '../../Notification';
 
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { TonEstimation, TonRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { TonEstimation, TonRecipientData } from '@tonkeeper/core/src/entries/send';
 import { useTransactionAnalytics } from '../../../hooks/amplitude';
 import { QueryKey } from '../../../libs/queryKey';
 import { Image, ImageMock, Info, SendingTitle, Title } from '../Confirm';
@@ -43,13 +43,13 @@ import {
     useGetSender
 } from '../../../hooks/blockchain/useSender';
 import { useTonRawTransactionService } from '../../../hooks/blockchain/useBlockchainService';
-import { NFTEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/nft-encoder';
+import { NFTEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/nft-encoder';
 import BigNumber from 'bignumber.js';
 import { comment } from '@ton/core';
 import { useNotifyErrorHandle } from '../../../hooks/useNotification';
-import { zeroFee } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
+import { zeroFee } from '@tonkeeper/core/src/service/ton-blockchain/utils';
 import { useToQueryKeyPart } from '../../../hooks/useToQueryKeyPart';
-import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 
 const assetAmount = new AssetAmount({
     asset: TON_ASSET,

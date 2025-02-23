@@ -1,5 +1,5 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
-import { NFT } from '@tonkeeper/core/dist/entries/nft';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { NFT } from '@tonkeeper/core/src/entries/nft';
 import { FC } from 'react';
 import { HomeSkeleton } from '../../components/Skeleton';
 import { Balance } from '../../components/home/Balance';
@@ -10,7 +10,7 @@ import { useAllChainsAssets } from '../../state/home';
 import { usePreFetchRates } from '../../state/rates';
 
 import { useWalletFilteredNftList } from '../../state/nft';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 
 const HomeAssets: FC<{
     assets: AssetAmount[];

@@ -3,7 +3,7 @@ import {
     isTon,
     TonAsset,
     tonAssetAddressToString
-} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { useTonAssetsBalances } from '../../state/home';
 import { DropDownContent, DropDownItem, DropDownItemsDivider } from '../DropDown';
 import { ColumnText } from '../Layout';

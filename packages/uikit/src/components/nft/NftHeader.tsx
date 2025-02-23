@@ -1,4 +1,4 @@
-import { NftItem, TrustType } from '@tonkeeper/core/dist/tonApiV2';
+import { NftItem, TrustType } from '@tonkeeper/core/src/tonApiV2';
 import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import { useTranslation } from '../../hooks/translation';

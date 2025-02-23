@@ -1,6 +1,6 @@
-import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
-import { eqAddresses } from '@tonkeeper/core/dist/utils/address';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { BLOCKCHAIN_NAME, CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { eqAddresses } from '@tonkeeper/core/src/utils/address';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import BigNumber from 'bignumber.js';
 import { FC, useEffect, useMemo, useRef } from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
@@ -29,18 +29,18 @@ import { useSwapFromAsset } from '../../state/swap/useSwapForm';
 import { useTonendpointBuyMethods } from '../../state/tonendpoint';
 import { useActiveTonNetwork, useIsActiveWalletWatchOnly } from '../../state/wallet';
 import { OtherHistoryFilters } from '../../components/desktop/history/DesktopHistoryFilters';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { Network } from '@tonkeeper/core/src/entries/network';
 import { HideOnReview } from '../../components/ios/HideOnReview';
 import {
     TRON_TRX_ASSET,
     TRON_USDT_ASSET
-} from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { tonAssetAddressFromString } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { tonAssetAddressFromString } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { useActiveTronWallet, useTronBalances } from '../../state/tron/tron';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import { BorderSmallResponsive } from '../../components/shared/Styles';
 import { useSendTransferNotification } from '../../components/modals/useSendTransferNotification';
-import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
+import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
 
 export const DesktopCoinPage = () => {
     const navigate = useNavigate();

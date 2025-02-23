@@ -3,14 +3,14 @@ import {
     useBatteryShouldBeReservedAmount,
     usePurchaseBatteryUnitTokenRate
 } from '../../../state/battery';
-import { legacyTonAssetId, TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { legacyTonAssetId, TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { FC, useEffect, useMemo, useRef, useState } from 'react';
 import BigNumber from 'bignumber.js';
 import { AmountDoubleInput } from '../../fields/AmountDoubleInput';
 import styled, { useTheme } from 'styled-components';
 import { Body3 } from '../../Text';
 import { useAssetWeiBalance } from '../../../state/home';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import { useTranslation } from '../../../hooks/translation';
 
 const ContentWrapper = styled.div<{ $isShown: boolean }>`

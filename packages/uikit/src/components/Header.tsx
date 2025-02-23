@@ -194,27 +194,23 @@ const DropDownPayload: FC<{ onClose: () => void; onCreate: () => void }> = ({
 }) => {
     const navigate = useNavigate();
     const { t } = useTranslation();
-    const accountsWallets: {
-        wallet: TonContract;
-        account: Account;
-        derivation?: DerivationItemNamed;
-    }[] = useSideBarItems()
+    const accountsWallets = useSideBarItems()
         .map(i => (i.type === 'folder' ? i.accounts : [i]))
         .flat()
         .filter(notNullish)
         .filter(a => a.type !== 'ton-multisig')
-        .flatMap(a => {
+        .flatMap<{ wallet: TonContract; account: Account; derivation?: DerivationItemNamed }>(a => {
             if (a.type === 'ledger') {
                 return a.derivations
                     .slice()
                     .sort(sortDerivationsByIndex)
-                    .map(
-                        (d: DerivationItemNamed) =>
-                            ({
-                                wallet: d.tonWallets.find((w: TonContract) => w.id === d.activeTonWalletId)!,
-                                account: a
-                            } as { wallet: TonContract; account: Account })
-                    );
+                    .flatMap(d => {
+                        if ('name' in d && 'emoji' in d) {
+                            const wallet = d.tonWallets.find(w => w.id === d.activeTonWalletId);
+                            return wallet ? [{ wallet, account: a, derivation: d as DerivationItemNamed }] : [];
+                        }
+                        return [];
+                    });
             }
 
             if (!isAccountTonWalletStandard(a)) {

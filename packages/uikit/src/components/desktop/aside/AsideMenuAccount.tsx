@@ -2,12 +2,12 @@ import {
     sortDerivationsByIndex,
     sortWalletsByVersion,
     WalletId
-} from '@tonkeeper/core/dist/entries/wallet';
+} from '@tonkeeper/core/src/entries/wallet';
 import { AsideMenuItem } from '../../shared/AsideItem';
 import { WalletEmoji } from '../../shared/emoji/WalletEmoji';
 import { Label2 } from '../../Text';
 import { GearIconEmpty } from '../../Icon';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import {
     AccountKeystone,
     AccountLedger,
@@ -19,7 +19,7 @@ import {
     Account,
     getNetworkByAccount,
     AccountTonTestnet, AccountTonSK
-} from "@tonkeeper/core/dist/entries/account";
+} from "@tonkeeper/core/src/entries/account";
 import { FC, forwardRef } from 'react';
 import { useIsHovered } from '../../../hooks/useIsHovered';
 import styled from 'styled-components';
@@ -38,7 +38,7 @@ import {
 import { useWalletVersionSettingsNotification } from '../../modals/WalletVersionSettingsNotification';
 import { useLedgerIndexesSettingsNotification } from '../../modals/LedgerIndexesSettingsNotification';
 import { useMAMIndexesSettingsNotification } from '../../modals/MAMIndexesSettingsNotification';
-import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
+import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
 import { useNavigate } from 'react-router-dom';
 import { AppRoute } from '../../../libs/routes';
 import { useAsideActiveRoute } from '../../../hooks/desktop/useAsideActiveRoute';

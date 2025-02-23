@@ -1,8 +1,8 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
-import { NFT } from '@tonkeeper/core/dist/entries/nft';
-import { RecipientData, TonRecipientData } from '@tonkeeper/core/dist/entries/send';
-import { parseTonTransferWithAddress } from '@tonkeeper/core/dist/service/deeplinkingService';
-import { NftItem } from '@tonkeeper/core/dist/tonApiV2';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { NFT } from '@tonkeeper/core/src/entries/nft';
+import { RecipientData, TonRecipientData } from '@tonkeeper/core/src/entries/send';
+import { parseTonTransferWithAddress } from '@tonkeeper/core/src/service/deeplinkingService';
+import { NftItem } from '@tonkeeper/core/src/tonApiV2';
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useAppContext } from '../../../hooks/appContext';

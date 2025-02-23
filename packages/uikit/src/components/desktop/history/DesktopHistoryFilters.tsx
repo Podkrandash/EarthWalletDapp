@@ -8,7 +8,7 @@ import { ChevronDownIcon, CoinsHorizontalIcon, SlidersIcon } from '../../Icon';
 import { Checkbox } from '../../fields/Checkbox';
 import { isInitiatorFiltrationForAssetAvailable, useHistoryFilters } from '../../../state/activity';
 import { useTranslation } from '../../../hooks/translation';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
 import { Badge } from '../../shared';
 
 const AssetIcon = styled.img<{ $noBorders?: boolean }>`

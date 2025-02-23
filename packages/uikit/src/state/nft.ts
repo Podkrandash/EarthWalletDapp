@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { NFT } from '@tonkeeper/core/dist/entries/nft';
-import { TonWalletConfig } from '@tonkeeper/core/dist/entries/wallet';
-import { getActiveWalletConfig } from '@tonkeeper/core/dist/service/wallet/configService';
+import { NFT } from '@tonkeeper/core/src/entries/nft';
+import { TonWalletConfig } from '@tonkeeper/core/src/entries/wallet';
+import { getActiveWalletConfig } from '@tonkeeper/core/src/service/wallet/configService';
 import {
     AccountsApi,
     BlockchainApi,
@@ -10,8 +10,8 @@ import {
     NFTApi,
     NftCollection,
     NftItem
-} from '@tonkeeper/core/dist/tonApiV2';
-import { isTONDNSDomain } from '@tonkeeper/core/dist/utils/nft';
+} from '@tonkeeper/core/src/tonApiV2';
+import { isTONDNSDomain } from '@tonkeeper/core/src/utils/nft';
 import { useMemo } from 'react';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';

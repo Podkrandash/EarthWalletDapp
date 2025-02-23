@@ -25,9 +25,9 @@ import {
     useIsActiveAccountMultisig,
     useUnviewedAccountOrdersNumber
 } from '../../../state/multisig';
-import { isAccountCanManageMultisigs } from '@tonkeeper/core/dist/entries/account';
+import { isAccountCanManageMultisigs } from '@tonkeeper/core/src/entries/account';
 import { RoundedBadge } from '../../shared/Badge';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { Network } from '@tonkeeper/core/src/entries/network';
 import { useBatteryBalance, useBatteryEnabledConfig } from '../../../state/battery';
 import { HideOnReview } from '../../ios/HideOnReview';
 

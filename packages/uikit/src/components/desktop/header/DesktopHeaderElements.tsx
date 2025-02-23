@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Skeleton } from '../../shared/Skeleton';
 import { Body2Class, Num2 } from '../../Text';
 import { formatFiatCurrency } from '../../../hooks/balance';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { Network } from '@tonkeeper/core/src/entries/network';
 import { AppRoute, SettingsRoute } from '../../../libs/routes';
 import { FC } from 'react';
 import BigNumber from 'bignumber.js';

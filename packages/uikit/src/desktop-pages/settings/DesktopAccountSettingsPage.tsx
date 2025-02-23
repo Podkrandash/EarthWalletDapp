@@ -10,7 +10,7 @@ import {
 import { WalletEmoji } from '../../components/shared/emoji/WalletEmoji';
 import { useTranslation } from '../../hooks/translation';
 import { useActiveAccount } from '../../state/wallet';
-import { AccountMAM } from '@tonkeeper/core/dist/entries/account';
+import { AccountMAM } from '@tonkeeper/core/src/entries/account';
 import { useRenameNotification } from '../../components/modals/RenameNotificationControlled';
 import { useRecoveryNotification } from '../../components/modals/RecoveryNotificationControlled';
 import React, { FC, useEffect, useState } from 'react';

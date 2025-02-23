@@ -7,12 +7,12 @@ import {
     useBatteryUnitTonRate,
     usePurchaseBatteryUnitTokenRate
 } from '../../../state/battery';
-import { assertUnreachable } from '@tonkeeper/core/dist/utils/types';
+import { assertUnreachable } from '@tonkeeper/core/src/utils/types';
 import { useTranslation } from '../../../hooks/translation';
 import BigNumber from 'bignumber.js';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import { ColumnText } from '../../Layout';
-import { legacyTonAssetId, TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { legacyTonAssetId, TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { useRate } from '../../../state/rates';
 import { formatFiatCurrency } from '../../../hooks/balance';
 import { useUserFiat } from '../../../state/fiat';

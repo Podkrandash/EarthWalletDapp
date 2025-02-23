@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Action } from '@tonkeeper/core/dist/tonApiV2';
+import { Action } from '@tonkeeper/core/src/tonApiV2';
 import { useTranslation } from '../../../../hooks/translation';
 import {
     ActionRow,
@@ -10,7 +10,7 @@ import {
     HistoryCellComment
 } from './HistoryCell';
 import { CoinsIcon, DoneIcon, ExitIcon } from '../../../Icon';
-import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
 import styled from 'styled-components';
 import { HistoryGridCell } from './HistoryGrid';
 

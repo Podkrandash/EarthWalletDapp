@@ -3,7 +3,7 @@ import { Action } from './Actions';
 import { SwapIcon } from '../Icon';
 import { useSwapMobileNotification } from '../../state/swap/useSwapMobileNotification';
 import { styled } from 'styled-components';
-import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { useSwapFromAsset } from '../../state/swap/useSwapForm';
 
 const SwapIconStyled = styled(SwapIcon)`

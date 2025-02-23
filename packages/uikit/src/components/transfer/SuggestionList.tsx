@@ -1,17 +1,17 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
-import { intlLocale } from '@tonkeeper/core/dist/entries/language';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { intlLocale } from '@tonkeeper/core/src/entries/language';
 import {
     FavoriteSuggestion,
     LatestSuggestion,
     Suggestion
-} from '@tonkeeper/core/dist/entries/suggestion';
+} from '@tonkeeper/core/src/entries/suggestion';
 import {
     deleteFavoriteSuggestion,
     getSuggestionsList,
     hideSuggestions
-} from '@tonkeeper/core/dist/service/suggestionService';
-import { toShortValue } from '@tonkeeper/core/dist/utils/common';
+} from '@tonkeeper/core/src/service/suggestionService';
+import { toShortValue } from '@tonkeeper/core/src/utils/common';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { useAppSdk } from '../../hooks/appSdk';
@@ -25,7 +25,7 @@ import { SkeletonListWithImages } from '../Skeleton';
 import { Label1 } from '../Text';
 import { useSuggestionAddress } from './SuggestionAddress';
 import { useActiveApi, useActiveStandardTonWallet, useActiveWallet } from '../../state/wallet';
-import { isStandardTonWallet } from '@tonkeeper/core/dist/entries/wallet';
+import { isStandardTonWallet } from '@tonkeeper/core/src/entries/wallet';
 
 const Label = styled(Label1)`
     user-select: none;

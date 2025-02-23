@@ -1,4 +1,4 @@
-import { TonWalletConfig } from '@tonkeeper/core/dist/entries/wallet';
+import { TonWalletConfig } from '@tonkeeper/core/src/entries/wallet';
 import { FC, useCallback, useMemo } from 'react';
 import {
     DragDropContext,
@@ -23,13 +23,13 @@ import {
     useTogglePinJettonMutation
 } from '../../state/jetton';
 import { useActiveTonWalletConfig } from '../../state/wallet';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import {
     assetAddressToString,
     jettonToTonAssetAmount
-} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 import { useTronBalances } from '../../state/tron/tron';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
 
 const TurnOnIcon = styled.span`
     color: ${props => props.theme.accentBlue};

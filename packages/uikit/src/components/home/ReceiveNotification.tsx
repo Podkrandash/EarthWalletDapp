@@ -1,4 +1,4 @@
-import { ReceiveInitParams } from '@tonkeeper/core/dist/AppSdk';
+import { ReceiveInitParams } from '@tonkeeper/core/src/AppSdk';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useAppSdk } from '../../hooks/appSdk';
 import { Notification } from '../Notification';

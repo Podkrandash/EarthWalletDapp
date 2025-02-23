@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { accountBySignerDeepLink } from '@tonkeeper/core/dist/service/walletService';
+import { accountBySignerDeepLink } from '@tonkeeper/core/src/service/walletService';
 import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Loading } from '../../components/Loading';
@@ -8,7 +8,7 @@ import { useAppSdk } from '../../hooks/appSdk';
 import { QueryKey } from '../../libs/queryKey';
 import { AppRoute } from '../../libs/routes';
 import { useAccountsStorage } from '../../hooks/useStorage';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { Network } from '@tonkeeper/core/src/entries/network';
 
 const useAddWalletMutation = () => {
     const sdk = useAppSdk();

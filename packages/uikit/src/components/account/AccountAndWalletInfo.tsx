@@ -9,7 +9,7 @@ import { WalletId, TonContract } from '@tonkeeper/core/src/entries/wallet';
 import { AccountAndWalletBadgesGroup } from './AccountBadge';
 import { useTranslation } from '../../hooks/translation';
 import styled from 'styled-components';
-import type { AllOrNone } from '@tonkeeper/core/src/utils/types';
+import { AllOrNone } from '@tonkeeper/core/src/utils/types';
 import { notNullish } from '@tonkeeper/core/src/utils/types';
 
 const WalletInfoStyled = styled.div`

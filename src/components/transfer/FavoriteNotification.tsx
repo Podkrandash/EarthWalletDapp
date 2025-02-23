@@ -1,5 +1,5 @@
 import { useMainButton } from '@tma.js/sdk-react';
-import { FavoriteSuggestion, LatestSuggestion } from '@tonkeeper/core/dist/entries/suggestion';
+import { FavoriteSuggestion, LatestSuggestion } from '@tonkeeper/core/src/entries/suggestion';
 import { Input } from '@tonkeeper/uikit/dist/components/fields/Input';
 import { SuggestionAddress } from '@tonkeeper/uikit/dist/components/transfer/SuggestionAddress';
 import { useAppSdk } from '@tonkeeper/uikit/dist/hooks/appSdk';

@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { Asset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { TON_ASSET, TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { RecipientData, isTonRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { Asset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { TON_ASSET, TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { RecipientData, isTonRecipientData } from '@tonkeeper/core/src/entries/send';
 import React, {
     Children,
     FC,
@@ -40,7 +40,7 @@ import {
     SenderChoiceUserAvailable,
     SenderTypeUserAvailable
 } from '../../hooks/blockchain/useSender';
-import { NotEnoughBalanceError } from '@tonkeeper/core/dist/errors/NotEnoughBalanceError';
+import { NotEnoughBalanceError } from '@tonkeeper/core/src/errors/NotEnoughBalanceError';
 
 type MutationProps = Pick<
     ReturnType<typeof useMutation<boolean, Error>>,

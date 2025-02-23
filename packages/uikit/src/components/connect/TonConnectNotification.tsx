@@ -3,8 +3,8 @@ import {
     ConnectItemReply,
     ConnectRequest,
     DAppManifest
-} from '@tonkeeper/core/dist/entries/tonConnect';
-import { getManifest } from '@tonkeeper/core/dist/service/tonConnect/connectService';
+} from '@tonkeeper/core/src/entries/tonConnect';
+import { getManifest } from '@tonkeeper/core/src/service/tonConnect/connectService';
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { useAppSdk } from '../../hooks/appSdk';
@@ -21,8 +21,8 @@ import { Button } from '../fields/Button';
 import { ResultButton } from '../transfer/common';
 import { SelectDropDown, SelectDropDownHost, SelectField } from '../fields/Select';
 import { DropDownContent, DropDownItem, DropDownItemsDivider } from '../DropDown';
-import { Account } from '@tonkeeper/core/dist/entries/account';
-import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
+import { Account } from '@tonkeeper/core/src/entries/account';
+import { WalletId } from '@tonkeeper/core/src/entries/wallet';
 
 const Title = styled(H2)`
     text-align: center;

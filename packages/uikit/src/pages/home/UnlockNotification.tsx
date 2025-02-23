@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
-import { IAppSdk, KeyboardParams } from '@tonkeeper/core/dist/AppSdk';
-import { passwordStorage, validatePassword } from '@tonkeeper/core/dist/service/passwordService';
-import { debounce } from '@tonkeeper/core/dist/utils/common';
+import { IAppSdk, KeyboardParams } from '@tonkeeper/core/src/AppSdk';
+import { passwordStorage, validatePassword } from '@tonkeeper/core/src/service/passwordService';
+import { debounce } from '@tonkeeper/core/src/utils/common';
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';

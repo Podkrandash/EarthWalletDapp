@@ -9,14 +9,14 @@ import { DesktopHeaderBalance, DesktopHeaderContainer } from './DesktopHeaderEle
 import { CategoriesModal } from '../../dashboard/CategoriesModal';
 import { useDisclosure } from '../../../hooks/useDisclosure';
 import { useDashboardData } from '../../../state/dashboard/useDashboardData';
-import { arrayToCsvString } from '@tonkeeper/core/dist/service/parserService';
-import { toStringDashboardCell } from '@tonkeeper/core/dist/entries/dashboard';
+import { arrayToCsvString } from '@tonkeeper/core/src/service/parserService';
+import { toStringDashboardCell } from '@tonkeeper/core/src/entries/dashboard';
 import { useMemo } from 'react';
 import {
     useDashboardColumns,
     useDashboardColumnsForm
 } from '../../../state/dashboard/useDashboardColumns';
-import { Network } from '@tonkeeper/core/dist/entries/network';
+import { Network } from '@tonkeeper/core/src/entries/network';
 import { useAppPlatform } from '../../../hooks/appContext';
 
 const ButtonsContainer = styled.div`

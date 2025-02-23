@@ -1,5 +1,5 @@
-import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
-import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
 import { FC, useMemo } from 'react';
 import styled from 'styled-components';
 import { useCoinFullBalance } from '../../hooks/balance';
@@ -9,7 +9,7 @@ import { useFormatFiat, useRate } from '../../state/rates';
 import { ListBlock } from '../List';
 import { Body2, Label1 } from '../Text';
 import { TonActivityEvents } from '../activity/ton/TonActivityEvents';
-import { AccountEvent } from '@tonkeeper/core/dist/tonApiV2';
+import { AccountEvent } from '@tonkeeper/core/src/tonApiV2';
 
 const Fee = styled.div`
     width: 100%;

@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { ListItem } from '../../List';
-import { TronHistoryItem, TronHistoryItemTransferAsset } from '@tonkeeper/core/dist/tronApi';
+import { TronHistoryItem, TronHistoryItemTransferAsset } from '@tonkeeper/core/src/tronApi';
 import { ReceiveActivityAction, SendActivityAction } from '../ActivityActionLayout';
 import { useActiveTronWallet } from '../../../state/tron/tron';
 import { ErrorAction } from '../CommonAction';
-import { ActionStatusEnum } from '@tonkeeper/core/dist/tonApiV2';
+import { ActionStatusEnum } from '@tonkeeper/core/src/tonApiV2';
 
 export const TronActivityEvents: FC<{
     event: TronHistoryItem;

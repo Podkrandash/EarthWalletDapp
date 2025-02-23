@@ -1,11 +1,11 @@
 import { useMainButton } from '@tma.js/sdk-react';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
-import { NFT } from '@tonkeeper/core/dist/entries/nft';
-import { RecipientData, TonRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { NFT } from '@tonkeeper/core/src/entries/nft';
+import { RecipientData, TonRecipientData } from '@tonkeeper/core/src/entries/send';
 import {
     TonTransferParams,
     parseTonTransferWithAddress
-} from '@tonkeeper/core/dist/service/deeplinkingService';
+} from '@tonkeeper/core/src/service/deeplinkingService';
 import { ConfirmViewButtons } from '@tonkeeper/uikit/dist/components/transfer/ConfirmView';
 import {
     RecipientView,

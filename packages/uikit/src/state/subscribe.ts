@@ -1,5 +1,5 @@
 import { useMutation } from '@tanstack/react-query';
-import { TonContract } from '@tonkeeper/core/dist/entries/wallet';
+import { TonContract } from '@tonkeeper/core/src/entries/wallet';
 import { useAppSdk } from '../hooks/appSdk';
 import { useActiveApi } from './wallet';
 

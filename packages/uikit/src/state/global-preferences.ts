@@ -1,8 +1,8 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { AppKey } from '@tonkeeper/core/dist/Keys';
+import { AppKey } from '@tonkeeper/core/src/Keys';
 import { useAppSdk } from '../hooks/appSdk';
 import { QueryKey } from '../libs/queryKey';
-import { AccountsFolderStored } from '@tonkeeper/core/dist/entries/account';
+import { AccountsFolderStored } from '@tonkeeper/core/src/entries/account';
 
 export interface GlobalPreferences {
     folders: AccountsFolderStored[];

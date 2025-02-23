@@ -1,14 +1,14 @@
 import { useMutation } from '@tanstack/react-query';
 import { useActiveMultisigAccountHost, useActiveMultisigWalletInfo } from '../../../state/multisig';
 import { useAsyncQueryData } from '../../useAsyncQueryData';
-import { MultisigOrder } from '@tonkeeper/core/dist/tonApiV2';
+import { MultisigOrder } from '@tonkeeper/core/src/tonApiV2';
 import { useActiveApi, useInvalidateActiveWalletQueries } from '../../../state/wallet';
 import { EXTERNAL_SENDER_CHOICE, useGetSender } from '../useSender';
 
 import { useNotifyErrorHandle } from '../../useNotification';
-import { MultisigEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder/multisig-encoder';
-import { zeroFee } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
-import { TonRawTransactionService } from '@tonkeeper/core/dist/service/ton-blockchain/ton-raw-transaction.service';
+import { MultisigEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder/multisig-encoder';
+import { zeroFee } from '@tonkeeper/core/src/service/ton-blockchain/utils';
+import { TonRawTransactionService } from '@tonkeeper/core/src/service/ton-blockchain/ton-raw-transaction.service';
 
 export function useSendExisitingMultisigOrder(orderAddress: MultisigOrder['address']) {
     const { data: multisigInfoData } = useActiveMultisigWalletInfo();

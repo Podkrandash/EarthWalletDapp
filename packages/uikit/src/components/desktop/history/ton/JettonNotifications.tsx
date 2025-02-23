@@ -1,6 +1,6 @@
 export {};
 /*
-import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
 import {
     AccountEvent,
     ActionStatusEnum,
@@ -8,8 +8,8 @@ import {
     JettonMintAction,
     JettonSwapAction,
     JettonTransferAction
-} from '@tonkeeper/core/dist/tonApiV2';
-import { formatDecimals } from '@tonkeeper/core/dist/utils/balance';
+} from '@tonkeeper/core/src/tonApiV2';
+import { formatDecimals } from '@tonkeeper/core/src/utils/balance';
 import React, { FC, useMemo } from 'react';
 import { Address } from 'ton-core';
 import { useWalletContext } from '../../../hooks/appContext';

@@ -7,9 +7,9 @@ import { IconButtonTransparentBackground } from '../../fields/IconButton';
 import { ChevronRightIcon } from '../../Icon';
 import { SkeletonImage, SkeletonText } from '../../shared/Skeleton';
 import { Body3, Label2 } from '../../Text';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { packAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/basic-asset';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { packAssetId } from '@tonkeeper/core/src/entries/crypto/asset/basic-asset';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
 
 export const MethodImageRounded = styled.img`
     width: 40px;

@@ -1,11 +1,11 @@
 import { useAppSdk } from '../hooks/appSdk';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { AppKey } from '@tonkeeper/core/dist/Keys';
+import { AppKey } from '@tonkeeper/core/src/Keys';
 import {
     DevSettings,
     getDevSettings,
     setDevSettings
-} from '@tonkeeper/core/dist/service/devStorage';
+} from '@tonkeeper/core/src/service/devStorage';
 
 export const useDevSettings = () => {
     const sdk = useAppSdk();

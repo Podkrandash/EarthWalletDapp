@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { AppKey } from '@tonkeeper/core/dist/Keys';
+import { AppKey } from '@tonkeeper/core/src/Keys';
 import { useAppSdk } from '../hooks/appSdk';
 import { defaultTheme } from '../styles/defaultTheme';
 import { proTheme } from '../styles/proTheme';

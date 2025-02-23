@@ -5,7 +5,7 @@ import { CenterContainer } from '../Layout';
 import { H2Label2Responsive } from '../Text';
 import { ButtonResponsiveSize } from '../fields/Button';
 import { TextArea } from '../fields/Input';
-import { isValidSK } from '@tonkeeper/core/dist/service/mnemonicService';
+import { isValidSK } from '@tonkeeper/core/src/service/mnemonicService';
 
 const Block = styled.div`
     display: flex;

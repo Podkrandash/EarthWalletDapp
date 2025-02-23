@@ -1,13 +1,13 @@
-import { TransferInitParams } from '@tonkeeper/core/dist/AppSdk';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
-import { jettonToTonAsset, TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { RecipientData, TonRecipientData } from '@tonkeeper/core/dist/entries/send';
+import { TransferInitParams } from '@tonkeeper/core/src/AppSdk';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
+import { jettonToTonAsset, TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { RecipientData, TonRecipientData } from '@tonkeeper/core/src/entries/send';
 import {
     parseTonTransferWithAddress,
     TonTransferParams
-} from '@tonkeeper/core/dist/service/deeplinkingService';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+} from '@tonkeeper/core/src/service/deeplinkingService';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import BigNumber from 'bignumber.js';
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -54,8 +54,8 @@ import { MultisigOrderLifetimeMinutes } from '../../libs/multisig';
 import { useIsActiveAccountMultisig } from '../../state/multisig';
 import { ConfirmMultisigNewTransferView } from './ConfirmMultisigNewTransferView';
 import { useAnalyticsTrack } from '../../hooks/amplitude';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { seeIfValidTonAddress, seeIfValidTronAddress } from '@tonkeeper/core/dist/utils/common';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { seeIfValidTonAddress, seeIfValidTronAddress } from '@tonkeeper/core/src/utils/common';
 import { useActiveWallet } from '../../state/wallet';
 
 const SendContent: FC<{

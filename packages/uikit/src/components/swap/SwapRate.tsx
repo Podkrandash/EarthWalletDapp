@@ -9,7 +9,7 @@ import {
     useSwapPriceImpact
 } from '../../state/swap/useSwapForm';
 import { useCalculatedSwap } from '../../state/swap/useCalculatedSwap';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 
 const Body3Styled = styled(Body3)<{ impact: 'unknown' | 'low' | 'medium' | 'high' }>`
     display: flex;

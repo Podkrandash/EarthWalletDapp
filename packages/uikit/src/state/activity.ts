@@ -1,25 +1,25 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
+import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
 import {
     isTon,
     tonAssetAddressToString
-} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { intlLocale } from '@tonkeeper/core/dist/entries/language';
-import { AccountEvent, AccountEvents, AccountsApi } from '@tonkeeper/core/dist/tonApiV2';
+} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { intlLocale } from '@tonkeeper/core/src/entries/language';
+import { AccountEvent, AccountEvents, AccountsApi } from '@tonkeeper/core/src/tonApiV2';
 import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
 import { atom, useAtom } from '../libs/atom';
 import { QueryKey } from '../libs/queryKey';
 import { useGlobalPreferences, useMutateGlobalPreferences } from './global-preferences';
 import { seeIfExtraCurrencyTransfer, seeIfTonTransfer } from './ton/tonActivity';
 import { useActiveApi, useActiveWallet } from './wallet';
-import { debounce, seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
+import { debounce, seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
 import { useTwoFAWalletConfig } from './two-fa';
 import { useActiveTronWallet, useTronApi } from './tron/tron';
-import { APIConfig } from '@tonkeeper/core/dist/entries/apis';
-import { TonContract } from '@tonkeeper/core/dist/entries/wallet';
-import { TronApi, TronHistoryItem } from '@tonkeeper/core/dist/tronApi';
-import { TRON_USDT_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { Asset, isTonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/asset';
+import { APIConfig } from '@tonkeeper/core/src/entries/apis';
+import { TonContract } from '@tonkeeper/core/src/entries/wallet';
+import { TronApi, TronHistoryItem } from '@tonkeeper/core/src/tronApi';
+import { TRON_USDT_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { Asset, isTonAsset } from '@tonkeeper/core/src/entries/crypto/asset/asset';
 
 export const formatActivityDate = (language: string, key: string, timestamp: number): string => {
     const date = new Date(timestamp);

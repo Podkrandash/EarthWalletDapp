@@ -1,6 +1,6 @@
-import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
-import { Account, JettonsBalances } from '@tonkeeper/core/dist/tonApiV2';
-import { getJettonSymbol } from '@tonkeeper/core/dist/utils/send';
+import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { Account, JettonsBalances } from '@tonkeeper/core/src/tonApiV2';
+import { getJettonSymbol } from '@tonkeeper/core/src/utils/send';
 import React, { FC, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useFormatCoinValue } from '../../../hooks/balance';

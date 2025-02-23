@@ -3,8 +3,8 @@ import { useTonRawTransactionService } from '../useBlockchainService';
 import { useActiveAccount } from '../../../state/wallet';
 import { useTransactionAnalytics } from '../../amplitude';
 import { useMutation } from '@tanstack/react-query';
-import { NFTEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/nft-encoder';
-import { zeroFee } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
+import { NFTEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/nft-encoder';
+import { zeroFee } from '@tonkeeper/core/src/service/ton-blockchain/utils';
 
 export const useRenewNft = (args: { nftAddress: string }) => {
     const getSender = useGetSender();

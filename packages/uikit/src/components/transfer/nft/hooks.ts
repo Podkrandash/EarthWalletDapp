@@ -3,8 +3,8 @@ import { useAppContext } from '../../../hooks/appContext';
 import { useActiveApi, useActiveWallet } from '../../../state/wallet';
 import { useNotifyErrorHandle } from '../../../hooks/useNotification';
 import { toNano } from '@ton/core';
-import { assertBalanceEnough } from '@tonkeeper/core/dist/service/ton-blockchain/utils';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { assertBalanceEnough } from '@tonkeeper/core/src/service/ton-blockchain/utils';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
 
 export const useMinimalBalance = () => {
     const api = useActiveApi();

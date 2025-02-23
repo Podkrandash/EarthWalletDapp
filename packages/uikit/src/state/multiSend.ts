@@ -1,21 +1,21 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Address } from '@ton/core';
-import { AppKey } from '@tonkeeper/core/dist/Keys';
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
-import { packAssetId } from '@tonkeeper/core/dist/entries/crypto/asset/basic-asset';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
+import { AppKey } from '@tonkeeper/core/src/Keys';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
+import { packAssetId } from '@tonkeeper/core/src/entries/crypto/asset/basic-asset';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
 import {
     TonAsset,
     isTon,
     tonAssetAddressFromString,
     tonAssetAddressToString
-} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { FiatCurrencies } from '@tonkeeper/core/dist/entries/fiat';
-import { TonRecipient } from '@tonkeeper/core/dist/entries/send';
-import { csvStringToArray } from '@tonkeeper/core/dist/service/parserService';
-import { JettonsApi } from '@tonkeeper/core/dist/tonApiV2';
-import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
-import { notNullish } from '@tonkeeper/core/dist/utils/types';
+} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { FiatCurrencies } from '@tonkeeper/core/src/entries/fiat';
+import { TonRecipient } from '@tonkeeper/core/src/entries/send';
+import { csvStringToArray } from '@tonkeeper/core/src/service/parserService';
+import { JettonsApi } from '@tonkeeper/core/src/tonApiV2';
+import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
+import { notNullish } from '@tonkeeper/core/src/utils/types';
 import { ErrorOption } from 'react-hook-form';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';

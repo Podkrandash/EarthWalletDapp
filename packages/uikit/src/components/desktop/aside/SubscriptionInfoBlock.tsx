@@ -2,7 +2,7 @@ import {
     isTrialSubscription,
     isValidSubscription,
     ProState
-} from '@tonkeeper/core/dist/entries/pro';
+} from '@tonkeeper/core/src/entries/pro';
 import { FC, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { useTranslation } from '../../../hooks/translation';

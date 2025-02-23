@@ -1,8 +1,8 @@
 import { QueryClient, useQuery, useQueryClient } from '@tanstack/react-query';
-import { CryptoCurrency } from '@tonkeeper/core/dist/entries/crypto';
-import { FiatCurrencies } from '@tonkeeper/core/dist/entries/fiat';
-import { RatesApi, TokenRates } from '@tonkeeper/core/dist/tonApiV2';
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { CryptoCurrency } from '@tonkeeper/core/src/entries/crypto';
+import { FiatCurrencies } from '@tonkeeper/core/src/entries/fiat';
+import { RatesApi, TokenRates } from '@tonkeeper/core/src/tonApiV2';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import BigNumber from 'bignumber.js';
 import { useMemo } from 'react';
 import { AssetData } from '../components/home/Jettons';
@@ -13,8 +13,8 @@ import { useActiveApi } from './wallet';
 import {
     TON_USDT_ASSET,
     TRON_USDT_ASSET
-} from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { tonAssetAddressToString } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
+} from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { tonAssetAddressToString } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
 
 export interface TokenRate {
     diff7d: string;

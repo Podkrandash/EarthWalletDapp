@@ -1,11 +1,11 @@
 import { useMutation } from '@tanstack/react-query';
 import { useActiveMultisigWalletInfo } from '../../../state/multisig';
 import { useAsyncQueryData } from '../../useAsyncQueryData';
-import { AccountEvent, AccountsApi, MultisigOrder } from '@tonkeeper/core/dist/tonApiV2';
+import { AccountEvent, AccountsApi, MultisigOrder } from '@tonkeeper/core/src/tonApiV2';
 import {
     estimateExistingOrder,
     OrderEstimation
-} from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder';
+} from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder';
 import { useActiveApi } from '../../../state/wallet';
 
 export function useEstimateExisitingMultisigOrder(orderAddress: MultisigOrder['address']) {

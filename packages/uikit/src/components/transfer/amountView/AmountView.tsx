@@ -1,12 +1,12 @@
-import { BLOCKCHAIN_NAME } from '@tonkeeper/core/dist/entries/crypto';
+import { BLOCKCHAIN_NAME } from '@tonkeeper/core/src/entries/crypto';
 import {
     TonAsset,
     jettonToTonAsset,
     legacyTonAssetId,
     tokenToTonAsset
-} from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { RecipientData } from '@tonkeeper/core/dist/entries/send';
-import { isNumeric } from '@tonkeeper/core/dist/utils/send';
+} from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { RecipientData } from '@tonkeeper/core/src/entries/send';
+import { isNumeric } from '@tonkeeper/core/src/utils/send';
 import React, {
     FC,
     useCallback,

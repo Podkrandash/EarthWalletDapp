@@ -17,7 +17,7 @@ import {
 import { Button } from '../fields/Button';
 import styled from 'styled-components';
 import { Body2, Body3, Body3Class, Label2 } from '../Text';
-import { seeIfValidTonAddress } from '@tonkeeper/core/dist/utils/common';
+import { seeIfValidTonAddress } from '@tonkeeper/core/src/utils/common';
 import { Address } from '@ton/core';
 import { InputBlock, InputField } from '../fields/Input';
 import { IconButtonTransparentBackground } from '../fields/IconButton';
@@ -30,19 +30,19 @@ import {
     SelectField
 } from '../fields/Select';
 import { useAppContext } from '../../hooks/appContext';
-import { AccountsApi } from '@tonkeeper/core/dist/tonApiV2';
+import { AccountsApi } from '@tonkeeper/core/src/tonApiV2';
 import {
     Account,
     isAccountCanManageMultisigs,
     isAccountTonWalletStandard
-} from '@tonkeeper/core/dist/entries/account';
-import { TonWalletStandard } from '@tonkeeper/core/dist/entries/wallet';
+} from '@tonkeeper/core/src/entries/account';
+import { TonWalletStandard } from '@tonkeeper/core/src/entries/wallet';
 import { DropDownContent, DropDownItem, DropDownItemsDivider } from '../DropDown';
 import { Dot } from '../Dot';
-import { AssetAmount } from '@tonkeeper/core/dist/entries/crypto/asset/asset-amount';
+import { AssetAmount } from '@tonkeeper/core/src/entries/crypto/asset/asset-amount';
 import BigNumber from 'bignumber.js';
-import { TON_ASSET } from '@tonkeeper/core/dist/entries/crypto/asset/constants';
-import { MultisigEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/multisig-encoder';
+import { TON_ASSET } from '@tonkeeper/core/src/entries/crypto/asset/constants';
+import { MultisigEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/multisig-encoder';
 
 const FormWrapper = styled.form`
     display: flex;

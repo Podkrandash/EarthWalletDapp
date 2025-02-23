@@ -1,4 +1,4 @@
-import { DAppSource, DAppTrack, formatBrowserUrl } from '@tonkeeper/core/dist/service/urlService';
+import { DAppSource, DAppTrack, formatBrowserUrl } from '@tonkeeper/core/src/service/urlService';
 import { useCallback, useRef } from 'react';
 import { useClickBrowser } from './amplitude';
 import { useAppSdk } from './appSdk';

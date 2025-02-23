@@ -1,4 +1,4 @@
-import { shiftedDecimals } from '@tonkeeper/core/dist/utils/balance';
+import { shiftedDecimals } from '@tonkeeper/core/src/utils/balance';
 import { FC } from 'react';
 import { useTranslation } from '../../hooks/translation';
 import { useCalculatedSwap } from '../../state/swap/useCalculatedSwap';

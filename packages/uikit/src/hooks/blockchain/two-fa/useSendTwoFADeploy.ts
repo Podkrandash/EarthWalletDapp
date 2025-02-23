@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { TonAsset } from '@tonkeeper/core/dist/entries/crypto/asset/ton-asset';
-import { Estimation } from '@tonkeeper/core/dist/entries/send';
+import { TonAsset } from '@tonkeeper/core/src/entries/crypto/asset/ton-asset';
+import { Estimation } from '@tonkeeper/core/src/entries/send';
 
 import { useAnalyticsTrack } from '../../amplitude';
 import {
@@ -16,8 +16,8 @@ import {
     useTwoFAServiceConfig,
     useTwoFAWalletConfig
 } from '../../../state/two-fa';
-import { TwoFAEncoder } from '@tonkeeper/core/dist/service/ton-blockchain/encoder/two-fa-encoder';
-import { isStandardTonWallet } from '@tonkeeper/core/dist/entries/wallet';
+import { TwoFAEncoder } from '@tonkeeper/core/src/service/ton-blockchain/encoder/two-fa-encoder';
+import { isStandardTonWallet } from '@tonkeeper/core/src/entries/wallet';
 import { QueryKey } from '../../../libs/queryKey';
 
 export function useSendTwoFADeploy(estimation: Estimation<TonAsset>) {

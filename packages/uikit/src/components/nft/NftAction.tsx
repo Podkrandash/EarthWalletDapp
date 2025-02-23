@@ -1,6 +1,6 @@
 import { Address } from '@ton/core';
-import { NFT, isNFTDNS } from '@tonkeeper/core/dist/entries/nft';
-import { NftItem } from '@tonkeeper/core/dist/tonApiV2';
+import { NFT, isNFTDNS } from '@tonkeeper/core/src/entries/nft';
+import { NftItem } from '@tonkeeper/core/src/tonApiV2';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { useAppSdk } from '../../hooks/appSdk';

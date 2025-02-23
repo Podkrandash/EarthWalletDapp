@@ -1,5 +1,5 @@
 import { InfiniteData } from '@tanstack/react-query';
-import { AccountEvent, AccountEvents, Action, ActionTypeEnum } from '@tonkeeper/core/dist/tonApiV2';
+import { AccountEvent, AccountEvents, Action, ActionTypeEnum } from '@tonkeeper/core/src/tonApiV2';
 
 const TonActivities: ActionTypeEnum[] = [
     'TonTransfer',

@@ -1,6 +1,6 @@
 import { css, styled } from 'styled-components';
 import { Body2, Body3 } from '../../../Text';
-import { getDecimalSeparator } from '@tonkeeper/core/dist/utils/formatting';
+import { getDecimalSeparator } from '@tonkeeper/core/src/utils/formatting';
 import { useTranslation } from '../../../../hooks/translation';
 
 const ImportTableContainer = styled.div`

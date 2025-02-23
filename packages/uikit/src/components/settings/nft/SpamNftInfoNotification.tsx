@@ -5,7 +5,7 @@ import { styled } from 'styled-components';
 import { ListBlock, ListItemElement, ListItemPayload } from '../../../components/List';
 import { Body2 } from '../../../components/Text';
 import { BorderSmallResponsive } from '../../../components/shared/Styles';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
 import { Button } from '../../../components/fields/Button';
 import { CopyButton } from '../../../components/CopyButton';
 import { useTranslation } from '../../../hooks/translation';

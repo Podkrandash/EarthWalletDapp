@@ -3,7 +3,7 @@ import type { UR } from '@keystonehq/keystone-sdk/dist/types/ur';
 import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
 import { KeystoneMessageType, KeystonePathInfo } from '@tonkeeper/core/src/service/keystone/types';
 import { constructKeystoneSignRequest } from '@tonkeeper/core/src/service/keystone/ur';
-import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { formatAddress } from '@tonkeeper/core/src/utils/common';
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useAppContext } from '../hooks/appContext';
 import { useAppSdk } from '../hooks/appSdk';

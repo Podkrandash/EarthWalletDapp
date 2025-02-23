@@ -1,6 +1,6 @@
 import { useAccountsStorage } from '../hooks/useStorage';
 import { useQuery } from '@tanstack/react-query';
-import { AccountsState } from '@tonkeeper/core/dist/entries/account';
+import { AccountsState } from '@tonkeeper/core/src/entries/account';
 import { QueryKey } from '../libs/queryKey';
 
 export const useAccountsState = () => {
