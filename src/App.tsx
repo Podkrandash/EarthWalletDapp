@@ -1,54 +1,54 @@
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
-import { Account } from '@tonkeeper/core/dist/entries/account';
-import { getApiConfig, Network } from '@tonkeeper/core/dist/entries/network';
-import { WalletVersion } from '@tonkeeper/core/dist/entries/wallet';
-import { InnerBody, useWindowsScroll } from '@tonkeeper/uikit/dist/components/Body';
-import { CopyNotification } from '@tonkeeper/uikit/dist/components/CopyNotification';
-import { Footer, FooterGlobalStyle } from '@tonkeeper/uikit/dist/components/Footer';
-import { Header, HeaderGlobalStyle } from '@tonkeeper/uikit/dist/components/Header';
-import { DarkThemeContext } from '@tonkeeper/uikit/dist/components/Icon';
-import { GlobalListStyle } from '@tonkeeper/uikit/dist/components/List';
-import { Loading } from '@tonkeeper/uikit/dist/components/Loading';
-import MemoryScroll from '@tonkeeper/uikit/dist/components/MemoryScroll';
+import { Account } from '@tonkeeper/core/src/entries/account';
+import { getApiConfig, Network } from '@tonkeeper/core/src/entries/network';
+import { WalletVersion } from '@tonkeeper/core/src/entries/wallet';
+import { InnerBody, useWindowsScroll } from '@tonkeeper/uikit/src/components/Body';
+import { CopyNotification } from '@tonkeeper/uikit/src/components/CopyNotification';
+import { Footer, FooterGlobalStyle } from '@tonkeeper/uikit/src/components/Footer';
+import { Header, HeaderGlobalStyle } from '@tonkeeper/uikit/src/components/Header';
+import { DarkThemeContext } from '@tonkeeper/uikit/src/components/Icon';
+import { GlobalListStyle } from '@tonkeeper/uikit/src/components/List';
+import { Loading } from '@tonkeeper/uikit/src/components/Loading';
+import MemoryScroll from '@tonkeeper/uikit/src/components/MemoryScroll';
 import {
     ActivitySkeletonPage,
     BrowserSkeletonPage,
     CoinSkeletonPage,
     HomeSkeleton,
     SettingsSkeletonPage
-} from '@tonkeeper/uikit/dist/components/Skeleton';
-import { SybHeaderGlobalStyle } from '@tonkeeper/uikit/dist/components/SubHeader';
-import { AppContext, IAppContext } from '@tonkeeper/uikit/dist/hooks/appContext';
-import { AppSdkContext } from '@tonkeeper/uikit/dist/hooks/appSdk';
-import { StorageContext } from '@tonkeeper/uikit/dist/hooks/storage';
+} from '@tonkeeper/uikit/src/components/Skeleton';
+import { SybHeaderGlobalStyle } from '@tonkeeper/uikit/src/components/SubHeader';
+import { AppContext, IAppContext } from '@tonkeeper/uikit/src/hooks/appContext';
+import { AppSdkContext } from '@tonkeeper/uikit/src/hooks/appSdk';
+import { StorageContext } from '@tonkeeper/uikit/src/hooks/storage';
 import {
     I18nContext,
     TranslationContext,
     useTWithReplaces
-} from '@tonkeeper/uikit/dist/hooks/translation';
-import { AppRoute, any } from '@tonkeeper/uikit/dist/libs/routes';
-import { Unlock } from '@tonkeeper/uikit/dist/pages/home/Unlock';
+} from '@tonkeeper/uikit/src/hooks/translation';
+import { AppRoute, any } from '@tonkeeper/uikit/src/libs/routes';
+import { Unlock } from '@tonkeeper/uikit/src/pages/home/Unlock';
 
 import { Platform as TwaPlatform, initViewport } from '@tma.js/sdk';
 import { SDKProvider } from '@tma.js/sdk-react';
-import { ModalsRoot } from '@tonkeeper/uikit/dist/components/ModalsRoot';
-import { AmplitudeAnalyticsContext, useTrackLocation } from '@tonkeeper/uikit/dist/hooks/amplitude';
-import { useLock } from '@tonkeeper/uikit/dist/hooks/lock';
-import { useDebuggingTools } from '@tonkeeper/uikit/dist/hooks/useDebuggingTools';
-import { UnlockNotification } from '@tonkeeper/uikit/dist/pages/home/UnlockNotification';
-import { useDevSettings } from '@tonkeeper/uikit/dist/state/dev';
-import { useUserFiatQuery } from '@tonkeeper/uikit/dist/state/fiat';
-import { useUserLanguage } from '@tonkeeper/uikit/dist/state/language';
-import { useSwapMobileNotification } from '@tonkeeper/uikit/dist/state/swap/useSwapMobileNotification';
-import { useTonendpoint, useTonenpointConfig } from '@tonkeeper/uikit/dist/state/tonendpoint';
+import { ModalsRoot } from '@tonkeeper/uikit/src/components/ModalsRoot';
+import { AmplitudeAnalyticsContext, useTrackLocation } from '@tonkeeper/uikit/src/hooks/amplitude';
+import { useLock } from '@tonkeeper/uikit/src/hooks/lock';
+import { useDebuggingTools } from '@tonkeeper/uikit/src/hooks/useDebuggingTools';
+import { UnlockNotification } from '@tonkeeper/uikit/src/pages/home/UnlockNotification';
+import { useDevSettings } from '@tonkeeper/uikit/src/state/dev';
+import { useUserFiatQuery } from '@tonkeeper/uikit/src/state/fiat';
+import { useUserLanguage } from '@tonkeeper/uikit/src/state/language';
+import { useSwapMobileNotification } from '@tonkeeper/uikit/src/state/swap/useSwapMobileNotification';
+import { useTonendpoint, useTonenpointConfig } from '@tonkeeper/uikit/src/state/tonendpoint';
 import {
     useAccountsStateQuery,
     useActiveAccountQuery,
     useActiveTonNetwork
-} from '@tonkeeper/uikit/dist/state/wallet';
-import { defaultTheme } from '@tonkeeper/uikit/dist/styles/defaultTheme';
-import { Container, GlobalStyle } from '@tonkeeper/uikit/dist/styles/globalStyle';
-import { lightTheme } from '@tonkeeper/uikit/dist/styles/lightTheme';
+} from '@tonkeeper/uikit/src/state/wallet';
+import { defaultTheme } from '@tonkeeper/uikit/src/styles/defaultTheme';
+import { Container, GlobalStyle } from '@tonkeeper/uikit/src/styles/globalStyle';
+import { lightTheme } from '@tonkeeper/uikit/src/styles/lightTheme';
 import React, { FC, PropsWithChildren, Suspense, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
@@ -62,24 +62,24 @@ import { SwapScreen } from './components/swap/SwapNotification';
 import { TwaSendNotification } from './components/transfer/SendNotifications';
 import { TwaAppSdk } from './libs/appSdk';
 import { useAnalytics, useTwaAppViewport } from './libs/hooks';
-import { useGlobalPreferencesQuery } from '@tonkeeper/uikit/dist/state/global-preferences';
-import { useGlobalSetup } from '@tonkeeper/uikit/dist/state/globalSetup';
+import { useGlobalPreferencesQuery } from '@tonkeeper/uikit/src/state/global-preferences';
+import { useGlobalSetup } from '@tonkeeper/uikit/src/state/globalSetup';
 
-const Initialize = React.lazy(() => import('@tonkeeper/uikit/dist/pages/import/Initialize'));
-const ImportRouter = React.lazy(() => import('@tonkeeper/uikit/dist/pages/import'));
-const Browser = React.lazy(() => import('@tonkeeper/uikit/dist/pages/browser'));
-const Settings = React.lazy(() => import('@tonkeeper/uikit/dist/pages/settings'));
-const Activity = React.lazy(() => import('@tonkeeper/uikit/dist/pages/activity/Activity'));
-const Home = React.lazy(() => import('@tonkeeper/uikit/dist/pages/home/Home'));
-const Coin = React.lazy(() => import('@tonkeeper/uikit/dist/pages/coin/Coin'));
+const Initialize = React.lazy(() => import('@tonkeeper/uikit/src/pages/import/Initialize'));
+const ImportRouter = React.lazy(() => import('@tonkeeper/uikit/src/pages/import'));
+const Browser = React.lazy(() => import('@tonkeeper/uikit/src/pages/browser'));
+const Settings = React.lazy(() => import('@tonkeeper/uikit/src/pages/settings'));
+const Activity = React.lazy(() => import('@tonkeeper/uikit/src/pages/activity/Activity'));
+const Home = React.lazy(() => import('@tonkeeper/uikit/src/pages/home/Home'));
+const Coin = React.lazy(() => import('@tonkeeper/uikit/src/pages/coin/Coin'));
 const TonConnectSubscription = React.lazy(
-    () => import('@tonkeeper/uikit/dist/components/connect/TonConnectSubscription')
+    () => import('@tonkeeper/uikit/src/components/connect/TonConnectSubscription')
 );
 const PairSignerNotification = React.lazy(
-    () => import('@tonkeeper/uikit/dist/components/PairSignerNotification')
+    () => import('@tonkeeper/uikit/src/components/PairSignerNotification')
 );
 const PairKeystoneNotification = React.lazy(
-    () => import('@tonkeeper/uikit/dist/components/PairKeystoneNotification')
+    () => import('@tonkeeper/uikit/src/components/PairKeystoneNotification')
 );
 
 const queryClient = new QueryClient({

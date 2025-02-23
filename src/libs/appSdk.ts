@@ -12,7 +12,7 @@ import {
     initUtils,
     retrieveLaunchParams
 } from '@tma.js/sdk';
-import { BaseApp, NativeBackButton, NotificationService } from '@tonkeeper/core/dist/AppSdk';
+import { BaseApp, NativeBackButton, NotificationService } from '@tonkeeper/core/src/AppSdk';
 import copyToClipboard from 'copy-to-clipboard';
 import packageJson from '../../package.json';
 import { disableScroll, enableScroll, getScrollbarWidth } from './scroll';
@@ -26,10 +26,13 @@ export class TwaAppSdk extends BaseApp {
     public miniApp: MiniApp;
     public launchParams: LaunchParams;
     public mainButton: MainButton;
+    public storage: TwaStorage;
     utils: Utils;
 
     constructor(public viewport: Viewport) {
-        super(new TwaStorage());
+        const storage = new TwaStorage();
+        super(storage);
+        this.storage = storage;
         const [miniApp] = initMiniApp();
         this.miniApp = miniApp;
         this.hapticFeedback = initHapticFeedback();
@@ -50,7 +53,9 @@ export class TwaAppSdk extends BaseApp {
     copyToClipboard = (value: string, notification?: string) => {
         copyToClipboard(value);
 
-        this.topMessage(notification);
+        if (notification) {
+            this.topMessage(notification);
+        }
         this.hapticFeedback.notificationOccurred('success');
     };
 
