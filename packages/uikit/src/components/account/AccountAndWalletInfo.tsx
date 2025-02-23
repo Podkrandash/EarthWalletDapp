@@ -1,15 +1,16 @@
 import { Body2 } from '../Text';
 import { WalletEmoji } from '../shared/emoji/WalletEmoji';
 import { Dot } from '../Dot';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
-import { Account } from '@tonkeeper/core/dist/entries/account';
+import { formatAddress, toShortValue } from '@tonkeeper/core/src/utils/common';
+import { Account } from '@tonkeeper/core/src/entries/account';
 import { useActiveAccount, useActiveTonNetwork } from '../../state/wallet';
 import { FC } from 'react';
-import { WalletId } from '@tonkeeper/core/dist/entries/wallet';
+import { WalletId, TonContract } from '@tonkeeper/core/src/entries/wallet';
 import { AccountAndWalletBadgesGroup } from './AccountBadge';
 import { useTranslation } from '../../hooks/translation';
 import styled from 'styled-components';
-import type { AllOrNone } from '@tonkeeper/core/dist/utils/types';
+import type { AllOrNone } from '@tonkeeper/core/src/utils/types';
+import { notNullish } from '@tonkeeper/core/src/utils/types';
 
 const WalletInfoStyled = styled.div`
     overflow: hidden;
