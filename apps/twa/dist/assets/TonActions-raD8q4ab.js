@@ -1,0 +1,5 @@
+import{c as i,j as t,dV as o,c8 as r,s as l,eA as d,eB as A,eC as m,bE as p,bd as w,aG as x,dQ as j,A as u,c6 as S}from"./index-zFtFmipv.js";import{S as h,R as v,B as N}from"./BuyAction-fHau53XV.js";const T=({asset:s})=>{const n=i();return t.jsx(o,{icon:t.jsx(h,{}),title:"wallet_send",action:()=>n.uiEvents.emit("transfer",{method:"transfer",id:Date.now(),params:{jetton:s,chain:r.TON,from:s==="TON"?"wallet":"token"}})})},O=({chain:s,jetton:n})=>{const e=i();return t.jsx(o,{icon:t.jsx(v,{}),title:"wallet_receive",action:()=>e.uiEvents.emit("receive",{method:"receive",params:{chain:s,jetton:n}})})},k=l(d)`
+    height: 24px;
+    width: 24px;
+    color: ${s=>s.theme.iconPrimary};
+`,E=({fromAsset:s})=>{const[n,e]=A(),[R,a]=m(),c=()=>{s&&a(s),e(!0)};return t.jsx(o,{icon:t.jsx(k,{}),title:"swap_title",action:c})},I=()=>{const s=p(),e=w()===x.TESTNET;return t.jsxs(j,{children:[!e&&t.jsx(N,{}),!s&&t.jsx(T,{asset:"TON"}),t.jsx(O,{}),t.jsx(u,{children:!e&&!s&&t.jsx(E,{fromAsset:S})})]})};export{I as H,O as R,T as S,E as a};

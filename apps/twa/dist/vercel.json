@@ -19,6 +19,15 @@
             "dest": "/index.html"
         }
     ],
-    "installCommand": false,
-    "buildCommand": false
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }
+            ]
+        }
+    ]
 }
