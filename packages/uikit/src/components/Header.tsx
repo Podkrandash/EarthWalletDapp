@@ -1,11 +1,7 @@
-import { Account, getNetworkByAccount } from '@tonkeeper/core/dist/entries/account';
-import {
-    DerivationItemNamed,
-    TonContract,
-    sortDerivationsByIndex,
-    sortWalletsByVersion
-} from '@tonkeeper/core/dist/entries/wallet';
-import { formatAddress, toShortValue } from '@tonkeeper/core/dist/utils/common';
+import { Account, AccountState } from '@tonkeeper/core/src/entries/account';
+import { WalletVersion } from '@tonkeeper/core/src/entries/wallet';
+import { formatAddress } from '@tonkeeper/core/src/utils/common';
+import { AccountType } from '@tonkeeper/core/src/utils/types';
 import { FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle, css } from 'styled-components';

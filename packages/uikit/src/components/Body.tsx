@@ -1,5 +1,5 @@
-import { TargetEnv } from '@tonkeeper/core/dist/AppSdk';
-import { throttle } from '@tonkeeper/core/dist/utils/common';
+import { IAppSdk } from '@tonkeeper/core/src/AppSdk';
+import { throttle } from '@tonkeeper/core/src/utils/common';
 import React, { PropsWithChildren, useLayoutEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { AppSelectionContext, useAppContext } from '../hooks/appContext';
