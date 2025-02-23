@@ -1,15 +1,14 @@
 {
-    "name": "@tonkeeper/twa",
-    "version": "3.27.4",
-    "author": "Ton APPS UK Limited <support@tonkeeper.com>",
-    "description": "Your telegram mini app wallet on The Open Network",
+    "name": "earthwallet-dapp",
+    "version": "1.0.0",
+    "description": "Earth Wallet DApp",
     "dependencies": {
         "@tanstack/react-query": "4.3.4",
         "@tma.js/sdk": "latest",
         "@tma.js/sdk-react": "latest",
-        "@tonkeeper/core": "0.1.0",
-        "@tonkeeper/locales": "0.1.0",
-        "@tonkeeper/uikit": "0.1.0",
+        "@ton/core": "^0.53.0",
+        "@ton/crypto": "^3.2.0",
+        "@ton/ton": "^13.9.0",
         "bignumber.js": "^9.1.2",
         "buffer": "^6.0.3",
         "copy-to-clipboard": "^3.3.3",
@@ -47,12 +46,9 @@
         "vite": "^5.0.11"
     },
     "scripts": {
-        "locales": "ts-node ./task/locales",
-        "build": "tsc && yarn locales && vite build",
-        "generate:twaApi": "rm -fr src/twaApi && docker build -f task/Dockerfile.twaApi . -t twaapisdk && docker run --rm --user=$(id -u):$(id -g) -v \"$PWD\":/local twaapisdk",
-        "analyze": "source-map-explorer 'build/static/js/*.js'",
-        "deploy": "yarn build && npx wrangler pages deploy dist/",
-        "build:twa": "yarn build"
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
     },
     "browserslist": {
         "production": [
@@ -65,8 +61,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "ts-standard": {
-        "project": "./tsconfig.json"
     }
 }
