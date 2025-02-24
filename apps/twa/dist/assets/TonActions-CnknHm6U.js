@@ -1,0 +1,5 @@
+import{c as i,j as e,e2 as o,Y as r,s as l,eI as m,eJ as p,eK as w,bT as x,V as A,b0 as d,d_ as j,A as u,c9 as S}from"./index-DR6GvvU1.js";import{S as T,R as h,B as v}from"./BuyAction-DzkxA7kK.js";const N=({asset:s})=>{const n=i();return e.jsx(o,{icon:e.jsx(T,{}),title:"wallet_send",action:()=>n.uiEvents.emit("transfer",{method:"transfer",id:Date.now(),params:{jetton:s,chain:r.TON,from:s==="TON"?"wallet":"token"}})})},O=({chain:s,jetton:n})=>{const t=i();return e.jsx(o,{icon:e.jsx(h,{}),title:"wallet_receive",action:()=>t.uiEvents.emit("receive",{method:"receive",params:{chain:s,jetton:n}})})},_=l(m)`
+    height: 24px;
+    width: 24px;
+    color: ${s=>s.theme.iconPrimary};
+`,k=({fromAsset:s})=>{const[n,t]=p(),[I,a]=w(),c=()=>{s&&a(s),t(!0)};return e.jsx(o,{icon:e.jsx(_,{}),title:"swap_title",action:c})},E=()=>{const s=x(),t=A()===d.TESTNET;return e.jsxs(j,{children:[!t&&e.jsx(v,{}),!s&&e.jsx(N,{asset:"TON"}),e.jsx(O,{}),e.jsx(u,{children:!t&&!s&&e.jsx(k,{fromAsset:S})})]})};export{E as H,O as R,N as S,k as a};
